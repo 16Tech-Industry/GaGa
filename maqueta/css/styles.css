@@ -1,31 +1,77 @@
+/*sirve para crear variales e incovar las variables en el archivo*/
 :root{
-    --color-primary:#1daf83
+    --color-primary:#1daf83;
+    --nav-bar-color:#0d5845;
 }
+/*modifica todo lo que no tenga un formato definido*/
 *{
     margin: 0;
+    border: 0px;
     padding: 0;
     font-family: "Montserrat";
+    text-decoration: none;
+    color: black;
 }
 
+/*aplicar color todo el header*/
 header{
-    color:red;
     width: 100%;
-    background: black;
-    padding: 20px;
+    padding: 0px;
+    background:var(--nav-bar-color);
 }
 /* contenido de la barra */
 header nav{
     display:flex;
-    background: blue;
+}
+/*lugar que contiene la imagen*/
+header nav div{
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 0%;
+    padding-bottom: 8px;
+    text-align: center;
 }
 /* texto */
 header nav ul{
+    color: white;
     display:flex;
     gap: 8px;
-    background: green;
+    /*background: green;*/
 }
 /* esto es las opciones */
 header nav ul li{
-    lise
-    text-decoration: none;
+    padding: 8px;
+    margin: 20px;
+    gap: 10px;
+    list-style-type: none;
+}
+/*color y modificaciones dentro del header liv a*/
+header nav ul li a{
+    color:white;
+    font-weight: bold
+}
+body .hero-section{
+    /*padding: 150px;*/
+    background-image: linear-gradient(rgb(29 175 131 / 34%)), url('../img/background-hero.jpg');
+    background-size:cover;
+    height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body h1 {
+    background-color: #1daf83;
+    color: white;
+    padding: 2%;
+    margin-left: 28%;
+    margin-right: 28%;
+    margin-bottom: 35px;
+    text-align: center;
+}
+body h4{
+    color: #d4f7e6;
+    text-align: center;
+    margin-left: 28%;
+    margin-right: 28%;
 }
