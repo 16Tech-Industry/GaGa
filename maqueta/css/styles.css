@@ -1,0 +1,31 @@
+:root{
+    --color-primary:#1daf83
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+}
+
+header{
+    color:red;
+    width: 100%;
+    background: black;
+    padding: 20px;
+}
+/* contenido de la barra */
+header nav{
+    display:flex;
+    background: blue;
+}
+/* texto */
+header nav ul{
+    display:flex;
+    gap: 8px;
+    background: green;
+}
+/* esto es las opciones */
+header nav ul li{
+    lise
+    text-decoration: none;
+}
