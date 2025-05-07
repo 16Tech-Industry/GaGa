@@ -23,21 +23,21 @@ header{
 header nav{
     display:flex;
 }
-/*lugar que contiene la imagen*/
-header nav div{
-    padding-top: 8px;
-    padding-left: 8px;
-    padding-right: 0%;
-    padding-bottom: 8px;
-    text-align: center;
+
+header .logo img{ 
+    margin-top: 12px;
+    margin-left: 15px;
+    height: 50px;
+    width: auto;
 }
 /* texto */
 header nav ul{
-    color: white;
     display:flex;
     gap: 8px;
-    /*background: green;*/
+    /* este margin -right hace que los botones esten en la otra punta*/
+    margin-right: auto;
 }
+
 /* esto es las opciones */
 header nav ul li{
     padding: 8px;
@@ -50,6 +50,35 @@ header nav ul li a{
     color:white;
     font-weight: bold
 }
+/*config botones*/
+header .login{
+    display: flex;
+    padding: 10px 10px;
+
+    margin: 20px;
+    
+    border-radius: 5px;
+    background-color: #adedd2;
+    color: #052921;
+
+    cursor: pointer;
+    
+}
+header .singup{
+    display: flex;
+    padding: 10px 10px;
+    
+    margin: 20px;
+    margin-left: -8px;
+
+    border-radius: 5px;
+    background-color: #1daf83;
+    color: #edfcf5;
+
+    cursor: pointer;
+}
+/*termina nav bar*/
+
 body .hero-section{
     /*padding: 150px;*/
     background-image: linear-gradient(rgb(29 175 131 / 34%)), url('../img/background-hero.jpg');
@@ -60,7 +89,7 @@ body .hero-section{
     justify-content: center;
 }
 
-body h1 {
+body .titulo-gestion{
     background-color: #1daf83;
     color: white;
     padding: 2%;
@@ -69,9 +98,27 @@ body h1 {
     margin-bottom: 35px;
     text-align: center;
 }
-body h4{
+body .bajo-titulo{
     color: #d4f7e6;
     text-align: center;
     margin-left: 28%;
     margin-right: 28%;
+}
+
+body .news{
+    background-color: rebeccapurple;
+    margin: auto;
+
+}
+body .news ul{
+    color: white;
+    display:flex;
+    gap: 20%;
+    /* este margin -right hace que los botones esten en la otra punta*/
+    margin-right: auto;
+}
+body .news ul li{
+    /*padding: 8px;*/
+    margin: auto; 
+    list-style-type: none;
 }
