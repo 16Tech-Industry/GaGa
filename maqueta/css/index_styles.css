@@ -10,7 +10,6 @@
     padding: 0;
     font-family: "Montserrat";
     text-decoration: none;
-    color: black;
 }
 
 /*aplicar color todo el header*/
@@ -106,19 +105,31 @@ body .bajo-titulo{
 }
 
 body .news{
-    background-color: rebeccapurple;
-    margin: auto;
-
+    color: #edfcf5;
+    background-color: #adedd2;
+    padding: 32px;
+}
+body .news h1{
+    font-size: 80px;
 }
 body .news ul{
-    color: white;
     display:flex;
-    gap: 20%;
+    gap: 3px;
     /* este margin -right hace que los botones esten en la otra punta*/
     margin-right: auto;
 }
+
 body .news ul li{
-    /*padding: 8px;*/
-    margin: auto; 
+    background-color: #1daf83;
+    padding: 30px;
+    gap: 3px;
+    margin: 70px; 
     list-style-type: none;
 }
+
+@media only screen and (max-width: 600px) {
+    * {
+        color: red;
+    }
+  }
+  
