@@ -2,6 +2,7 @@
 :root{
     --color-primary:#1daf83;
     --nav-bar-color:#0d5845;
+    /*crear color por c/ color*/
 }
 /*modifica todo lo que no tenga un formato definido*/
 *{
@@ -105,31 +106,40 @@ body .bajo-titulo{
 }
 
 body .news{
-    color: #edfcf5;
+    color: #052921;
     background-color: #adedd2;
-    padding: 32px;
+    padding: 64px;
 }
-body .news h1{
+body .news h2{
     font-size: 80px;
+    color: #108b69;
 }
 body .news ul{
     display:flex;
-    gap: 3px;
-    /* este margin -right hace que los botones esten en la otra punta*/
+    gap: 32px;
     margin-right: auto;
 }
 
 body .news ul li{
-    background-color: #1daf83;
-    padding: 30px;
-    gap: 3px;
-    margin: 70px; 
+    padding: 24px;
+    background-color:#77deb8;
     list-style-type: none;
+    border-radius: 12px;
 }
+body .news ul li h3{
+    font-size: 30px;
+}
+.news ul li img{
+    border-radius: 8px;
+    width: 100%;
+    object-fit: cover;
 
-@media only screen and (max-width: 600px) {
-    * {
-        color: red;
+
+}
+/*Esto sirve para todo lo que es movile*/
+@media screen and (max-width: 768px) {
+    body .news ul{
+        flex-direction: column; 
     }
-  }
-  
+
+}
