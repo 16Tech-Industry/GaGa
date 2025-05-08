@@ -1,0 +1,125 @@
+.nav {
+    background-color: #830248;
+    --img1: scale(1);
+    --img2: scale(0);
+}
+
+.nav:has(.cascada:target) {
+    --img1: scale(0);
+    --img2: scale(1);
+    --clip: inset(0 0 0 0);
+}
+
+.nav_contenedor {
+    width: 90%;
+    margin: 0 auto;
+    height: 70px;
+
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-areas: "title img";
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.nav_titulo {
+    color: #fff;
+    grid-area: title;
+}
+
+.nav_menu {
+    grid-area: img;
+    position: relative;
+    z-index: 10;
+    transform: var(--img1);
+}
+
+.nav_menu_second {
+    transform: var(--img2);
+}
+
+.nav_icono {
+    width: 30px;
+    display: block;
+}
+
+.cascada {
+    position: absolute;
+    background-color: rgb(196, 241, 135);
+    width: 75%;
+    max-width: 300px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    padding: 1em;
+    display: grid;
+    align-content: center;
+    gap: 1rem;
+
+    overflow-y: auto;
+
+    clip-path: var(--clip, inset(0 0 100% 100%));
+    transition: clip-path .5s;
+
+}
+
+.cascada_list {
+    list-style: none;
+}
+
+.cascada_link {
+    color: rgb(184, 187, 191);
+    padding: 1em .7em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    background-color: var(--bg, transparent);
+    border-radius: 6px;
+}
+
+.cascada_list:has( :checked) {
+    --flecha: 1fr;
+    --rotacion: rotate(180deg);
+    --bg: #28303b;
+}
+
+.cascada_check {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.cascada_flecha {
+    margin-left: auto;
+    transform: var(--rotacion, 0);
+    transition: .2s transform;
+}
+
+.cascada_contenido {
+    display: grid;
+    grid-template-rows: var(--flecha, 0fr);
+    transition: .3s grid-template-rows;
+}
+
+.cascada_sub {
+    overflow: hidden;
+}
+
+.cascada_li {
+    width: 85%;
+    list-style: none;
+    margin-left: auto;
+}
+
+.cascada_ancla {
+    padding: 1em 0;
+    display: block;
+    color: #B6BABE;
+    text-decoration: none;
+}
