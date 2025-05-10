@@ -224,9 +224,6 @@ input {
     background: #0d5845;
     color: white;
     font-family: "Monserrat";
-    &:hover, &:focus {
-        background: black;
-    }
 }
 
 .button-block {
