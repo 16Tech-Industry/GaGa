@@ -1,0 +1,145 @@
+/*sirve para crear variales e incovar las variables en el archivo*/
+:root{
+    --color-primary:#1daf83;
+    --nav-bar-color:#0d5845;
+    /*crear color por c/ color*/
+}
+/*modifica todo lo que no tenga un formato definido*/
+*{
+    margin: 0;
+    border: 0px;
+    padding: 0;
+    font-family: "Montserrat";
+    text-decoration: none;
+}
+
+/*aplicar color todo el header*/
+header{
+    width: 100%;
+    padding: 0px;
+    background:var(--nav-bar-color);
+}
+/* contenido de la barra */
+header nav{
+    display:flex;
+}
+
+header .logo img{ 
+    margin-top: 12px;
+    margin-left: 15px;
+    height: 50px;
+    width: auto;
+}
+/* texto */
+header nav ul{
+    display:flex;
+    gap: 8px;
+    /* este margin -right hace que los botones esten en la otra punta*/
+    margin-right: auto;
+}
+
+/* esto es las opciones */
+header nav ul li{
+    padding: 8px;
+    margin: 20px;
+    gap: 10px;
+    list-style-type: none;
+}
+/*color y modificaciones dentro del header liv a*/
+header nav ul li a{
+    color:white;
+    font-weight: bold
+}
+/*config botones*/
+header .login{
+    display: flex;
+    padding: 10px 10px;
+
+    margin: 20px;
+    
+    border-radius: 5px;
+    background-color: #adedd2;
+    color: #052921;
+
+    cursor: pointer;
+    
+}
+header .singup{
+    display: flex;
+    padding: 10px 10px;
+    
+    margin: 20px;
+    margin-left: -8px;
+
+    border-radius: 5px;
+    background-color: #1daf83;
+    color: #edfcf5;
+
+    cursor: pointer;
+}
+/*termina nav bar*/
+
+body .hero-section{
+    /*padding: 150px;*/
+    background-image: linear-gradient(rgb(29 175 131 / 34%)), url('../img/background-hero.jpg');
+    background-size:cover;
+    height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body .titulo-gestion{
+    background-color: #1daf83;
+    color: white;
+    padding: 2%;
+    margin-left: 28%;
+    margin-right: 28%;
+    margin-bottom: 35px;
+    text-align: center;
+}
+body .bajo-titulo{
+    color: #d4f7e6;
+    text-align: center;
+    margin-left: 28%;
+    margin-right: 28%;
+}
+
+body .news{
+    color: #052921;
+    background-color: #adedd2;
+    padding: 64px;
+}
+body .news h2{
+    font-size: 80px;
+    color: #108b69;
+}
+body .news ul{
+    display:flex;
+    gap: 32px;
+    margin-right: auto;
+}
+
+body .news ul li{
+    padding: 24px;
+    background-color:#77deb8;
+    list-style-type: none;
+    border-radius: 12px;
+}
+body .news ul li h3{
+    font-size: 30px;
+}
+.news ul li img{
+    border-radius: 8px;
+    width: 100%;
+    object-fit: cover;
+
+
+}
+/*Esto sirve para todo lo que es movile*/
+@media screen and (max-width: 768px) {
+    body .news ul{
+        flex-direction: column; 
+    }
+
+}
