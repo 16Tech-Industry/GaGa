@@ -3,22 +3,21 @@
 <meta charset="utf-8" />
 
 <head>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="style_dash.css" </head>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="style_dash.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
 
-<body>
-    <header>
-        <nav class="menu">
-            <div><a href="index.html"><img href="about_us.html" src="img/LOGO.png" width="50" height="50" /></a></div>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="about_us.html">Sobre nosotros</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="cuerpo">
     <nav class="nav">
         <div class="nav_contenedor">
-            <h1 class="nav_titulo">Hola.</h1>
+            <a href="index.html">
+                <img href="about_us.html" src="img/LOGO.png" width="50" height="50">
+            </a>
             <a href="#menu" class="nav_menu">
                 <img src="./assets/menu-button.svg" class="nav_icono">
             </a>
@@ -27,12 +26,37 @@
                 <img src="./assets/x-circle.svg" class="nav_icono">
             </a>
 
+
             <ul id="menu" class="cascada">
                 <li class="cascada_list">
                     <a href="#" class="cascada_link">
-                        <img src="./assets/house.svg" class="cascada_icono">
-                        <span class="cascada_span">Inicio</span>
+                        <img src="./assets/person-circle.svg" class="cascada_icono">
+                        <span class="cascada_span">Cerrar Sesion</span>
                     </a>
+                </li>
+                <li class="cascada_list">
+                    <a href="#" class="cascada_link">
+                        <img src="./assets/gear-wide-connected.svg" class="cascada_icono">
+                        <span class="cascada_span">Dashboard</span>
+                        <img src="./assets/arrow-down-circle.svg" class="cascada_flecha">
+                        <input type="checkbox" class="cascada_check">
+                    </a>
+                    <div class="cascada_contenido">
+                        <ul class="cascada_sub">
+                            <li class="cascada_li">
+                                <a href="#" class="cascada_ancla">Metrica</a>
+                            </li>
+                            <li class="cascada_li">
+                                <a href="#" class="cascada_ancla">Cargar Sensores</a>
+                            </li>
+                            <li class="cascada_li">
+                                <a href="#" class="cascada_ancla">Alerta</a>
+                            </li>
+                            <li class="cascada_li">
+                                <a href="#" class="cascada_ancla">Configuracion</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="cascada_list">
                     <a href="#" class="cascada_link">
@@ -54,7 +78,6 @@
                             </li>
                         </ul>
                     </div>
-
                 </li>
             </ul>
         </div>

@@ -1,5 +1,14 @@
+* {
+    margin: 0;
+    border: 0px;
+    padding: 0;
+    font-family: "Montserrat";
+    text-decoration: none;
+    color: black;
+}
+
 .nav {
-    background-color: #830248;
+    background-color: #0d5845;
     --img1: scale(1);
     --img2: scale(0);
 }
@@ -47,7 +56,8 @@
 
 .cascada {
     position: absolute;
-    background-color: rgb(196, 241, 135);
+    background-color: #1daf83;
+    opacity: 80%;
     width: 75%;
     max-width: 300px;
     right: 0;
@@ -79,12 +89,13 @@
     gap: .6rem;
     background-color: var(--bg, transparent);
     border-radius: 6px;
+    position: relative;
 }
 
 .cascada_list:has( :checked) {
     --flecha: 1fr;
     --rotacion: rotate(180deg);
-    --bg: #28303b;
+    --bg: #b1b5bb;
 }
 
 .cascada_check {
@@ -122,4 +133,14 @@
     display: block;
     color: #B6BABE;
     text-decoration: none;
+}
+
+.cuerpo {
+    background-image: url(img/background-hero.jpg);
+    color: #1daf83;
+    opacity: 80%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
