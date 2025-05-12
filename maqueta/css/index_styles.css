@@ -3,6 +3,7 @@
     --color-primary:#1daf83;
     --nav-bar-color:#0d5845;
     /*crear color por c/ color*/
+    
 }
 /*modifica todo lo que no tenga un formato definido*/
 *{
@@ -105,28 +106,28 @@ body .bajo-titulo{
     margin-right: 28%;
 }
 
-body .news{
+.news{
     color: #052921;
     background-color: #adedd2;
     padding: 64px;
 }
-body .news h2{
+.news h2{
     font-size: 80px;
     color: #108b69;
 }
-body .news ul{
+.news ul{
     display:flex;
     gap: 32px;
     margin-right: auto;
 }
 
-body .news ul li{
+.news ul li{
     padding: 24px;
     background-color:#77deb8;
     list-style-type: none;
     border-radius: 12px;
 }
-body .news ul li h3{
+.news ul li h3{
     font-size: 30px;
 }
 .news ul li img{
