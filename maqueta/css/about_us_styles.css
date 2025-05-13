@@ -1,0 +1,69 @@
+/* ---------- Página "Sobre Nosotros" ---------- */
+
+.about-content {
+    padding: 64px;
+    background-color: #edfcf5; /* compatible con index */
+    color: #052921;
+}
+
+.about-content .intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-content .intro h1 {
+    font-size: 48px;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.about-content .intro p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.about-box {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    background-color: #adedd2; /* tono usado en botones del index */
+    border-radius: 16px;
+    padding: 32px;
+    flex-wrap: wrap;
+}
+
+.about-box img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.about-box div {
+    flex: 1;
+}
+
+.about-box h2 {
+    color: var(--nav-bar-color); /* consistente con la barra */
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.about-box p {
+    font-size: 16px;
+}
+
+/* Responsive: mobile */
+@media screen and (max-width: 768px) {
+    .about-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,21 +1,72 @@
 <!DOCTYPE html>
 <html lang="es-AR">
-<meta charset = "utf-8"/>
-
 <head>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Estilos base (incluye nav bar) -->
+  <link rel="stylesheet" href="css/index_styles.css">
+  <!-- Estilos específicos para About Us -->
+  <link rel="stylesheet" href="css/about_us_styles.css">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <title>Sobre Nosotros</title>
 </head>
 <body>
-    <header>
-        <nav class="menu">
-            <div>LOGO</div>
-            <ul>
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="about_us.html">Sobre nosotros</a></li>
-              <li><a href="#">Dashboard</a></li>
-            </ul>
-          </nav>          
-    </header>
-</body>
+  <header>
+    <nav class="menu">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Logo" /></a>
+      </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about_us.html">Sobre nosotros</a></li>
+        <li><a href="#">Dashboard</a></li>
+      </ul>
+      <button class="login">Log In</button>
+      <button class="singup">Sing Up</button>
+    </nav>
+  </header>
 
+  <main class="about-content">
+    <section class="intro">
+      <h1>Sobre Nosotros</h1>
+      <p>Somos una empresa dedicada al análisis de datos ambientales, con foco en sostenibilidad y tecnología verde. Nuestra misión es generar soluciones que contribuyan a un futuro más limpio y eficiente.</p>
+    </section>
+
+    <section class="about-sections">
+      <div class="about-box">
+        <img src="img/mision.jpg" alt="Misión de la empresa" />
+        <div>
+          <h2>Nuestra Misión</h2>
+          <p>Brindar servicios de análisis y gestión ambiental de alta calidad, apoyando a organizaciones que buscan reducir su impacto ecológico mediante decisiones basadas en datos.</p>
+        </div>
+      </div>
+
+      <div class="about-box">
+        <img src="img/vision.jpg" alt="Visión de la empresa" />
+        <div>
+          <h2>Visión</h2>
+          <p>Ser líderes en soluciones tecnológicas verdes, innovando constantemente y promoviendo prácticas sostenibles en todos los sectores de la economía.</p>
+        </div>
+      </div>
+
+      <div class="about-box">
+        <img src="img/equipo.jpg" alt="Nuestro equipo" />
+        <div>
+          <h2>El Equipo</h2>
+          <p>Contamos con un equipo multidisciplinario de expertos en ciencia de datos, medioambiente e ingeniería, comprometidos con la excelencia y el cambio positivo.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Green Analytics. Todos los derechos reservados.</p>
+  </footer>
+</body>
 </html>
