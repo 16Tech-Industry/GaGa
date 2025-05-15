@@ -1,0 +1,57 @@
+header nav{
+    display:flex;
+    background-color: #1daf83;
+}
+
+header .logo img{ 
+    margin-top: 12px;
+    margin-left: 15px;
+    height: 50px;
+    width: auto;
+
+}
+/* texto */
+header nav ul{
+
+    display:flex;
+    gap: 8px;
+    /* este margin -right hace que los botones esten en la otra punta*/
+    margin-right: auto;
+}
+
+/* esto es las opciones */
+header nav ul li{
+    padding: 8px;
+@@ -50,6 +50,35 @@ header nav ul li a{
+    color:white;
+    font-weight: bold
+}
+/*config botones*/
+header .login{
+    display: flex;
+    padding: 10px 10px;
+
+    margin: 20px;
+    
+    border-radius: 5px;
+    background-color: #adedd2;
+    color: #052921;
+
+    cursor: pointer;
+    
+}
+header .singup{
+    display: flex;
+    padding: 10px 10px;
+    
+    margin: 20px;
+    margin-left: -8px;
+
+    border-radius: 5px;
+    background-color: #1daf83;
+    color: #edfcf5;
+
+    cursor: pointer;
+}
+/*termina nav bar*/
+
