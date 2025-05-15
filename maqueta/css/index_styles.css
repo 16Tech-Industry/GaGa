@@ -112,79 +112,76 @@ body .bajo-titulo{
     margin-left: 28%;
     margin-right: 28%;
 }
-
+.title-section{
+    font-size: 80px;
+    color: var(--color-600);
+}
 .news{
     color: var(--color-950);
     background-color: var(--color-200);
     padding: 64px;
 }
-.news h2{
-    font-size: 80px;
-    color: var(--color-600);
-}
-.news ul{
+
+.news .card-list{
     display:flex;
     gap: 32px;
     margin-right: auto;
 }
 
-.news ul li{
+.news .card-list .card{
     padding: 24px;
     background-color:var(--color-300);
     list-style-type: none;
     border-radius: 12px;
 }
-.news ul li h3{
+.news .card-list .card h3{
     font-size: 30px;
 }
-.news ul li img{
+.news .card-list .card img{
     border-radius: 8px;
     width: 100%;
     object-fit: cover;
 }
 
+/*esto modifica limita el ancho max del elemento*/
+.container-section{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 /*Desde aca todo empieza a ser provisorio hasta tener boostrap y js*/
 .dashboard-preview{
-    gap: 32px;
-    margin-right: auto;
+    padding: 64px;
     background-color: var(--color-400);
 }
-/*el gap siempre se usa cuando haya un display: flex*/
-.dashboard-preview h2{
-    color: var(--color-100);
-    text-align: center;
+/*esto modifica generalmente los titulos dentro de el dahsboard preview*/
+.dashboard-preview .title-section{
+    color:var(--color-100)
 }
-.dashboard-preview .medidor-escala{
+/*el gap siempre se usa cuando haya un display: flex*/
+
+/*esto modifica los graficos */
+.dashboard-preview .graficos{
     display:flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 24px;
+    gap: 42px;
     
 }
-.dashboard-preview .medidor-escala li{
+/*esto es la cartita del grafico*/
+.dashboard-preview .graficos .card{
+    padding: 12px;
     background-color: var(--color-300);
-    padding: 2%;
-    border-radius: 15px;
-    margin: 20px;
-
-}
-
-.dashboard-preview .lineales{
-    gap: 34px;
-    display:flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 24px;
-}
-.dashboard-preview .lineales li{
-    background-color: var(--color-300);
-    padding: 2px;
     border-radius: 15px;
 }
-.dashboard-preview .lineales img{
-    padding: 30px;
-    width: 400px;
+
+/*esto modifica las imagenes que vendrian a ser los graficos*/
+.dashboard-preview .graficos .card img{
+    width: 100%;
 }
+/*modifica separa cosas :D*/
+.dashboard-preview .medidor-escala{
+    margin-bottom: 42px;
+}
+
 
 .footer {
     background-color: var(--color-900);
