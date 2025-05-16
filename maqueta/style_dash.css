@@ -73,7 +73,6 @@
 
     clip-path: var(--clip, inset(0 0 100% 100%));
     transition: clip-path .5s;
-
 }
 
 .cascada_list {
@@ -137,10 +136,60 @@
 
 .cuerpo {
     background-image: url(img/background-hero.jpg);
-    color: #1daf83;
     opacity: 80%;
     background-size: cover;
+}
+
+.contenedor {
+    width: 98%;
+    height: 650px;
+    margin: auto;
+    margin-top: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    gap: 1em;
+    background-color: black;
+
+}
+
+.clima {
+    width: 48%;
+    height: 40%;
+    background-image: url(img/clima.PNG);
+    background-size: cover;
+}
+
+.medidor_escala {
+    width: 48%;
+    height: 40%;
+    background-color: azure;
+}
+
+.historial_temperatura {
+    width: 48%;
+    height: 65%;
+    background-image: url(img/Historial_temperatura.PNG);
+    background-size: cover;
+}
+
+.historial_humedad {
+    width: 48%;
+    height: 65%;
+    background-image: url(img/Historial_humedad.PNG);
+    background-size: cover;
+}
+
+.historial_consumo {
+    width: 48%;
+    height: 40%;
+    background-image: url(img/Historial_consumo.PNG);
+    background-size: cover;
+}
+
+.ahorro {
+    width: 48%;
+    height: 40%;
+    background-color: aquamarine;
 }
