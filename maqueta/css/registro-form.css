@@ -16,6 +16,8 @@ main{
     background-size: cover; 
     width: 100%;
     height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .registro-tit{
@@ -25,12 +27,17 @@ main{
 }
 label{
     font-size: 2.5rem;
+    margin-bottom: 0.3rem;
 }
 .contenedor-registro{  
     background:rgba(255, 255, 255, 0.2);
     padding: 35px;
     border-radius: 5px 30px;
     border: solid 2px grey;
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
 }
 input{
     height: 1.8rem;
@@ -63,4 +70,43 @@ input{
     cursor: pointer;
     background-color:  #1daf83;
     transform: scale(1.1);
+}
+
+@media(max-wigth:768px){
+    .registro-tit{
+        font-size: 2rem;
+    }
+
+    label{
+        font-size: 1rem;
+    }
+
+    input{
+        height: 1.8rem;
+        font-size: 0.95rem;
+    }
+
+    .contenedor-registro{
+        padding: 1.5rem;
+    }
+
+    .btn-registrar{
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    
+}
+
+@media( max-width: 468px){
+    .registro-tit{
+        font-size: 1.6rem;
+    }
+
+    label{
+        font-size: 0.95rem;
+    }
+
+    .contenedor-registro{
+        padding: 1rem;
+    }
 }
