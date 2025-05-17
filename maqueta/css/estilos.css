@@ -88,7 +88,7 @@ header .singup{
 /*termina nav bar*/
 
 
-body {
+body{
     background-image: url(/maqueta/img/FONDO2.png);
     background-size: COVER;
     font-family: "Monserrat";
@@ -224,6 +224,9 @@ input {
     background: #0d5845;
     color: white;
     font-family: "Monserrat";
+    &:hover, &:focus {
+        background: black;
+    }
 }
 
 .button-block {
