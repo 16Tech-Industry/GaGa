@@ -136,60 +136,66 @@
 
 .cuerpo {
     background-image: url(img/background-hero.jpg);
-    opacity: 80%;
+    opacity: 90%;
     background-size: cover;
 }
 
 .contenedor {
-    width: 98%;
-    height: 650px;
+    width: 92%;
+    height: 1350px;
     margin: auto;
     margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-flow: row wrap;
     align-content: flex-start;
-    gap: 1em;
     background-color: black;
 
 }
 
 .clima {
-    width: 48%;
-    height: 40%;
+    width: 50%;
+    height: 30%;
+    border-radius: 10px;
     background-image: url(img/clima.PNG);
     background-size: cover;
 }
 
 .medidor_escala {
-    width: 48%;
+    width: 50%;
     height: 40%;
+    border-radius: 10px;
     background-color: azure;
 }
 
 .historial_temperatura {
-    width: 48%;
-    height: 65%;
+    width: 50%;
+    height: 45%;
+    border-radius: 10px;
     background-image: url(img/Historial_temperatura.PNG);
     background-size: cover;
 }
 
 .historial_humedad {
-    width: 48%;
-    height: 65%;
+    width: 50%;
+    height: 45%;
+    border-radius: 10px;
     background-image: url(img/Historial_humedad.PNG);
     background-size: cover;
 }
 
 .historial_consumo {
-    width: 48%;
+    width: 50%;
     height: 40%;
+    border-radius: 10px;
     background-image: url(img/Historial_consumo.PNG);
     background-size: cover;
 }
 
 .ahorro {
-    width: 48%;
+    width: 50%;
     height: 40%;
-    background-color: aquamarine;
+    border-radius: 10px;
+    background-image: url(img/porcentaje_ahorro.PNG);
+    background-size: cover;
 }
