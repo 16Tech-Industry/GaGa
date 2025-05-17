@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+
+    <link rel="stylesheet" href="/maqueta/css/registro-form.css">
+    <link rel="stylesheet" href="/maqueta/css/index_styles.css">
+</head>
+<body>
+     <header>
+        <nav class="menu">
+            <div>LOGO</div>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="about_us.html">Sobre nosotros</a></li>
+              <li><a href="#">Inciar sesión</a></li>
+            </ul>
+          </nav>          
+    </header>
+    
+    <main>
+        
+        <article class="contenedor-registro">
+            <article>
+            <h2 class="registro-tit">Registrarse</h2>
+            </article>
+            
+            <form id="registro" action="/maqueta/pages/404.html" method="get">
+                <section id="form-grupo">
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" id="nombre" placeholder="Ingrese su nombre(s)" required>
+                </section>
+                
+                <section id="form-grupo">
+                    <label for="apellido"> Apellido: </label>
+                    <input type="text" id="apellido" placeholder="Ingrese su apellido(s)" required>
+                </section>
+
+                <section id="form-grupo">
+                    <label for="email"> Email: </label>
+                    <input type="email" id="email" placeholder="hola@xxx.com" required>
+                </section>
+
+                <section id="form-grupo">
+                    <label for="contrasenia">Contraseña: </label>
+                    <input type="password" id="contrasenia" maxlength="8" placeholder="Al menos 8 caracteres" required>
+                </section>
+
+                <section id="btn-registrar">
+                    <button class="btn-registrar" type="submit">Enviar</button>   
+                </section>
+            </form>
+        </article>    
+    </main>
+</body>
+</html>
