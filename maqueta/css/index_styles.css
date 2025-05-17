@@ -1,8 +1,16 @@
 /*sirve para crear variales e incovar las variables en el archivo*/
 :root{
-    --color-primary:#1daf83;
-    --nav-bar-color:#0d5845;
-    /*crear color por c/ color*/
+    --color-50: #edfcf5 ;
+    --color-100: #d4f7e6 ;
+    --color-200: #adedd2 ;
+    --color-300: #77deb8 ;
+    --color-400: #40c79a ;
+    --color-500: #1daf83 ;
+    --color-600: #108b69 ;
+    --color-700: #0d6f56 ;
+    --color-800: #0d5845 ;
+    --color-900: #0b493a ;
+    --color-950: #052921 ;
 }
 /*modifica todo lo que no tenga un formato definido*/
 *{
@@ -17,7 +25,7 @@
 header{
     width: 100%;
     padding: 0px;
-    background:var(--nav-bar-color);
+    background:var(--color-800);
 }
 /* contenido de la barra */
 header nav{
@@ -58,8 +66,8 @@ header .login{
     margin: 20px;
     
     border-radius: 5px;
-    background-color: #adedd2;
-    color: #052921;
+    background-color: var(--color-200);
+    color: var(--color-950);
 
     cursor: pointer;
     
@@ -72,8 +80,8 @@ header .singup{
     margin-left: -8px;
 
     border-radius: 5px;
-    background-color: #1daf83;
-    color: #edfcf5;
+    background-color: var(--color-500);
+    color: var(--color-50);
 
     cursor: pointer;
 }
@@ -90,8 +98,8 @@ body .hero-section{
 }
 
 body .titulo-gestion{
-    background-color: #1daf83;
-    color: white;
+    background-color: var(--color-500);
+    color: var(--color-100);
     padding: 2%;
     margin-left: 28%;
     margin-right: 28%;
@@ -99,47 +107,105 @@ body .titulo-gestion{
     text-align: center;
 }
 body .bajo-titulo{
-    color: #d4f7e6;
+    color:var(--color-100);
     text-align: center;
     margin-left: 28%;
     margin-right: 28%;
 }
-
-body .news{
-    color: #052921;
-    background-color: #adedd2;
+.title-section{
+    font-size: 80px;
+    color: var(--color-600);
+}
+.news{
+    color: var(--color-950);
+    background-color: var(--color-200);
     padding: 64px;
 }
-body .news h2{
-    font-size: 80px;
-    color: #108b69;
-}
-body .news ul{
+
+.news .card-list{
     display:flex;
     gap: 32px;
     margin-right: auto;
 }
 
-body .news ul li{
+.news .card-list .card{
     padding: 24px;
-    background-color:#77deb8;
+    background-color:var(--color-300);
     list-style-type: none;
     border-radius: 12px;
 }
-body .news ul li h3{
+.news .card-list .card h3{
     font-size: 30px;
 }
-.news ul li img{
+.news .card-list .card img{
     border-radius: 8px;
     width: 100%;
     object-fit: cover;
-
-
 }
-/*Esto sirve para todo lo que es movile*/
+
+/*esto modifica limita el ancho max del elemento*/
+.container-section{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/*Desde aca todo empieza a ser provisorio hasta tener boostrap y js*/
+.dashboard-preview{
+    padding: 64px;
+    background-color: var(--color-400);
+}
+/*esto modifica generalmente los titulos dentro de el dahsboard preview*/
+.dashboard-preview .title-section{
+    color:var(--color-100)
+}
+/*el gap siempre se usa cuando haya un display: flex*/
+
+/*esto modifica los graficos */
+.dashboard-preview .graficos{
+    display:flex;
+    gap: 42px;
+    
+}
+/*esto es la cartita del grafico*/
+.dashboard-preview .graficos .card{
+    padding: 12px;
+    background-color: var(--color-300);
+    border-radius: 15px;
+}
+
+/*esto modifica las imagenes que vendrian a ser los graficos*/
+.dashboard-preview .graficos .card img{
+    width: 100%;
+}
+/*modifica separa cosas :D*/
+.dashboard-preview .medidor-escala{
+    margin-bottom: 42px;
+}
+
+
+.footer {
+    background-color: var(--color-900);
+    color: var(--color-50);
+    padding: 30px 0;
+}
+
+.footer p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+/*Esto sirve para todo lo que es movile, el max width es el maximo antes de cambiar de estilo*/
 @media screen and (max-width: 768px) {
     body .news ul{
         flex-direction: column; 
     }
+    /*acomodar para que cuando se pase a movile no tener problemas con desalineos*/
+    .dashboard-preview .medidor-escala{
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
 
-}
+    }
+
+}     
