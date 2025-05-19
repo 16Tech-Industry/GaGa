@@ -118,7 +118,7 @@ body{
         text-decoration: none;
         padding: 0px;
         background: #0d5845;
-        color: white;
+        color: blue;
         font-size: 10px;
         float: left;
         width: 10px;
@@ -129,7 +129,7 @@ body{
     
     .active a {
         background: #0d5845;
-        color: white;
+        color: blue;
     }
 }
 
@@ -157,7 +157,7 @@ h2 {
 
 h3 {
     text-align: right;
-    color: #0d5845;
+    color: blue;
     font-family:"Monserrat";
     font-size: 10px;
     margin: 40px -60px 30px 10px;
@@ -241,6 +241,7 @@ input {
     font-size: 10px;
     font-family: "Monserrat";
     height: auto;
+    color: blue;
 }
 
 /*Mediaqueries*/
@@ -261,4 +262,4 @@ input {
         li a {
             width: 100%;
         }
-    }
+    }}
