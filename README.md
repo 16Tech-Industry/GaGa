@@ -9,8 +9,6 @@ Entre sus Funcionalidades econtramos:
 - Almacenamiento estructurado de la información recolectada.
 - Procesamiento de los datos y cálculo de métricas.
 - Visualización en un tablero de control (dashboard) con gráficos interactivos.
-- Alertas configurables ante ciertos eventos.
-- Exportación de datos e informes.
 
 Tecnologias utilizadas:
 - Lenguajes de programacion (HTML, CSS, JS);
