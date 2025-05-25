@@ -89,7 +89,7 @@ header .singup{
 
 body .hero-section{
     /*padding: 150px;*/
-    background-image: linear-gradient(rgb(29 175 131 / 34%)), url('../img/background-hero.jpg');
+    background-image: linear-gradient(rgb(29 175 131 / 34%)), url(/maqueta/img/background_hero.jpg);
     background-size:cover;
     height: calc(100vh - 75px);
     display: flex;
