@@ -28,3 +28,15 @@ Los usuarios del sistema estarán conformados por:
 - Ávila Franco
 - Giraudo Guillermo
 - Juárez Valentín
+
+Entre sus Funcionalidades econtramos:
+- Recolección automática de datos desde sensores o fuentes externas (API).
+- Almacenamiento estructurado de la información recolectada.
+- Procesamiento de los datos y cálculo de métricas.
+- Visualización en un tablero de control (dashboard) con gráficos interactivos.
+
+Tecnologias utilizadas:
+- Lenguajes de programacion (HTML, CSS, JS);
+- Protocolos de envios de informacion (MQTT);
+- Hardware (Microprocesador ESP32, Sensores)
+- Redes (WIFI, Internet)
