@@ -1,6 +1,5 @@
 .foot-personalizado {
-  background-color: var(--color-500); /* Antes: #1daf83 */
-  color: var(--color-50);
+  background-color: #1daf83;
   padding: 20px 0;
 }
 
