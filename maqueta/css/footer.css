@@ -1,9 +1,11 @@
 .foot-personalizado {
-  background-color: var(--color-500); /* Antes: #1daf83 */
-  color: var(--color-50);
-  padding: 20px 0;
+  background-color: #1daf83;
+  padding: 20px 0;
 }
-
+.foot-personalizado {
+  background-color: #1daf83;
+  padding: 20px 0;
+}
 .p-footer {
   font-size: 17px;
   font-weight: 600;
