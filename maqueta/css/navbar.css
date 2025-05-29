@@ -1,0 +1,44 @@
+.nav-personalizada {
+  background-color: #1daf83;
+}
+
+.ul-personalizada {
+  font-size: 1.5rem;
+}
+
+.img-personalizada {
+  padding: 0;
+}
+
+.navbar-nav .nav-link {
+
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color-100);
+  text-decoration: underline;
+}
+
+/* Botones Login y Registro */
+.btn-login {
+  background-color: var(--color-200);
+  color: var(--color-950);
+  font-weight: 600;
+}
+
+.btn-login:hover {
+  background-color: var(--color-100);
+  color: var(--color-950);
+}
+
+.btn-registro {
+  background-color: var(--color-600);
+  color: var(--color-50);
+  font-weight: 600;
+}
+
+.btn-registro:hover {
+  background-color: var(--color-700);
+  color: var(--color-50);
+}
