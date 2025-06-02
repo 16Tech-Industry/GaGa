@@ -2,44 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="css/EstilosLogin.css">
-    <link rel="stylesheet" href="css/styles.css">  
-    <link rel="icon" href="/maqueta/img/Icono-GaGa.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/index_styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login GAGA</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">    <link rel="stylesheet" href="/maqueta/css/login_styles.css">
+    
+    <link rel="stylesheet" href="/maqueta/css/registro_form.css">     
+    <link rel="stylesheet" href="/maqueta/css/navbar.css">
+    <link rel="stylesheet" href="/maqueta/css/footer.css">
+    
+    <link rel="icon" href="/maqueta/img/logo_hoja.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<header>
-    <nav class="menu">
-    <div class="logo">
-      <a href="index.html" width="auto"><img src= "img/logo.png"/></a>
-    </div>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about_us.html">Sobre nosotros</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-      </ul>
-</nav></header>
 
 <body>
-    <div class="contenedor-formularios">     
-        <div class="contenido-tab">
-            <div id="iniciar-sesion">
-                <h1 class="ingresar">Ingresar</h1>
-                <form action="#" method="post">
-                    <label"><h2>Usuario:</h2></label>
-                    <div class="contenedor-input">
-                       <input type="text" required>
-                    </div>
-                    <label"><h2>Contraseña:</h2></label>
-                    <div class="contenedor-input">
+    <header>
+            <nav class="navbar navbar-expand-lg nav-personalizada" id="nav-container">
+        <div class="container-fluid">
+    <!-- LOGO -->
+            <a class="img-personalizada" href="#">
+                <img src="/maqueta/img/logo_hoja.png" alt="Logo" width="65" height="65" class="d-inline-block align-text-top">
+            </a>
 
-                        <input type="password" required>
+        <!-- Botón hamburguesa para móvil -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+    <!-- Contenido del navbar -->
+            <div class="collapse navbar-collapse" id="navbarContenido">
+                <div class="row w-100">
+    <!-- Menú izquierdo -->
+                    <div class="col-lg-8">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ul-personalizada">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/about_us.html">Sobre nosotros</a>
+                            </li>
+                        </ul>
                     </div>
-                <p><a href="/maqueta/index.html" class="recuperar_contraseña"><h3>¿Se te olvidó la contraseña?</h3></a></p>
-                    <input type="submit" class="button button-block" value="Iniciar Sesión">
-                </form>
-                <input type="submit" class="button button-block" value="Crear Cuenta" margin-botton: "20px">
+                </div>
             </div>
+        </div>
+            </nav>    
+    </header>
+    <main>
+        <article class="contenedor-registro">  
+            <article>
+            <h2 class="registro-tit">Ingresar</h2>
+            </article>
+            <form id="registro" action="../pages/404.html" method="get">
+                <section class="form-grupo">
+                    <label" for="email"> Usuario: </label>
+                    <input type="text" id="email" placeholder="Ingrese su email" required>
+                </section class="form-grupo">
+
+                <section>
+                    <label" for="contrasenia">Contraseña:</label>
+                    <input type="password" id="contrasenia" maxlength="8" placeholder="Al menos 8 caracteres" required>
+                </section>
+
+                <section class="form-grupo">
+                    <p><a href="/maqueta/index.html" class="recuperar_contraseña">¿Se te olvidó la contraseña?</a></p>                        
+                </section>
+
+                <section id="btn-registrar">
+                    <button class="btn-registrar" type="submit">Inciar Sesion</button>   
+                    <button class="btn-registrar" type="submit">Crear Cuenta</button>  
+                </section>
+            </form>
+        </article>
+    </main>
 </body>
+<footer class="foot-personalizado col-12 text-center py-1">
+    <p class="p-footer">Copyright &copy; 2025. All rights reserved.</p>
+    <p class="p-footer">Designed with a lot 🔥 by 16th Industry</p>
+</footer>
+
 </html>
