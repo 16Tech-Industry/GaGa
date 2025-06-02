@@ -48,7 +48,8 @@
                     </div>
     <!-- Botones derecho -->
                     <div class="col-lg-4 text-end">
-                      <a href="/maqueta/pages/registro_form.html" class="btn btn-outline-primary me-2 btn-login">Registrarse</a>
+                        <a href="/maqueta/pages/login.html" class="btn btn-outline-primary me-2 btn-login">Login</a>
+                        <a href="/maqueta/pages/registro_form.html" class="btn btn-primary btn-registro">Registrarse</a>    
                     </div>
                 </div>
             </div>
@@ -58,25 +59,15 @@
     <main>
         <article class="contenedor-registro">  
             <article>
-            <h2 class="registro-tit">Ingresar</h2>
+            <center><h3>Recuperación Contraseña</h3></center>
             </article>
             <form id="registro" action="../pages/404.html" method="get">
                 <section class="form-grupo">
-                    <label for="email"> Usuario: </label>
                     <input type="text" id="email" placeholder="Ingrese su email" required>
-                </section class="form-grupo">
-
-                <section class="form-grupo">
-                    <label for="contrasenia">Contraseña:</label>
-                    <input type="password" id="contrasenia" maxlength="8" placeholder="Al menos 8 caracteres" required>
-                </section>
-
-                <section class="form-grupo">
-                    <p><a href="/maqueta/pages/recupera_pass.html" class="recuperar_contraseña">¿Se te olvidó la contraseña?</a></p>                        
                 </section>
 
                 <section id="btn-registrar">
-                    <button class="btn-registrar" type="submit">Inciar Sesion</button> 
+                    <button class="btn-registrar" type="submit">Enviar Código</button> 
                 </section>
             </form>
         </article>
