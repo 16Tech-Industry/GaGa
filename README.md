@@ -1,7 +1,7 @@
 # 🌍 GaGa – Gestión Avanzada de la Green Analytics
 
 ## 🧾 Descripción
-GaGa es un sistema para la recopilacio, organizacion y analisis de datos ambientales de forma continua y automatizada con una finalidad ecológica. Involucra el monitoreo del consumo energético, el cálculo del ahorro, la evaluación de variaciones de temperatura y la generación de insights para tomar decisiones sostenibles.
+GaGa es un sistema para la recopilación, organizacióm y análisis de datos ambientales de forma continua y automatizada con una finalidad ecológica. Involucra el monitoreo del consumo energético, el cálculo del ahorro, la evaluación de variaciones de temperatura y la generación de insights para tomar decisiones sostenibles.
 
 ## 🚀 Funcionalidades
 - Registro e inicio de sesión de usuarios
