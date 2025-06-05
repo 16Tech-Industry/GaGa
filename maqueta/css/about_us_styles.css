@@ -94,6 +94,14 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
+.card {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
 
 .card h3 {
   margin-top: 0;

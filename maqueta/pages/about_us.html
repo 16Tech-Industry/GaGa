@@ -5,19 +5,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Estilos base (incluye nav bar) -->
-  <link rel="stylesheet" href="css/index_styles.css">
-  <!-- Estilos específicos para About Us -->
-  <link rel="stylesheet" href="css/about_us_styles.css">
-  <link rel="icon" href="/maqueta/img/Icono-GaGa.ico" type="image/x-icon">
-  <!-- Tipografías -->
+  <title>Sobre Nosotros</title>
+  <link rel="shortcut icon" href="../img/favico.ico" />
+
+  <!-- TIPOGRAFÍA -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
 
-  <title>Sobre Nosotros</title>
+  <!-- ESTILOS PROPIOS -->
+  <link rel="stylesheet" href="../css/index_styles.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/about_us_styles.css">
+
+  <!-- BOOTSTRAP CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -27,7 +33,7 @@
       <div class="container-fluid">
         <!-- LOGO -->
         <a class="img-personalizada" href="#">
-          <img src="/maqueta/img/Logo_limpio.png" alt="Logo" width="65" height="65" class="d-inline-block align-text-top">
+          <img src="../img/logo_hoja.png" alt="Logo" width="65" height="65" class="d-inline-block align-text-top">
         </a>
 
         <!-- Botón hamburguesa para móvil -->
@@ -42,18 +48,18 @@
             <div class="col-lg-8">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 ul-personalizada">
                 <li class="nav-item">
-                  <a class="nav-link active" href="/maqueta/index.html">Inicio</a>
+                  <a class="nav-link active" href="../index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/maqueta/pages/about_us.html">Sobre nosotros</a>
+                  <a class="nav-link" href="about_us.html">Sobre nosotros</a>
                 </li>
               </ul>
             </div>
 
             <!-- Botones derecho -->
             <div class="col-lg-4 text-end">
-              <a href="../maqueta/pages/login.html" class="btn btn-outline-primary me-2 btn-login">Login</a>
-              <a href="../maqueta/pages/registro_form.html" class="btn btn-primary btn-registro">Registrarse</a>
+              <a href="login.html" class="btn btn-outline-primary me-2 btn-login">Login</a>
+              <a href="registro_form.html" class="btn btn-primary btn-registro">Registrarse</a>
             </div>
           </div>
         </div>
@@ -70,10 +76,12 @@
 
     <section class="about-sections">
       <div class="about-box">
-        <img src="../img/mision.png" />
+        <img src="../img/mision.png" alt="Misión" />
         <div>
           <h2>Nuestra Misión</h2>
-          <p>Empoderar a empresas y organizaciones con soluciones avanzadas de gestión de datos ambientales, proporcionando la inteligencia necesaria para tomar decisiones informadas, optimizar sus procesos y minimizar su impacto ecológico en Córdoba y más allá</p>
+          <p>Empoderar a empresas y organizaciones con soluciones avanzadas de gestión de datos ambientales,
+            proporcionando la inteligencia necesaria para tomar decisiones informadas, optimizar sus procesos y
+            minimizar su impacto ecológico en Córdoba y más allá.</p>
         </div>
       </div>
 
@@ -81,49 +89,56 @@
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEmBIyiyOTVPIQSmnpMf-YA0xP8Qj24fsl5Q&s" alt="Visión de la empresa" />
         <div>
           <h2>Visión</h2>
-          <p>Ser la empresa líder en Argentina en la transformación de datos ambientales en conocimiento actionable, impulsando un futuro donde la sostenibilidad y la eficiencia se entrelazan para el bienestar del planeta y las comunidades.</p>
+          <p>Ser la empresa líder en Argentina en la transformación de datos ambientales en conocimiento actionable,
+            impulsando un futuro donde la sostenibilidad y la eficiencia se entrelazan para el bienestar del planeta y
+            las comunidades.</p>
         </div>
       </div>
+    </section>
 
-     <section class="equipo-section">
-  <h2>Nuestro Equipo</h2>
-  <p>Contamos con un equipo multidisciplinario de expertos en ciencia de datos, medioambiente e ingeniería, comprometidos con la excelencia y el cambio positivo.</p>
-  <div class="equipo-grid">
-    <div class="card">
-      <h3>Bautista Bustos</h3>
-      <p><strong>Director de Diseño y Desarrollo</strong></p>
-      <p>Lidera estratégicamente el diseño y desarrollo de productos digitales, unificando estética e innovación con funcionalidad robusta.</p>
-    </div>
-    <div class="card">
-      <h3>Heyme Coraspe Bueno</h3>
-      <p><strong>Director de Diseño</strong></p>
-      <p>Define la identidad visual de los productos con un enfoque centrado en la experiencia del usuario.</p>
-    </div>
-    <div class="card">
-      <h3>Guillermo Giraudo</h3>
-      <p><strong>Director de Desarrollo</strong></p>
-      <p>Garantiza la implementación técnica y la escalabilidad de las soluciones digitales desarrolladas.</p>
-    </div>
-    <div class="card">
-      <h3>Luciano Cañas</h3>
-      <p><strong>Desarrollador FrontEnd</strong></p>
-      <p>Construye interfaces interactivas que garantizan una experiencia fluida y atractiva para los usuarios.</p>
-    </div>
-    <div class="card">
-      <h3>Franco Ávila</h3>
-      <p><strong>Desarrollador FrontEnd</strong></p>
-      <p>Traduce los diseños en código funcional, aportando a la capa visual de las aplicaciones web.</p>
-    </div>
-    <div class="card">
-      <h3>Valentín Juárez</h3>
-      <p><strong>Desarrollador BackEnd</strong></p>
-      <p>Desarrolla la lógica del servidor y gestiona los datos que hacen funcionar las aplicaciones correctamente.</p>
-    </div>
-  </div>
-</section>
+    <section class="equipo-section">
+      <h2>Nuestro Equipo</h2>
+      <p>Contamos con un equipo multidisciplinario de expertos en ciencia de datos, medioambiente e ingeniería,
+        comprometidos con la excelencia y el cambio positivo.</p>
+      <div class="equipo-grid">
+        <div class="card">
+          <h3>Bautista Bustos</h3>
+          <p><strong>Director de Diseño y Desarrollo</strong></p>
+          <p>Lidera estratégicamente el diseño y desarrollo de productos digitales, unificando estética e innovación con funcionalidad robusta.</p>
+        </div>
+        <div class="card">
+          <h3>Heyme Coraspe Bueno</h3>
+          <p><strong>Director de Diseño</strong></p>
+          <p>Define la identidad visual de los productos con un enfoque centrado en la experiencia del usuario.</p>
+        </div>
+        <div class="card">
+          <h3>Guillermo Giraudo</h3>
+          <p><strong>Director de Desarrollo</strong></p>
+          <p>Garantiza la implementación técnica y la escalabilidad de las soluciones digitales desarrolladas.</p>
+        </div>
+        <div class="card">
+          <h3>Luciano Cañas</h3>
+          <p><strong>Desarrollador FrontEnd</strong></p>
+          <p>Construye interfaces interactivas que garantizan una experiencia fluida y atractiva para los usuarios.</p>
+        </div>
+        <div class="card">
+          <h3>Franco Ávila</h3>
+          <p><strong>Desarrollador FrontEnd</strong></p>
+          <p>Traduce los diseños en código funcional, aportando a la capa visual de las aplicaciones web.</p>
+        </div>
+        <div class="card">
+          <h3>Valentín Juárez</h3>
+          <p><strong>Desarrollador BackEnd</strong></p>
+          <p>Desarrolla la lógica del servidor y gestiona los datos que hacen funcionar las aplicaciones correctamente.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    <p>© 2025 Green Analytics. Todos los derechos reservados.</p>
+  <!-- FOOTER -->
+  <footer class="foot-personalizado col-12 text-center py-1">
+    <p class="p-footer">Copyright &copy; 2025. All rights reserved.</p>
+    <p class="p-footer">Designed with a lot 🔥 by 16th Industry</p>
   </footer>
 </body>
 </html>
