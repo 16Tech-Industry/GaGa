@@ -50,7 +50,7 @@ input{
     gap: 1rem;
 }
 
-#form-grupo{
+.form-grupo{
     display: flex;
     flex-direction: column;
 }
