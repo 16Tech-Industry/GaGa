@@ -4,7 +4,7 @@
     --color-100: #d4f7e6 ;
     --color-200: #adedd2 ;
     --color-300: #77deb8 ;
-    --color-400: #40c79a ;
+    --color-400: #40c79a ; 
     --color-500: #1daf83 ;
     --color-600: #108b69 ;
     --color-700: #0d6f56 ;
@@ -20,9 +20,6 @@
     font-family: "Montserrat";
     text-decoration: none;
 }
-
-
-
 
 body .hero-section{
     /*padding: 150px;*/
@@ -49,32 +46,38 @@ body .bajo-titulo{
     margin-left: 28%;
     margin-right: 28%;
 }
-.title-section{
-    font-size: 80px;
-    color: var(--color-600);
-}
-.news{
-    color: var(--color-950);
-    background-color: var(--color-200);
-    padding: 64px;
+
+.title-section {
+    font-size: 5rem; /* Tamaño base para pantallas grandes (aprox. 80px) */
+    color: var(--color-600); /* Color que ya tienes */
+    text-align: start; /* Generalmente los títulos de sección quedan bien centrados */
+    margin-bottom: 30px; /* Agrega un poco de espacio debajo del título */
 }
 
-.news .card-list{
+.news{
+    justify-content: center;
+    color: var(--color-950);
+    background-color: var(--color-200);
+    padding: 24px;
+}
+
+.news .tarjeta-list{
     display:flex;
     gap: 32px;
     margin-right: auto;
 }
 
-.news .card-list .card{
+.news .tarjeta-list .tarjeta{
     padding: 24px;
     background-color:var(--color-300);
     list-style-type: none;
     border-radius: 12px;
 }
-.news .card-list .card h3{
+.news .tarjeta-list .tarjeta h3{
     font-size: 30px;
 }
-.news .card-list .card img{
+.news .tarjeta-list .tarjeta img{
+    height: 200px;
     border-radius: 8px;
     width: 100%;
     object-fit: cover;
@@ -99,19 +102,19 @@ body .bajo-titulo{
 
 /*esto modifica los graficos */
 .dashboard-preview .graficos{
-    display:flex;
-    gap: 42px;
+        display:flex;
+        gap: 42px;
     
 }
 /*esto es la cartita del grafico*/
-.dashboard-preview .graficos .card{
+.dashboard-preview .graficos .tarjeta{
     padding: 12px;
     background-color: var(--color-300);
     border-radius: 15px;
 }
 
 /*esto modifica las imagenes que vendrian a ser los graficos*/
-.dashboard-preview .graficos .card img{
+.dashboard-preview .graficos .tarjeta img{
     width: 100%;
 }
 /*modifica separa cosas :D*/
@@ -126,12 +129,27 @@ body .bajo-titulo{
     body .news ul{
         flex-direction: column; 
     }
-    /*acomodar para que cuando se pase a movile no tener problemas con desalineos*/
-    .dashboard-preview .medidor-escala{
-        margin: auto;
-        flex-direction: column;
-        justify-content: center;
-
-    }
 
 }     
+
+
+/* Media query para pantallas medianas (tablets y laptops más pequeñas) */
+@media (max-width: 992px) {
+    .title-section {
+        font-size: 4rem; /* Achica el tamaño para pantallas <= 992px (aprox. 64px) */
+    }
+}
+
+/* Media query para pantallas pequeñas (móviles y tablets en vertical) */
+@media (max-width: 768px) {
+    .title-section {
+        font-size: 3rem; /* Achica aún más para pantallas <= 768px (aprox. 48px) */
+    }
+}
+
+/* Media query para pantallas muy pequeñas (móviles) */
+@media (max-width: 576px) {
+    .title-section {
+        font-size: 2.2rem; /* Tamaño más pequeño para móviles (aprox. 35px) */
+    }
+}
