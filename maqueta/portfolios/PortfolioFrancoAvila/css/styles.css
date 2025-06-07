@@ -1,0 +1,130 @@
+/* STYLES.CSS */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --color_primario: blue;
+  --color_secundario: #252525;
+  --color_negro: #000;
+  --color_blanco: #fff;
+
+  --ancho_maximo: 1100px;
+  --padding_izquierda_derecha: 20px;
+  --padding_arriba_abajo: 100px;
+  --altura_header: 60px;
+
+  --titulo_h1: clamp(1rem, 7vw, 2.6rem);
+  --titulos_h2: clamp(1.2rem, 5.6vw, 2rem);
+  --subtitulo_seccion_principal: clamp(1.1rem, 4vw, 2rem);
+  --parrafo_seccion_principal: clamp(0.6rem, 2.3vw, 1.1rem);
+  --parrafo_secciones: clamp(1.2rem, 2.5vw, 1.4rem);
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding-top: var(--altura_header); /* Para compensar navbar fijo */
+  background-color: var(--color_blanco);
+  color: var(--color_negro);
+}
+
+
+/* ----- RESET & BASE ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  min-height: 100%;
+  background-color: lightseagreen;
+}
+
+/* ----- GLOBALES ----- */
+.estilo_secciones_globales {
+  margin: 0 auto;
+  width: min(100%, var(--ancho_maximo));
+  padding: var(--padding_arriba_abajo) var(--padding_izquierda_derecha);
+}
+
+.titulos_secciones {
+  font-size: var(--titulos_h2);
+  color: blue;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titulo_h3 {
+  color: var(--color_blanco);
+  font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+.boton i {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.article_sobreMi {
+  text-align: center;
+}
+
+.imagen_sobreMi {
+  max-width: 150px;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 8px;
+}
+.btn-img {
+  background-color: var(--color_blanco); /* Ahora fondo blanco */
+  border: none;
+  outline: none;
+  padding: 20px;
+  border-radius: 60%;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-img img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: brightness(0.8); /* Asegura buen contraste en fondo blanco */
+}
+
+.btn-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  background-color: #f0f0f0; /* Ligero gris al hacer hover */
+}
+
+.logo-ispc {
+  max-width: 250px; /* Aumentá este valor si querés que sea más grande */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.foto-franco {
+  max-width: 275px; /* Cambiá este valor para ajustar el tamaño */
+  width: 150%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+
