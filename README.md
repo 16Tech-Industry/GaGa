@@ -18,7 +18,8 @@ Los usuarios del sistema estarán conformados por:
 ## 🛠️ Tecnologías Utilizadas
 🟧 HTML  
 🟦 CSS  
-🟪 Boostrap
+🟪 Boostrap              
+
 🐙 GitHub  
 🧪 W3C Validator  
 
