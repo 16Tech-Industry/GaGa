@@ -19,7 +19,6 @@ Los usuarios del sistema estarán conformados por:
 🟧 HTML  
 🟦 CSS  
 🟪 Boostrap              
-
 🐙 GitHub  
 🧪 W3C Validator  
 
