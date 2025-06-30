@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'Monserrat';
-    src: url(/maqueta/fuentes/Montserrat/static/Montserrat-Bold.ttf) format('truetype');
+    src: url(../fuentes/Montserrat/static/Montserrat-Bold.ttf) format('truetype');
 }
 
 /*sirve para crear variales e incovar las variables en el archivo*/
@@ -87,7 +87,7 @@ header .singup{
 
 
 body{
-    background-image: url(/maqueta/img/FONDO2.png);
+    background-image: url(../img/FONDO2.png);
     background-size: COVER;
     font-family: "Monserrat";
 }

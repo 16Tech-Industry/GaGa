@@ -135,7 +135,7 @@
 }
 
 .cuerpo {
-    background-image: url(img/background-hero.jpg);
+    background-image: url(../img/background-hero.jpg);
     opacity: 90%;
     background-size: cover;
 }
@@ -157,7 +157,7 @@
     width: 50%;
     height: 30%;
     border-radius: 10px;
-    background-image: url(img/clima.PNG);
+    background-image: url(../img/clima.PNG);
     background-size: cover;
 }
 
@@ -172,7 +172,7 @@
     width: 50%;
     height: 45%;
     border-radius: 10px;
-    background-image: url(img/Historial_temperatura.PNG);
+    background-image: url(../img/Historial_temperatura.PNG);
     background-size: cover;
 }
 
@@ -180,7 +180,7 @@
     width: 50%;
     height: 45%;
     border-radius: 10px;
-    background-image: url(img/Historial_humedad.PNG);
+    background-image: url(../img/Historial_humedad.PNG);
     background-size: cover;
 }
 
@@ -188,7 +188,7 @@
     width: 50%;
     height: 40%;
     border-radius: 10px;
-    background-image: url(img/Historial_consumo.PNG);
+    background-image: url(../img/Historial_consumo.PNG);
     background-size: cover;
 }
 
@@ -196,6 +196,6 @@
     width: 50%;
     height: 40%;
     border-radius: 10px;
-    background-image: url(img/porcentaje_ahorro.PNG);
+    background-image: url(../img/porcentaje_ahorro.PNG);
     background-size: cover;
 }
