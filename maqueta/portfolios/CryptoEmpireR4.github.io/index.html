@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Metadatos -->
+    <meta charset="utf-8">
+    <meta name="author" content="Luciano Cañas DEV">
+    <meta name="description" content="Contador y Desarrollador">
+    <meta name="keywords" content="HTML, CSS, Python, MySQL">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Titulo -->
+    <title>Luciano CAÑAS | Contabilidad, Desarrollo y Gestión</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/logoIcono.ico">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CSS -->
+    <link href="/css/StylePortfolioLCanasDEV.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Barra de navegacion -->
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-toggler">
+          <a class="navbar-brand" href="#">
+            <img src="/img/logoLCanasDEVsf.png" width="200" alt="Logo de la página web">
+          </a>
+          <ul class="navbar-nav d-flex justify-content-center align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#sobre-mi">Sobre mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#proyectos">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pensamientos">Pensamientos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Seccion Hero -->
+    <section class="hero align-items-stretch">
+      <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
+        <img class="hero-imagen-desarrollador rounded-circle" src="/img/perfilGhibli1.png" alt="Foto de Jane Doe">
+        <h1>Hola, soy Luciano Cañas</h1>
+        <h2>Desarrollador y Programador.</h2>
+      </div>
+      <div class="hero-inferior">
+        <img class="hero-inferior-imagen img-fluid" src="/img/fondo2.png" alt="Monitor, laptop y logos de HTML, CSS, JavaScript y React.">
+      </div>
+    </section>
+
+    <!-- Sobre mi -->
+    <section id="sobre-mi" class="sobre-mi seccion-oscura">
+        <div class="contenedor">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="sobremi-imagen" src="/img/LucianoSF.png" alt="Logo de la página web">
+                </div>
+                <div class="col-md-8">
+                    <h2 class="seccion-titulo">Acerca de mi</h2>
+                    <p class="seccion-texto">Soy Luciano Cañas, argentino, contador público y programador. Tengo más de 10 años de experiencia en la gestión y administración de empresas.
+Con orientación en la optimización de procesos administrativos me encuentro especializándome en el área de desarrollo de software.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section class="experiencia seccion-clara">
+      <div class="container text-center">
+        <div class="row">
+          <!-- Desarrollo Web -->
+          <div class="columna col-12 col-md-4">
+            <i class="bi bi-patch-check-fill"></i>
+            <p class="experiencia-titulo">Argentina PROGRAMA</p>
+            <p class="experiencia-titulo">Ministerio de Desarrollo Productivo</p>
+            <p>Aprobada 1er Etapa #SeProgramar</p>
+            <a class="navbar-brand" href="#">
+            <img src="/img/ArgPrograma2.png" width="300" alt="Logo de la página web">
+            </a>
+          </div>
+          <!-- Articulos -->
+          <div class="columna col-12 col-md-4">
+            <i class="bi bi-patch-check-fill"></i>
+            <p class="experiencia-titulo">MBA ESSENTIALS</p>
+            <p class="experiencia-titulo">Escuela de Economía de Londres</p>
+            <p>Especializacion obtenida en Estrategía, Finanzas y Liderazgo</p>
+            <a class="navbar-brand" href="#">
+            <img src="/img/MBA.png" width="300" alt="Logo de la página web">
+            </a>
+          </div>
+          <!-- Estudiante -->
+          <div class="columna col-12 col-md-4">
+            <i class="bi bi-laptop"></i>
+            <p class="experiencia-titulo">Experiencia Educativa</p>
+            <p>Egresado Contador Publico Nacional. Universidad Católica de Cuyo.</p>
+            <p>Cursando Técnico Superior en Desarrollo de Software. Instituto Politecnico Superior de Córdoba.</p>
+            <div class="badges-contenedor">
+              <span class="badge text-bg-primary">Contaduría</span>
+              <span class="badge text-bg-primary">Gestión y Administración</span>
+              <span class="badge text-bg-primary">Desarrollo de</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
+      <h2 class="seccion-titulo texto-negro">Mis proyectos</h2>
+      <h3 class="seccion-descripcion">Estos son algunos proyectos que estoy desarrollando...</h3>
+      <!-- Galeria de Proyectos -->
+      <div class="container text-center proyectos-contenedor">
+        <div class="row">
+          <!-- Proyecto 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="/img/UniversoERPyme.png" alt="ERPyme">
+              <div class="overlay">
+                <p>Proyecto ERPyme</p>
+                <div class="iconos-contenedor">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Proyecto 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="/img/GAGAproy.png" alt="GAGA">
+              <div class="overlay">
+                <p>Proyecto GAGA</p>
+                <div class="iconos-contenedor">
+                  <a href="https://github.com/16Tech-Industry/GaGa" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Proyecto 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="/img/ARGBROKERproy.png" alt="ARG BROKER">
+              <div class="overlay">
+                <p>Proyecto ARG BROKER</p>
+                <div class="iconos-contenedor">
+                  <a href="https://github.com/16th-Tech-Group/ARGBroker-Demo" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Archivos -->
+    <section class="articulos justify-content-start">
+      <h2 class="seccion-titulo texto-negro">Archivos</h2>
+      <div class="card">
+        <div class="card-header">
+          Mis Archivos
+        </div>
+        <ul class="list-group list-group-flush">
+          <a href="/archivos/CV Luciano adolfo cañas.pdf" target="_blank" rel="noopener noreferrer">
+            <li class="list-group-item">
+              Curriculum Vitae Profesional
+            </li>
+          </a>
+        </ul>
+      </div>
+      <a href="/archivos/CV Luciano adolfo cañas.pdf" target="_blank" rel="noopener noreferrer">
+     </a>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="ensamientos" class="testimonios seccion-clara">
+      <h2 class="seccion-titulo">Pensamientos</h2>
+      <h3 class="seccion-descripcion">Estos son algunas frases relevantes en mi vida profesional...</h3>
+
+      <!-- Carrusel -->
+      <div id="testimonios-carrusel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <img class="testimonio-imagen rounded-circle" src="/img/m_jordan.webp" alt="Foto de Michael Jordan">
+              <p class="testimonio-texto">"El talento gana juegos, pero el trabajo en equipo y la inteligencia ganan campeonatos."</p>
+              <div class="testimonio-info">
+                <p class="cliente">Michael JORDAN</p>
+                <p class="cargo">Ex Jugador NBA</p>
+              </div>
+            </div>
+          </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <img class="testimonio-imagen rounded-circle" src="/img/VLombardi.png" alt="Foto de Vince Lombardi">
+              <p class="testimonio-texto">“Del compromiso individual al esfuerzo de un equipo. Eso hace que un equipo funcione, que una compañía funciona, que una sociedad y civilización funcionen.”</p>
+              <div class="testimonio-info">
+                <p class="cliente">Vince LOMBARDI</p>
+                <p class="cargo">Entrenador ganador de la NFL</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <img class="testimonio-imagen rounded-circle" src="/img/Madre-Teresa-1.jpg" alt="Foto Maria Teresa de Calcuta">
+              <p class="testimonio-texto">“Yo hago lo que usted no puede, y usted hace lo que yo no puedo. Juntos podemos hacer grandes cosas.” </p>
+              <div class="testimonio-info">
+                <p class="cliente">Maria Teresa de CALCUTA</p>
+                <p class="cargo">Nobel de la Paz</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <img class="testimonio-imagen rounded-circle" src="/img/disney.jpeg" alt="Foto de Walt Disney">
+              <p class="testimonio-texto">“Puedes diseñar y crear, y construir el lugar más maravilloso del mundo, pero se necesita gente para hacer el sueño realidad.”</p>
+              <div class="testimonio-info">
+                <p class="cliente">Walt DISNEY</p>
+                <p class="cargo">Productor Cinematográfico</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto seccion-oscura">
+      <div class="container">
+        <div class="container text-center rectangulo d-flex justify-content-evenly">
+          <div class="row">
+            <div class="col-4 col-md-14 seccion-titulo">
+              ¡Hablemos!
+            </div>
+            <div class="col-12 col-md-4 descripcion">
+              Contáctame si queres conocerme, podemos trabajar juntos.
+            </div>
+            <div class="col-12 col-md-4">
+              <a href="mailto:rio4tech@gmail.com">
+                <button type="button">
+                  Contacto
+                  <i class="bi bi-envelope-check-fill"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pie de pagina (footer) -->
+    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+      <img class="footer-logo" src="/img/logoIcono.png" width="200px" alt="logo de la pagina web">
+      <p class="footer-texto text-center">Valor = (Capacidad + Habilidades) * Actitud<br>Trabajo Colaborativo 1 + 1 = 3</p>
+      <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+        <a href="https://github.com/CryptoEmpireR4" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/luciano-adolfo-canas/" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-linkedin"></i>
+        </a>
+       </div>
+      <div class="derechos-de-autor">Creado por LCANAS DEV (2025) &#169;</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>

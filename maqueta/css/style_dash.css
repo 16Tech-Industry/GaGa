@@ -4,198 +4,71 @@
     padding: 0;
     font-family: "Montserrat";
     text-decoration: none;
-    color: black;
-}
-
-.nav {
-    background-color: #0d5845;
-    --img1: scale(1);
-    --img2: scale(0);
-}
-
-.nav:has(.cascada:target) {
-    --img1: scale(0);
-    --img2: scale(1);
-    --clip: inset(0 0 0 0);
-}
-
-.nav_contenedor {
-    width: 90%;
-    margin: 0 auto;
-    height: 70px;
-
-    display: grid;
-    grid-template-columns: max-content max-content;
-    grid-template-areas: "title img";
-    justify-content: space-between;
-    align-items: center;
-
-    overflow: hidden;
-}
-
-.nav_titulo {
-    color: #fff;
-    grid-area: title;
-}
-
-.nav_menu {
-    grid-area: img;
-    position: relative;
-    z-index: 10;
-    transform: var(--img1);
-}
-
-.nav_menu_second {
-    transform: var(--img2);
-}
-
-.nav_icono {
-    width: 30px;
-    display: block;
-}
-
-.cascada {
-    position: absolute;
-    background-color: #1daf83;
-    opacity: 80%;
-    width: 75%;
-    max-width: 300px;
-    right: 0;
-    top: 0;
-    bottom: 0;
-
-    padding: 1em;
-    display: grid;
-    align-content: center;
-    gap: 1rem;
-
-    overflow-y: auto;
-
-    clip-path: var(--clip, inset(0 0 100% 100%));
-    transition: clip-path .5s;
-}
-
-.cascada_list {
-    list-style: none;
-}
-
-.cascada_link {
-    color: rgb(184, 187, 191);
-    padding: 1em .7em;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: .6rem;
-    background-color: var(--bg, transparent);
-    border-radius: 6px;
-    position: relative;
-}
-
-.cascada_list:has( :checked) {
-    --flecha: 1fr;
-    --rotacion: rotate(180deg);
-    --bg: #b1b5bb;
-}
-
-.cascada_check {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.cascada_flecha {
-    margin-left: auto;
-    transform: var(--rotacion, 0);
-    transition: .2s transform;
-}
-
-.cascada_contenido {
-    display: grid;
-    grid-template-rows: var(--flecha, 0fr);
-    transition: .3s grid-template-rows;
-}
-
-.cascada_sub {
-    overflow: hidden;
-}
-
-.cascada_li {
-    width: 85%;
-    list-style: none;
-    margin-left: auto;
-}
-
-.cascada_ancla {
-    padding: 1em 0;
-    display: block;
-    color: #B6BABE;
-    text-decoration: none;
+    font-size: 28px;
 }
 
 .cuerpo {
-    background-image: url(../img/background-hero.jpg);
+    background-image: url(../img/background_hero.jpg);
     opacity: 90%;
     background-size: cover;
 }
 
 .contenedor {
-    width: 92%;
-    height: 1350px;
+    width: 98%;
+    height: auto;
     margin: auto;
     margin-top: 20px;
+    text-align: center;
     display: flex;
     justify-content: center;
+    align-content: center;
     flex-flow: row wrap;
-    align-content: flex-start;
-    background-color: black;
+    background-color: #0d6f56;
 
 }
 
-.clima {
-    width: 50%;
-    height: 30%;
-    border-radius: 10px;
-    background-image: url(../img/clima.PNG);
-    background-size: cover;
+.metricas {
+    width: 100%;
+    height: auto;
 }
 
-.medidor_escala {
-    width: 50%;
-    height: 40%;
-    border-radius: 10px;
-    background-color: azure;
+.historial {
+    max-width: 100%;
+    width: 95%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: row wrap;
+    gap: 5px;
+
 }
 
-.historial_temperatura {
-    width: 50%;
-    height: 45%;
-    border-radius: 10px;
-    background-image: url(../img/Historial_temperatura.PNG);
-    background-size: cover;
+.historial h2 {
+    text-align: center;
+    margin: auto;
+    width: 100%;
 }
 
-.historial_humedad {
-    width: 50%;
-    height: 45%;
+section div>img {
+    width: 95%;
+    height: auto;
+    margin: auto;
+    border: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     border-radius: 10px;
-    background-image: url(../img/Historial_humedad.PNG);
-    background-size: cover;
 }
 
-.historial_consumo {
-    width: 50%;
-    height: 40%;
-    border-radius: 10px;
-    background-image: url(../img/Historial_consumo.PNG);
-    background-size: cover;
-}
+@media (width > 1276px) {
+    .historial_consumo {
+        margin: auto;
+        margin-left: 15px;
+    }
 
-.ahorro {
-    width: 50%;
-    height: 40%;
-    border-radius: 10px;
-    background-image: url(../img/porcentaje_ahorro.PNG);
-    background-size: cover;
+    .historial_ahorro {
+        margin: auto;
+        margin-left: 20px;
+    }
 }

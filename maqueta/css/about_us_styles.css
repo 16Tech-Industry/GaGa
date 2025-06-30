@@ -1,76 +1,76 @@
 /* ---------- Página "Sobre Nosotros" ---------- */
 
 .about-content {
-    padding: 64px;
-    background-color: #edfcf5; /* compatible con index */
-    color: #052921;
+  padding: 64px;
+  background-color: #edfcf5; /* compatible con index */
+  color: #052921;
 }
 
 .about-content .intro {
-    text-align: center;
-    margin-bottom: 60px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .about-content .intro h1 {
-    font-size: 48px;
-    color: var(--color-primary);
-    margin-bottom: 16px;
+  font-size: 48px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
 }
 
 .about-content .intro p {
-    font-size: 18px;
-    max-width: 700px;
-    margin: 0 auto;
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .about-sections {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
 .about-box {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    background-color: #adedd2; /* tono usado en botones del index */
-    border-radius: 16px;
-    padding: 32px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  background-color: #adedd2; /* tono usado en botones del index */
+  border-radius: 16px;
+  padding: 32px;
+  flex-wrap: wrap;
 }
 
 .about-box img {
-    width: 300px;
-    max-width: 100%;
-    border-radius: 12px;
-    object-fit: cover;
+  width: 300px;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 .about-box div {
-    flex: 1;
+  flex: 1;
 }
 
 .about-box h2 {
-    color: var(--nav-bar-color); /* consistente con la barra */
-    font-size: 28px;
-    margin-bottom: 12px;
+  color: var(--nav-bar-color); /* consistente con la barra */
+  font-size: 28px;
+  margin-bottom: 12px;
 }
 
 .about-box p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 /* Responsive: mobile */
 @media screen and (max-width: 768px) {
-    .about-box {
-        flex-direction: column;
-        text-align: center;
-    }
+  .about-box {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .equipo-section {
   padding: 64px 20px;
-  background-color: #edfcf5; /* igual que .about-content */
+  background-color: #edfcf5;
   text-align: center;
 }
 
@@ -87,14 +87,30 @@
   padding: 0 20px;
 }
 
+/* Enlaces que rodean las tarjetas */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Tarjeta */
 .card {
-  background: #adedd2; /* mismo color que .about-box */
+  background: #adedd2;
   padding: 24px;
   border-radius: 16px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+/* Efecto hover */
+.card:hover {
+  transform: scale(1.05);
+  background-color: #89d9b6;
+}
+
+/* Textos dentro de las tarjetas */
 .card h3 {
   margin-top: 0;
   font-size: 22px;
@@ -112,6 +128,7 @@
   .equipo-grid {
     padding: 0;
   }
+
   .card {
     text-align: center;
   }
