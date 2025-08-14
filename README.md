@@ -21,7 +21,7 @@ Los usuarios del sistema estarán conformados por:
 🟪 Boostrap              
 🐙 GitHub  
 🧪 W3C Validator  
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg" alt="angular" width="30" height="30"/> Angular
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg" alt="angular" width="20" height="20"/> Angular
 
 ## 👨‍💻 Equipo
 - Bustos Bautista 
