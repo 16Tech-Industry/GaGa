@@ -15,11 +15,10 @@ Los usuarios del sistema estarán conformados por:
 - Empresas: interesadas en monitorear condiciones ambientales.
 - Gobiernos y entes reguladores: que usan esta información para diseñar políticas públicas.
 
-# 🛠️ Tecnologías Utilizadas
+## 🛠️ Tecnologías Utilizadas
 
-| Ícono | Nombre |
-|-------|--------|
 | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="20"/> | HTML |
+| :---: | :---: |
 | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="20"/> | CSS |
 | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" width="20"/> | Bootstrap |
 | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20"/> | GitHub |
