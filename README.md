@@ -35,7 +35,7 @@ Los usuarios del sistema estarán conformados por:
 - Giraudo Guillermo
 - Juárez Valentín
 
-Entre sus Funcionalidades econtramos:
+Entre sus Funcionalidades encontramos:
 - Recolección automática de datos desde sensores o fuentes externas (API).
 - Almacenamiento estructurado de la información recolectada.
 - Procesamiento de los datos y cálculo de métricas.
