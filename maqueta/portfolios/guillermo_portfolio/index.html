@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guillermo Giraudo - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>  <!--bauti-->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="icons/logogg2.svg" alt="Logo GG" class="logo-navbar" />
+          Mi Portfolio
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          ☰
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#habilidades">Tecnologías</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header>
+        <h1>Guillermo Giraudo</h1>
+        <p>Estudiante de Desarrollo de Software con pasión por automatizar, diseñar y optimizar</p>
+    </header>
+
+    <section id="sobre-mi">
+      <div class="sobre-mi-contenedor">
+        <div class="foto-container">
+          <img src="icons/mi_foto.png" alt="Foto de Guillermo Giraudo" class="foto-perfil" />
+        </div>
+        <div class="texto-sobre-mi">
+          <h2>Sobre mí</h2>
+          <p>Hola, soy Guillermo Giraudo, tengo 31 años. Soy estudiante de la Tecnicatura Superior en Desarrollo de Software con pasión por automatizar procesos, diseñar interfaces limpias y optimizar soluciones. Disfruto aprender nuevas tecnologías y aplicar buenas prácticas para construir sistemas eficientes y funcionales.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades">
+        <h2>Tecnologías</h2>
+        <div class="iconos">
+            <img src="icons/python.svg" alt="Python" title="Python" />
+            <img src="icons/sql.svg" alt="SQL" title="SQL" />
+            <img src="icons/html.svg" alt="HTML" title="HTML" />
+            <img src="icons/css.svg" alt="CSS" title="CSS" />
+            <img src="icons/shell.svg" alt="Shell" title="Shell" />
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="proyecto">
+            <h3>ARGBroker</h3>
+            <p>Demo de compra y venta de acciones que cotizan en el MERVAL.</p>
+            <a href="https://github.com/16th-Tech-Group/ARGBroker-Demo" target="_blank">Ver en GitHub</a>
+        </div>
+        <div class="proyecto">
+            <h3>GaGa - Green Analytics</h3>
+            <p>Sistema para el monitoreo ambiental y la toma de decisiones sostenibles.</p>
+            <a href="https://github.com/16Tech-Industry/GaGa" target="_blank">Ver en GitHub</a>
+        </div>
+        <div class="proyecto">
+            <h3>DEBIAN TOOLKIT</h3>
+            <p>Proyecto basado en scripts de Linux para administración avanzada.</p>
+            <a href="https://github.com/CryptoEmpireR4/SistemasOperativosISPC" target="_blank">Ver en GitHub</a>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <address class="email-contacto" id="email">
+            giraudoguillermo7@gmail.com
+        </address>
+        <div class="botones-contacto">
+            <a href="mailto:giraudoguillermo7@gmail.com" class="btn">Enviar email</a>
+            <button class="btn copiar-btn" id="copiarEmail" title="Copiar email">
+                <img src="icons/copy.svg" alt="Copiar email" class="icono-copiar">
+            </button>
+            <a href="cv.pdf" class="btn" download>Descargar CV</a>
+            <a href="https://github.com/GuillermoGiraudo7" class="btn" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/guillermo-giraudo-294a73369/" class="btn" target="_blank">Linkedin</a>
+        </div>
+    </section>
+
+    <footer>
+      <div class="footer-contenido">
+        <p>Hecho con 💻 y ☕ por Guillermo Giraudo</p>
+        <div class="footer-redes">
+          <a href="mailto:giraudoguillermo7@gmail.com" title="Email">
+            <img src="icons/email.svg" alt="Email" class="footer-icono">
+          </a>
+          <a href="https://github.com/GuillermoGiraudo7" target="_blank" title="GitHub">
+            <img src="icons/github.svg" alt="GitHub" class="footer-icono">
+          </a>
+          <a href="https://www.linkedin.com/in/guillermo-giraudo-294a73369/" target="_blank" title="Linkedin">
+            <img src="icons/linkedin.svg" alt="Linkedin" class="footer-icono">
+          </a>
+        </div>
+        <p class="footer-copyright">© 2025 Guillermo Giraudo. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+
+      navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("show");
+        });
+      });
+
+      document.getElementById("copiarEmail").addEventListener("click", function () {
+        const email = document.getElementById("email").textContent;
+        navigator.clipboard.writeText(email).then(() => {
+          alert("Correo copiado al portapapeles ✅");
+        });
+      });
+    </script>
+</body>
+</html>

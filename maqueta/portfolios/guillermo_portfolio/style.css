@@ -1,0 +1,289 @@
+/* ==== Reset general ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==== Variables ==== */
+:root {
+  --fondo: #121212;
+  --fondo-secundario: #1e1e1e;
+  --texto: #e0e0e0;
+  --acento: #00ffd5;
+  --gris: #888;
+  --hover: #2a2a2a;
+  --borde: #333;
+  --sombra: rgba(0, 0, 0, 0.5);
+  --fuente: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==== Estilos generales ==== */
+body {
+  font-family: var(--fuente);
+  background-color: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+  padding-top: 70px;
+}
+
+h1, h2, h3 {
+  color: var(--acento);
+}
+
+a {
+  color: var(--acento);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==== Navbar ==== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px; /* altura fija */
+  background-color: var(--fondo-secundario);
+  border-bottom: 1px solid var(--borde);
+  box-shadow: 0 2px 5px var(--sombra);
+  z-index: 999;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--texto);
+}
+
+.logo-navbar {
+  height: 60px;
+  max-height: 100%;
+  width: auto;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: var(--texto);
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--acento);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--texto);
+  cursor: pointer;
+}
+
+h1, h2, h3 {
+  color: var(--acento);
+  text-align: center;
+}
+
+/* ==== Header ==== */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--fondo-secundario);
+}
+
+/* ==== Sobre mí ==== */
+.sobre-mi-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
+
+.foto-perfil {
+  width: 180px;
+  border-radius: 50%;
+  border: 3px solid var(--acento);
+}
+
+.texto-sobre-mi {
+  max-width: 600px;
+  text-align: left; /* Esto alinea el texto a la izquierda */
+}
+
+/* ==== Tecnologías ==== */
+.iconos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.iconos img {
+  width: 60px;
+  transition: transform 0.3s;
+  filter: invert(1);
+}
+
+.iconos img:hover {
+  transform: scale(1.1);
+}
+
+/* ==== Proyectos ==== */
+.proyecto {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: var(--fondo-secundario);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--sombra);
+}
+
+.proyecto h3 {
+  margin-bottom: 10px;
+}
+
+.proyecto a {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* ==== Contacto ==== */
+.email-contacto {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.botones-contacto {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: var(--acento);
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #00c7a6;
+}
+
+.icono-copiar {
+  width: 20px;
+}
+
+/* ==== Footer ==== */
+footer {
+  background-color: var(--fondo-secundario);
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+.footer-redes {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-icono {
+  width: 25px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+.footer-icono:hover {
+  transform: scale(1.2);
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: var(--fondo-secundario);
+    width: 100%;
+    padding: 15px 0;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .sobre-mi-contenedor {
+    flex-direction: column;
+    /* Eliminamos text-align: center para no forzar alineación */
+  }
+
+  .texto-sobre-mi {
+    text-align: center; /* Ahora solo el texto se alinea al centro en móviles */
+  }
+
+  .botones-contacto {
+    flex-direction: column;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#sobre-mi h2 {
+  text-align: left;
+}
+
+section {
+  scroll-margin-top: 100px; /* espacio de compensación */
+}
