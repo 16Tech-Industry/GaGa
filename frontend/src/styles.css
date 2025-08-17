@@ -1,1 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --color-50: #edfcf5 ;
+    --color-100: #d4f7e6 ;
+    --color-200: #adedd2 ;
+    --color-300: #77deb8 ;
+    --color-400: #40c79a ; 
+    --color-500: #1daf83 ;
+    --color-600: #108b69 ;
+    --color-700: #0d6f56 ;
+    --color-800: #0d5845 ;
+    --color-900: #0b493a ;
+    --color-950: #052921 ;
+}
+
+*{
+    margin: 0;
+    border: 0px;
+    padding: 0;
+}
