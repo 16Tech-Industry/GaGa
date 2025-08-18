@@ -1,1 +1,24 @@
-<p>usuario works!</p>
+<!-- src/app/usuario/usuario.html -->
+
+<h2>Lista de Usuarios Registrados</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Empresa</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <!-- Itera sobre el array 'usuarios' y crea una fila por cada uno -->
+    <tr *ngFor="let usuario of usuarios">
+      <th scope="row">{{ usuario.id }}</th>
+      <td>{{ usuario.nombre }}</td>
+      <td>{{ usuario.email }}</td>
+      <td>{{ usuario.empresa }}</td>
+    </tr>
+  </tbody>
+</table>
+

@@ -4,7 +4,7 @@ import { DashAdm } from './dash-adm/dash-adm';
 
 // Componentes del dashboard
 import { Empresa } from './dash-adm/empresa/empresa';
-import { Usuario} from './dash-adm/usuario/usuario';
+import { Usuario, UsuarioComponent} from './dash-adm/usuario/usuario';
 import { Centrales} from './dash-adm/centrales/centrales';
 
 export const routes: Routes = [
@@ -16,7 +16,7 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'empresa', pathMatch: 'full' },
       { path: 'empresa', component: Empresa },
-      { path: 'usuario', component: Usuario },
+      { path: 'usuario', component: UsuarioComponent },
       { path: 'centrales', component: Centrales },
     ],
   },

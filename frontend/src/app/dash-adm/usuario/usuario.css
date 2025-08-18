@@ -1,0 +1,26 @@
+/* src/app/usuario/usuario.css */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Para eliminar los espacios entre celdas */
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+}
+
+tr:nth-child(even) { /* Estilo para filas pares */
+  background-color: #f9f9f9;
+}
+
+tr:hover { /* Efecto al pasar el ratón por encima */
+  background-color: #f1f1f1;
+}
