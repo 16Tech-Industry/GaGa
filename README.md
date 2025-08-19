@@ -16,6 +16,7 @@ Los usuarios del sistema estarán conformados por:
 - Gobiernos y entes reguladores: que usan esta información para diseñar políticas públicas.
 
 ## 🛠️ Tecnologías Utilizadas
+<<<<<<< HEAD
 
 | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="20"/> | HTML |
 | :---: | :---: |
@@ -26,6 +27,13 @@ Los usuarios del sistema estarán conformados por:
 | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angular/angular-original.svg" width="20"/> | Angular |
 | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="20"/> | TypeScript |
 
+=======
+🟧 HTML  
+🟦 CSS  
+🟪 Boostrap
+🐙 GitHub  
+🧪 W3C Validator  
+>>>>>>> dev
 
 ## 👨‍💻 Equipo
 - Bustos Bautista 
