@@ -1,0 +1,12 @@
+/* Footer */
+.footer {
+  background-color: lightskyblue;
+
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1rem;
+  margin-top: 40px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
