@@ -1,8 +1,26 @@
 /* src/app/usuario/usuario.css */
+.buscador {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 0px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Asegura que el padding no cambie el ancho total */
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.buscador:focus {
+  outline: none; /* Elimina el borde de enfoque por defecto */
+  border-color: #007bff; /* Cambia el color del borde al hacer clic */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
 table {
   width: 100%;
   border-collapse: collapse; /* Para eliminar los espacios entre celdas */
-  margin-top: 20px;
+  margin-top: 3px;
 }
 
 th, td {

@@ -13,7 +13,3 @@
   overflow-y: auto; /* Permite desplazamiento si el contenido es muy largo */
 }
 
-/* Estilos para el sidebar (navegación) */
-app-nav {
-  /* No se necesita un ancho fijo si el nav ya tiene un ancho definido en su propio CSS */
-}
