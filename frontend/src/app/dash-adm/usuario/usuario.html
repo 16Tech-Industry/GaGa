@@ -10,7 +10,8 @@
 
 <table class="table">
   <thead>
-    <tr>
+    <!-- ACA ESTA ESTA LA TABLA-->
+    <tr>   <!-- estos son los header-->
       <th>ID</th>
       <th>Nombre</th>
       <th>Email</th>
@@ -20,6 +21,7 @@
   </thead>
   <tbody class="table-group-divider">
     <tr *ngFor="let usuario of usuarios">
+      <!-- aca se genera dinamicamente las filas-->
       <th scope="row">{{ usuario.id }}</th>
       <td>{{ usuario.nombre }}</td>
       <td>{{ usuario.email }}</td>

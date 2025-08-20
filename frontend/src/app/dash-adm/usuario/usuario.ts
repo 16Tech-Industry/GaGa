@@ -19,10 +19,12 @@ export interface Usuario {
 })
 export class UsuarioComponent { // Cambié el nombre de la clase a UsuarioComponent (convención)
   // 2. Array de datos de ejemplo (Data)
+
+  //esto es interpolacion donde se harcodean los datos, pero en el html hay otra interpolacion donde se muestran los datos
   usuarios: Usuario[] = [
-    { id: 1, nombre: 'Juan Pérez', email: 'juan.perez@example.com', empresa: 'FullAnito'},
-    { id: 2, nombre: 'María García', email: 'maria.garcia@example.com', empresa: 'FullAnito'},
-    { id: 3, nombre: 'Carlos Rodríguez', email: 'carlos.rodriguez@example.com', empresa: 'FullAnito'},
-    { id: 4, nombre: 'Esteban Quito', email: 'esteban.quito@example.com', empresa: 'FullAnito'},
+    { id: 1, nombre: 'Juan Pérez', email: 'juan.perez@example.com', empresa: 'Ardu'},
+    { id: 2, nombre: 'María García', email: 'maria.garcia@example.com', empresa: 'Ardu'},
+    { id: 3, nombre: 'Carlos Rodríguez', email: 'carlos.rodriguez@example.com', empresa: 'Samsung'},
+    { id: 4, nombre: 'Esteban Quito', email: 'esteban.quito@example.com', empresa: 'Hiksemi'},
   ];
 }

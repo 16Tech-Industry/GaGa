@@ -11,7 +11,7 @@ export const routes: Routes = [
 
   // Ruta del dashboard, que contiene las rutas anidadas
   {
-    path: 'dashboard',
+    path: 'dashboard-admin',
     component: DashAdm,
     children: [
       { path: '', redirectTo: 'empresa', pathMatch: 'full' },
