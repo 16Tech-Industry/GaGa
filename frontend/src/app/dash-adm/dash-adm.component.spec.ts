@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashAdm } from './dash-adm';
+import { DashAdm } from './dash-adm.component';
 
 describe('DashAdm', () => {
   let component: DashAdm;
