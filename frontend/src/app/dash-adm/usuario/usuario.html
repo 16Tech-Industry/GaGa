@@ -1,6 +1,13 @@
-<!-- src/app/usuario/usuario.html -->
 <h2>Lista de Usuarios Registrados</h2>
-<input type="text" class="buscador" placeholder="Buscar...">
+
+<div class="top-controls">
+  <input type="text" class="buscador" placeholder="Buscar...">
+  
+  <div class="action-buttons">
+    <button class="square-button add-button">Agregar</button>
+  </div>
+</div>
+
 <table class="table">
   <thead>
     <tr>
@@ -8,16 +15,21 @@
       <th>Nombre</th>
       <th>Email</th>
       <th>Empresa</th>
+      <th></th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
-    <!-- Itera sobre el array 'usuarios' y crea una fila por cada uno -->
     <tr *ngFor="let usuario of usuarios">
       <th scope="row">{{ usuario.id }}</th>
       <td>{{ usuario.nombre }}</td>
       <td>{{ usuario.email }}</td>
-      <td>{{ usuario.empresa }}</td>  
+      <td>{{ usuario.empresa }}</td>
+      <td>
+        <div class="action-buttons">
+          <button class="square-button edit-button">Editar</button>
+          <button class="square-button delete-button">Borrar</button>
+        </div>
+      </td>  
     </tr>
   </tbody>
 </table>
-
