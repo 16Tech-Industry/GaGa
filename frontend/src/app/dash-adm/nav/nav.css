@@ -1,7 +1,7 @@
 /* Estilos generales para pantallas de escritorio */
 .sidebar {
   align-content: top;
-  width: 200px;
+  width: 300px;
   height: 100vh;
   background-color: var(--color-800);
   color: white;
