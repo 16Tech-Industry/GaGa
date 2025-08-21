@@ -3,9 +3,9 @@ import { Routes } from '@angular/router';
 import { DashAdm } from './dash-adm/dash-adm';
 
 // Componentes del dashboard
-import { Empresa } from './dash-adm/empresa/empresa';
-import { Usuario, UsuarioComponent} from './dash-adm/usuario/usuario';
-import { Centrales} from './dash-adm/centrales/centrales';
+import { EmpresaComponent } from './dash-adm/empresa/empresa';
+import { UsuarioComponent} from './dash-adm/usuario/usuario';
+import { CentralesComponent} from './dash-adm/centrales/centrales';
 
 export const routes: Routes = [
 
@@ -15,9 +15,9 @@ export const routes: Routes = [
     component: DashAdm,
     children: [
       { path: '', redirectTo: 'empresa', pathMatch: 'full' },
-      { path: 'empresa', component: Empresa },
+      { path: 'empresa', component: EmpresaComponent },
       { path: 'usuario', component: UsuarioComponent },
-      { path: 'centrales', component: Centrales },
+      { path: 'centrales', component: CentralesComponent },
     ],
   },
   
