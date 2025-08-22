@@ -1,0 +1,48 @@
+<section class="alertas-container">
+  <h2>Configuración de Alertas</h2>
+
+  <form class="alertas-form" (ngSubmit)="guardarConfiguracion()">
+    <div class="form-group mb-3">
+      <label for="temperaturaUmbral">Umbral de Temperatura (°C):</label>
+      <input type="number" [(ngModel)]="temperaturaUmbral" name="temperaturaUmbral" class="form-control" id="temperaturaUmbral">
+    </div>
+
+    <div class="form-check mb-2">
+      <input type="checkbox" [(ngModel)]="notificarPorEmail" name="notificarPorEmail" class="form-check-input" id="emailCheck">
+      <label class="form-check-label" for="emailCheck">Notificar por Email</label>
+    </div>
+
+    <div class="form-check mb-3">
+      <input type="checkbox" [(ngModel)]="notificarPorSonido" name="notificarPorSonido" class="form-check-input" id="sonidoCheck">
+      <label class="form-check-label" for="sonidoCheck">Notificar con Sonido</label>
+    </div>
+
+    <button type="submit" class="btn btn-success">Guardar Configuración</button>
+  </form>
+
+  <hr>
+
+  <h3>Alertas Activas</h3>
+  <table class="table table-striped mt-3" *ngIf="alertasActivas.length > 0; else noAlertas">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Tipo</th>
+        <th>Valor</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let alerta of alertasActivas">
+        <td>{{ alerta.fecha | date:'short' }}</td>
+        <td>{{ alerta.tipo }}</td>
+        <td>{{ alerta.valor }}</td>
+        <td>{{ alerta.estado }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noAlertas>
+    <p>No hay alertas activas actualmente.</p>
+  </ng-template>
+</section>
