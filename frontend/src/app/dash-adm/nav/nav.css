@@ -1,13 +1,20 @@
+/* Estilos generales para pantallas de escritorio */
 .sidebar {
-  width: 250px;
+  align-content: top;
+  width: 300px;
   height: 100vh;
-  background-color: var(--color-700);
+  background-color: var(--color-800);
   color: white;
-  padding: 1rem;
+  padding: 24px;
+  transition: all 0.3s ease-in-out; /* Transición para un efecto de apertura suave */
 }
 
 .sidebar-header {
-  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: row;
+  align-items: center;
+  padding-bottom: 2rem;
   border-bottom: 1px solid var(--color-50);
   margin-bottom: 1rem;
 }
