@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { DashAdm } from './dash-adm/dash-adm';
-import { HomeView } from './home.view/home.view';
+import { HomeView } from './home_view/home_view';
 
 export const routes: Routes = [
     { path: '', component: HomeView, title: 'Home' },
