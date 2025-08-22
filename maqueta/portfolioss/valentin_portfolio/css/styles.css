@@ -1,0 +1,132 @@
+.content {
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column wrap;
+    font-size: 18px;
+    background-image: url(../img/background_body.webp);
+}
+
+.card {
+    width: 30%;
+    height: auto;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease;
+    background-color: rgb(248, 240, 231);
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    margin: auto;
+    margin-top: 3px;
+    padding: 5px;
+    text-align: center;
+    color: rgb(24, 63, 87);
+}
+
+div>img {
+    max-width: 95%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+            minmax(150px, 1fr));
+    gap: 32px;
+    margin: auto;
+    border-radius: 5px;
+    background-size: auto;
+
+}
+
+div a img {
+    max-width: 95%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+            minmax(150px, 1fr));
+    gap: 32px;
+    margin: auto;
+    border-radius: 5px;
+    background-size: auto;
+
+}
+
+p {
+    max-width: 100%;
+    text-align: left;
+    padding: 10px;
+    overflow: hidden;
+    color: rgb(73, 57, 88);
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(43, 40, 38);
+}
+
+footer h1 {
+    max-width: 100%;
+    color: rgb(245, 245, 245);
+}
+
+footer div {
+    max-width: 100%;
+    height: 30px;
+    padding: 5px;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #6d6d6d;
+    color: rgb(245, 245, 245);
+}
+
+.enlaces {
+    max-width: 30%;
+    height: 60px;
+
+}
+
+
+.gmail {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+    background-image: url(../img/email.png);
+}
+
+.github {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+    background-image: url(../img/github.png);
+}
+
+.linkedin {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+    background-image: url(../img/linkedin.png);
+}
+
+@media (width < 800px) {
+    .card {
+        width: 95%;
+        height: auto;
+        margin: 15px;
+        margin-top: 12%;
+    }
+}

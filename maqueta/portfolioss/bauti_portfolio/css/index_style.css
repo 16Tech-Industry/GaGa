@@ -1,0 +1,135 @@
+:root{
+    --color-50: #f5f6f6;
+    --color-100: #e5e7e8;
+    --color-200: #cdd0d4;
+    --color-300: #aaaeb6;
+    --color-400: #808690;
+    --color-500: #656b75;
+    --color-600: #575b63;
+    --color-700: #4b4e55;
+    --color-800: #414349;
+    --color-900: #3a3c3f;
+    --color-950: #242528;
+    --color-1050: #111213;
+}
+
+*{
+    /*all color https://uicolors.app/generate/4b4e55*/ 
+    margin: 0;
+    border: 0px;
+    padding: 0;
+    font-family: "Oxygen", sans-serif;
+    text-decoration: none;
+    color: var(--color-50);
+}
+
+
+.oxygen-light {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.oxygen-regular {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.oxygen-bold {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+}
+
+
+body {
+    background-color: var(--color-950);
+}
+
+section{
+    max-width: 800px;    
+    margin: auto;
+    margin-bottom: 0px;
+    align-items: center;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.title{
+    font-size: 32px;
+}
+
+.presentacion{
+    text-align: center;
+}
+.presentacion h1{
+    font-size: 20px;
+    color: var(--color-300);
+}
+
+.presentacion h2{
+    font-size: 40px;
+    color: var(--color-50);
+}
+
+.descripcion{
+    display:flex;
+    gap: 40px;
+    color: var(--color-50);
+}
+.descripcion img{
+    border-radius: 50%;
+    width: 12rem;
+}
+
+.tarjeta{
+    padding: 1em;
+    color: var(--color-100);
+    background-color: var(--color-700);
+}
+
+.xp h3{
+    font-size: 24px;
+}
+
+
+.badge-custom{
+    /*background-color: red;*/
+    color:white;
+    border: 1px solid white; /* Ajusta el grosor si quieres */
+}
+
+.soft{
+    font-size: 24px;
+}
+
+footer{
+    background-color: var(--color-800);
+    align-items: center;
+    text-align: center;
+    opacity:70%;
+}
+
+.iconos{
+    width:48px;
+    height: 48px;
+    margin: 10px;
+    padding: 8px;
+    background: white;
+    border-radius: 999px;
+    margin-bottom: 16px;
+}
+
+.tags{
+    padding: 4px 8px;
+    display: inline-flex;
+    color: #75b798;
+    background: #051b11;
+    border: 2px solid #0f5132;
+    border-radius: 8px
+}
+
