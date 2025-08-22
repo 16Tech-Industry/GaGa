@@ -1,0 +1,35 @@
+<main>
+    <article class="contenedor-registro">
+        <article>
+            <h2 class="registro-tit">Registrarse</h2>
+        </article>
+        <form [formGroup]="formularioRegistro" (ngSubmit)="onSubmit()">
+            <section class="form-grupo">
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" formControlName="nombre" placeholder="Ingrese su nombre(s)">
+            </section>
+            <section class="form-grupo">
+                <label for="apellido"> Apellido: </label>
+                <input type="text" id="apellido" formControlName="apellido" placeholder="Ingrese su apellido(s)">
+            </section>
+            <section class="form-grupo">
+                <label for="email"> Email: </label>
+                <input type="email" id="email" formControlName="email" placeholder="hola@xxx.com">
+                <p class="error" *ngIf="formularioRegistro.get('email')?.invalid && formularioRegistro.get('email')?.touched">
+                        Por favor, ingrese un email válido.
+                    </p>
+            </section>
+            <section class="form-grupo">
+                <label for="contrasenia">Contraseña: </label>
+                <input type="password" id="contrasenia" formControlName="contrasenia" placeholder="Al menos 8 caracteres">
+                <p class="error" *ngIf="formularioRegistro.get('contrasenia')?.invalid && formularioRegistro.get('contrasenia')?.touched">
+                        La contraseña debe tener 5-8 caracteres, una mayúscula y un caracter especial.
+                    </p>
+            </section>
+            <section id="btn-registrar">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </section>
+        </form>
+    </article>
+</main>
+

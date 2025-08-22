@@ -10,10 +10,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image:url(../img/FONDO2.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; 
+    background-color: #cceee0;
     width: 100%;
     height: 100%;
     padding: 1rem;
@@ -30,8 +27,9 @@ label{
     font-size: 2rem;
     margin-bottom: 0.3rem;
 }
+
 .contenedor-registro{  
-    background:rgba(255, 255, 255, 0.2);
+    background-color: #1daf83;          
     padding: 35px;
     border-radius: 5px 30px;
     border: solid 2px grey;
@@ -40,6 +38,7 @@ label{
     width: 100%;
     box-sizing: border-box;
 }
+
 input{
     height: 1.8rem;
 }
