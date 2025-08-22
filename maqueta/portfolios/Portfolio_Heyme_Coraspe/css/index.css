@@ -1,0 +1,225 @@
+/*#121f39 #166581 #4e3768 #321c3a #d86375 #f31cb6 #bdbdbd
+font-family: "Doto", sans-serif;  font-family: 'Courier New', Courier, monospace;*/
+/**/
+
+html, body, main{
+    background-color: #121f39;
+    box-sizing: border-box;
+    color:#bdbdbd;
+}
+
+li, ul, list-item, a{
+    list-style: none;    
+    text-decoration: none !important;
+}
+/* sección sobre mí*/
+.presentacion{
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    gap: 10px;
+}
+
+.presentacion-contenido1{
+    display: flex ;
+    flex-direction: row;
+    align-items: center;
+    background-color: #4e3768;
+    padding: 0 25px 0 25px;
+    border-radius:60px;
+}
+
+.presentacion-contenido2{
+    display: flex ;
+    flex-direction: row;
+    align-items: center;
+    background-color: #321c3a;
+    padding: 0 25px 0 25px;
+    border-radius:60px;
+}
+
+.imggata{
+    width: 70px;
+    height: 80px;
+}
+
+.presentacion-tituloppal{
+    color: #e07787;
+    font-size: 55px;
+    font-family: "Doto", sans-serif;
+    align-items: center;
+    padding-left: 35px;
+}
+
+.presentacion-titulosec{
+    color: #e47f8e;
+    font-size: 45px;
+    font-family: "Doto", sans-serif;
+}
+
+/* FIN sección sobre mí*/
+
+/*INICIO formación y habilidades*/
+.formacion-habilidades{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    gap: 20px;
+
+}
+
+.h-contacto,.h-formacion, .h-habilidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ .formacion-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contacto-tit, .formacion-tit, .skills-tit{
+    font-family: "Doto", sans-serif;
+    font-size: 45px;
+    color: #d86375;
+    border-radius: 80px;
+    padding: 9px;
+}
+
+.h-contacto {
+    background-color: #321c3a;
+    border-radius:60px;
+}
+
+.h-formacion{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+}
+
+.formacion-col1{
+    background-color: #4e3768;
+    border-radius:60px;
+    padding: 25px;
+}
+
+.formacion-p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.formacion-col2{
+    background-color: #321c3a;
+    border-radius:60px;
+    padding: 25px;
+}
+
+.h-habilidades{
+    background-color: #4e3768;
+    border-radius:60px;
+}
+
+.formacion-izq, .formacion-der{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-icons{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+}
+/*FIN formación y habilidades*/
+ 
+/*INICIO proyectos*/
+.proyectos-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 6fr));
+    gap: 1.15rem;
+}
+
+.proyectos-card {
+    background-color: #321c3a;
+    overflow: hidden;
+    border-radius:60px;
+}
+
+.proyectos-card1{
+    background-color: #4e3768;
+    overflow: hidden;
+    border-radius:60px;
+}
+
+.proyecto-card-img{
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.section-tit{
+    margin-bottom: 0.95rem;
+    color: #bdbdbd;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-tit{
+    color: #d86375;
+    font-size: 1.8rem;
+    font-family: "Doto", sans-serif;
+
+    border-radius: 80px;
+    padding: 8px;
+}
+
+.proyectos-tit, .presentacion-tit{
+    text-align: center;
+    color: #d86375;
+    font-family: "Doto", sans-serif;
+    font-size: 3rem;
+    background-color: #321c3a;
+    border-radius: 80px;
+    margin: 20px;
+}
+
+.proyectos-p{
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 768px){
+    .presentacion, .formacion-habilidades, .h-formacion{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imggata{
+        visibility: hidden;
+    }
+
+    .formacion-tit, .skills-tit{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .proyectos-p{
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    .presentacion-tituloppal, .presentacion-titulosec{
+        font-size: 2rem;
+    }
+    /**
+    .presentacion-contenido1, .presentacion-contenido2,.formacion-habilidades{
+        width: 100%;
+        max-width: 500px;
+        flex-direction: column;
+        align-items: center;
+    }*/
+}
