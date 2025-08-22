@@ -1,5 +1,5 @@
 .nav-personalizada {
-  background-color: #1daf83; 
+  background-color: #1daf83;
 }
 
 .ul-personalizada {
@@ -11,7 +11,7 @@
 }
 
 .navbar-nav .nav-link {
-  
+
   font-weight: 600;
 }
 
@@ -42,4 +42,3 @@
   background-color: var(--color-700);
   color: var(--color-50);
 }
-

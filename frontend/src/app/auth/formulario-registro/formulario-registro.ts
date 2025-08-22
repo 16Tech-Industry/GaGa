@@ -1,0 +1,34 @@
+import { Component } from '@angular/core';
+import {ReactiveFormsModule, FormGroup, FormControl, Validators,} from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-formulario-registro',
+  standalone: true,
+  imports: [ReactiveFormsModule, CommonModule ],
+  templateUrl: './formulario-registro.html',
+  styleUrl: './formulario-registro.css'
+})
+export class FormularioRegistro {
+formularioRegistro: FormGroup;
+
+  constructor(private router: Router) {
+    this.formularioRegistro = new FormGroup({
+    nombre: new FormControl('', Validators.required),
+    apellido: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    contrasenia: new FormControl('', [Validators.required, Validators.pattern('^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{5,8}$') ])
+
+});
+}
+
+  onSubmit() {
+    console.log('El formulario es válido:', this.formularioRegistro.valid);
+    console.log('Valores del formulario:', this.formularioRegistro.value);
+
+    if (this.formularioRegistro.valid) {
+      this.router.navigate(['/']);
+    }
+  }
+}
