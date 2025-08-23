@@ -29,7 +29,6 @@ export const routes: Routes = [
     ],
   },
   // Ruta comodín para manejar URLs no encontradas
-  { path: '**', redirectTo: '' },
   {
     path: 'dash-user',
     component: DashUser,
@@ -40,4 +39,5 @@ export const routes: Routes = [
       { path: 'alertas', component: Alertas },
     ]
   },
+  { path: '**', redirectTo: '' },
 ];
