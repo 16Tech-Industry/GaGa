@@ -101,4 +101,16 @@
   "cli": {
     "analytics": false
   }
+},
+"cli": {
+  "analytics": false
+},
+"cli": {
+  "analytics": "fc522eba-2c16-49c9-8493-91bd68cb2fc0"
+},
+"cli": {
+  "analytics": "cc3c6800-6fdf-463b-a2fa-991cd1334a25"
+},
+"cli": {
+  "analytics": "83fb929d-bd35-4c70-a6a6-93ed23c538e8"
 }

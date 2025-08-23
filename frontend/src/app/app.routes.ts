@@ -4,6 +4,7 @@ import { DashAdm } from './dash-adm/dash-adm';
 import { DashUser } from './dash-user/dash-user';
 import { FormularioRegistro } from './auth/formulario-registro/formulario-registro';
 import { HomeView } from './home_view/home_view';
+import { Ingreso } from './auth/ingreso/ingreso';
 // Componentes del dashboard
 import { EmpresaComponent } from './dash-adm/empresa/empresa';
 import { UsuarioComponent } from './dash-adm/usuario/usuario';
@@ -18,7 +19,8 @@ import { Error404Component } from './error404/error404.component';
 
 export const routes: Routes = [
   //{path: '', component: FormularioRegistro},
-  { path: 'inicio', component: FormularioRegistro },
+  { path: 'registrar', component: FormularioRegistro },
+  { path: 'login', component: Ingreso },
 
   // Ruta del dashboard, que contiene las rutas anidadas
   {
