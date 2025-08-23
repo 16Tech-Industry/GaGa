@@ -12,6 +12,8 @@ import { CentralesComponent } from './dash-adm/centrales/centrales';
 import { Metricas } from './components/metricas/metricas';
 import { Historial } from './components/historial/historial';
 import { Alertas } from './components/alertas/alertas';
+import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
+import { Error404Component } from './error404/error404.component';
 
 
 export const routes: Routes = [
@@ -42,5 +44,13 @@ export const routes: Routes = [
   },
   { path: '', component: HomeView, title: 'Home' },
   // aca agregar ubicacion de error :D
-  { path: '**', redirectTo: '' },
+
+
+
+  // Redirige la URL raíz ('') a la página de 'quienes-somos'
+  { path: '', redirectTo: '/quienes-somos', pathMatch: 'full' }, 
+  // Esta es la ruta para tu componente 'quienes-somos'
+  { path: 'quienes-somos', component: QuienesSomosComponent },
+  { path: '**', component: Error404Component }
+
 ];

@@ -1,0 +1,135 @@
+/* ---------- Página "Sobre Nosotros" ---------- */
+
+.about-content {
+  padding: 64px;
+  background-color: #edfcf5;
+  color: #052921;
+}
+
+.about-content .intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-content .intro h1 {
+  font-size: 48px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.about-content .intro p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.about-box {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  background-color: #adedd2;
+  border-radius: 16px;
+  padding: 32px;
+  flex-wrap: wrap;
+}
+
+.about-box img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.about-box div {
+  flex: 1;
+}
+
+.about-box h2 {
+  color: var(--nav-bar-color);
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.about-box p {
+  font-size: 16px;
+}
+
+/* Responsive: mobile */
+@media screen and (max-width: 768px) {
+  .about-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.equipo-section {
+  padding: 64px 20px;
+  background-color: #edfcf5;
+  text-align: center;
+}
+
+.equipo-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: var(--color-primary);
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  padding: 0 20px;
+}
+
+/* Enlaces que rodean las tarjetas */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Tarjeta */
+.card {
+  background: #adedd2;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto hover */
+.card:hover {
+  transform: scale(1.05);
+  background-color: #89d9b6;
+}
+
+/* Textos dentro de las tarjetas */
+.card h3 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #052921;
+}
+
+.card p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #052921;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .equipo-grid {
+    padding: 0;
+  }
+
+  .card {
+    text-align: center;
+  }
+}
