@@ -1,0 +1,21 @@
+<div class="text-center">
+    <main class="form-signin">
+        <form [formGroup]="form">
+            <h2 class="registro-tit">Ingresar</h2>
+            <div class="contenedor-registro">
+                <label for="email"> Usuario: </label>
+                <input type="email" formControlName="email" class="form-control" placeholder="Ingrese su email" required>
+                <label for="contrasenia">Contraseña:</label>
+                <input type="password" formControlName="password" class="form-control" maxlength="8" placeholder="Al menos 8 caracteres" required>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="Recordarme"> Recordarme
+                </label>
+            </div>
+
+            <button class="btn btn-primary btn-registro" type="submit">Inciar Sesion</button>
+        </div>
+        </form>
+    </main>
+</div>
+
