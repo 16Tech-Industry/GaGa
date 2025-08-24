@@ -1,20 +1,12 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; 
-// Rutas corregidas si header y footer están DENTRO de quienes-somos
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from '../home_view/header/header';
+import { FooterComponent } from '../home_view/footer/footer';
 
 @Component({
   selector: 'app-quienes-somos',
   standalone: true,
-  imports: [
-    CommonModule,
-    HeaderComponent,
-    FooterComponent
-  ],
-  templateUrl: './quienes-somos.html', 
-  styleUrl: './quienes-somos.css'
+  imports: [HeaderComponent, FooterComponent],
+  templateUrl: './quienes-somos.html',
+  styleUrls: ['./quienes-somos.css']
 })
-export class QuienesSomosComponent { 
-
-}
+export class QuienesSomosComponent {}
