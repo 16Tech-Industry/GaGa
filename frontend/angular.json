@@ -131,4 +131,19 @@
 },
 "cli": {
   "analytics": false
+},
+"cli": {
+  "analytics": "4a894d55-c657-4299-9b75-e72b609036d3"
+},
+"cli": {
+  "analytics": "b87e7482-dfff-4e6a-9c93-3efff95116f8"
+},
+"cli": {
+  "analytics": "7a957dee-c446-4641-87da-a5572b367a3d"
+},
+"cli": {
+  "analytics": false
+},
+"cli": {
+  "analytics": false
 }
