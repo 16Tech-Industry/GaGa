@@ -18,17 +18,18 @@ formularioRegistro: FormGroup;
     nombre: new FormControl('', Validators.required),
     apellido: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
-    contrasenia: new FormControl('', [Validators.required, Validators.pattern('^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{5,8}$') ])
+    contrasenia: new FormControl('', [Validators.required, Validators.pattern('^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{5,12}$') ])
 
 });
 }
 
-  onSubmit() {
-    console.log('El formulario es válido:', this.formularioRegistro.valid);
-    console.log('Valores del formulario:', this.formularioRegistro.value);
+onSubmit() {
+  console.log('El formulario es válido:', this.formularioRegistro.valid);
+  console.log('Valores del formulario:', this.formularioRegistro.value);
+  console.log('Formulario completo:', this.formularioRegistro);
 
-    if (this.formularioRegistro.valid) {
-      this.router.navigate(['/']);
-    }
+  if (this.formularioRegistro.valid) {
+    this.router.navigate(['/login']);
   }
+}
 }

@@ -1,30 +1,39 @@
 // app.routes.ts // 
 import { Routes } from '@angular/router';
-import { DashAdm } from './dash-adm/dash-adm';
-import { DashUser } from './dash-user/dash-user';
+
+import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { FormularioRegistro } from './auth/formulario-registro/formulario-registro';
 import { HomeView } from './home_view/home_view';
 import { Ingreso } from './auth/ingreso/ingreso';
-// Componentes del dashboard
+
+// Componentes del dashboard de administrador
+import { DashAdm } from './dash-adm/dash-adm';
 import { EmpresaComponent } from './dash-adm/empresa/empresa';
 import { UsuarioComponent } from './dash-adm/usuario/usuario';
 import { CentralesComponent } from './dash-adm/centrales/centrales';
-
+// Componentes del dashboard de usuario
+import { DashUser } from './dash-user/dash-user';
 import { Metricas } from './components/metricas/metricas';
 import { Historial } from './components/historial/historial';
 import { Alertas } from './components/alertas/alertas';
-import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
+
+// componente de ruta no encontrada
 import { Error404Component } from './error404/error404.component';
 
 
 export const routes: Routes = [
+  { path: '', component: HomeView, title: 'Home' },
+  { path: 'home', component: HomeView, title: 'Home' },
+    // ruta para tu componente 'quienes-somos'
+  { path: 'quienes-somos', component: QuienesSomosComponent },
+
   //{path: '', component: FormularioRegistro},
-  { path: 'registrar', component: FormularioRegistro },
+  { path: 'sing-up', component: FormularioRegistro },
   { path: 'login', component: Ingreso },
 
-  // Ruta del dashboard, que contiene las rutas anidadas
+  // Ruta del dashboard administrador
   {
-    path: 'dashboard-admin',
+    path: 'dash-admin',
     component: DashAdm,
     children: [
       { path: '', redirectTo: 'empresa', pathMatch: 'full' },
@@ -33,7 +42,7 @@ export const routes: Routes = [
       { path: 'centrales', component: CentralesComponent },
     ],
   },
-  // Ruta comodín para manejar URLs no encontradas
+  //dashboard usuario 
   {
     path: 'dash-user',
     component: DashUser,
@@ -44,15 +53,7 @@ export const routes: Routes = [
       { path: 'alertas', component: Alertas },
     ]
   },
-  { path: '', component: HomeView, title: 'Home' },
-  // aca agregar ubicacion de error :D
-
-
-
-  // Redirige la URL raíz ('') a la página de 'quienes-somos'
-  { path: '', redirectTo: '/quienes-somos', pathMatch: 'full' }, 
-  // Esta es la ruta para tu componente 'quienes-somos'
-  { path: 'quienes-somos', component: QuienesSomosComponent },
+  // Ruta comodín para manejar URLs no encontradas
   { path: '**', component: Error404Component }
 
 ];
