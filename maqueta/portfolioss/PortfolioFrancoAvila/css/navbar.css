@@ -1,0 +1,341 @@
+
+:root {
+  --color_primario: blue;
+  --color_secundario: #252525;
+  --color_negro: #000;
+  --color_blanco: #fff;
+
+  --ancho_maximo: 1100px;
+  --padding_izquierda_derecha: 20px;
+  --padding_arriba_abajo: 100px;
+  --altura_header: 60px;
+
+  --titulo_h1: clamp(1rem, 7vw, 2.6rem);
+  --titulos_h2: clamp(1.2rem, 5.6vw, 2rem);
+  --subtitulo_seccion_principal: clamp(1.1rem, 4vw, 2rem);
+  --parrafo_seccion_principal: clamp(0.6rem, 2.3vw, 1.1rem);
+  --parrafo_secciones: clamp(1.2rem, 2.5vw, 1.4rem);
+}
+.header {
+  width: 100%;
+}
+
+.barra_navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: min(100%, var(--ancho_maximo));
+  padding: 0 var(--padding_izquierda_derecha);
+  height: var(--altura_header);
+
+  background-color: var(--color_primario); /* Fondo azul */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Sombra */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.barra_navegacion h1 {
+  font-size: var(--titulo_h1);
+  color: var(--color_blanco);
+}
+
+.barra_navegacion img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 30%;
+}
+
+
+.icon_burger {
+  font-size: 2rem;
+  color: var(--color_blanco);
+  position: fixed;
+  z-index: 10;
+  top: 9px;
+  right: 20px;
+}
+
+.link_nav {
+  color: var(--color_blanco);
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.link_nav:hover {
+  color: #ddd;
+}
+
+.ul_links_nav {
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 0;
+  transition: height 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+}
+
+.icono_hamburguesa {
+  display: none;
+}
+
+.icono_hamburguesa:checked + .ul_links_nav {
+  height: 100vh;
+}
+
+
+/* ---------- SECCIÓN PRINCIPAL ---------- */
+.seccion_principal {
+  background-color: skyblue;
+  display: flex;
+  justify-content: space-around;
+}
+
+.seccion_principal_article {
+  text-align: initial;
+  width: 51%;
+}
+
+.seccion_principal_h2 {
+  color: var(--color_negro);
+  font-size: var(--titulos_h2);
+}
+
+.seccion_principal_h3 {
+  font-size: var(--subtitulo_seccion_principal);
+  color: black;
+}
+
+.seccion_principal_p {
+  font-size: var(--parrafo_seccion_principal);
+  color: black;
+  margin: 15px 0;
+}
+
+.btn_contenedor {
+  display: flex;
+  justify-content: start;
+  gap: 15px;
+}
+
+.boton {
+  background-color: var(--color_primario);
+  font-size: 1.4rem;
+  padding: 7px 15px;
+  color: var(--color_blanco);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: darkblue;
+}
+
+.img_principal {
+  width: 40%;
+  display: block;
+  max-width: 350px;
+  max-height: 320px;
+  object-fit: cover;
+  object-position: left;
+}
+
+/* ---------- SECCIÓN SOBRE MÍ ---------- */
+.seccion_sobreMi {
+  background-color: lightskyblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  gap: 50px;
+}
+
+.articule_sobreMi {
+  background-color: blue;
+  height: 100%;
+}
+
+.parrafo_sobreMi {
+  color: var(--color_negro);
+  text-align: center;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+.imagen_sobreMi {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+/* ---------- SECCIÓN HABILIDADES ---------- */
+.seccion_habilidades {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  background-color: lightskyblue;
+}
+
+.contenedor_secciones_habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+}
+
+.contenedor_habilidad {
+  background-color: #89b3e6;
+  padding: 40px;
+  border-radius: 12px;
+  height: 250px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.contenedor_habilidad:hover {
+  transform: scale(1.05);
+}
+
+.tecnologia_icono {
+  width: 180px;
+  max-width: 100%;
+}
+
+/* ---------- SECCIÓN PROYECTOS ---------- */
+.seccion_proyectos {
+  max-width: var(--ancho_maximo);
+  margin: 0 auto 50px auto;
+  padding: var(--padding_arriba_abajo) var(--padding_izquierda_derecha);
+  background-color: skyblue;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.h2_proyectos {
+  font-size: var(--titulos_h2);
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.contenedor_proyectos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.proyecto {
+  background-color: lightcyan;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.proyecto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.proyecto h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: blue;
+}
+
+.proyecto p {
+  font-size: 1rem;
+  color: blue;
+  flex-grow: 1;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.boton_proyecto {
+  align-self: flex-start;
+  background-color: var(--color_primario);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.boton_proyecto:hover {
+  background-color: blue;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 600px) {
+  .icon_burger {
+    display: block;
+  }
+
+  .ul_links_nav {
+    flex-direction: column;
+    gap: 20%;
+  }
+
+  .contenedor_proyectos {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .proyecto {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 600px) {
+  .icon_burger,
+  .icono_hamburguesa {
+    display: none;
+  }
+
+  .ul_links_nav {
+    position: static;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10%;
+  }
+
+  .link_nav {
+    font-size: 1rem;
+  }
+}

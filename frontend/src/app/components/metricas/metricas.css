@@ -1,0 +1,15 @@
+.metricas {
+  width: 100%;
+  max-width: 1200px; /* ancho máximo del contenedor */
+  margin: 20px auto;
+  text-align: center;
+}
+
+.clima_actual img {
+  width: 100%;      /* ocupa todo el contenedor */
+  max-width: 600px; /* tamaño máximo de la imagen */
+  height: auto;     /* mantiene proporción */
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;   /* centra la imagen */
+}

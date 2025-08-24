@@ -1,0 +1,177 @@
+/* ======================= */
+/* Layout general          */
+/* ======================= */
+
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: transparent;
+}
+
+/* ======================= */
+/* Navbar izquierda        */
+/* ======================= */
+
+.nav-personalizada {
+  width: 220px;
+  min-height: 100vh;
+  background-color: #0d6f56;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+/* ======================= */
+/* Contenido central       */
+/* ======================= */
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  background-color: #f5f5f5;
+}
+
+/* ======================= */
+/* Métricas               */
+/* ======================= */
+
+.metricas {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.metricas h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.clima_actual img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* ======================= */
+/* Historial              */
+/* ======================= */
+
+.historial {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  width: 100%;
+  max-width: 900px;
+  justify-items: center;
+  align-items: start;
+}
+
+.historial h2 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.historial div > img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* ======================= */
+/* Footer                 */
+/* ======================= */
+
+footer.foot-personalizado {
+  background-color: #0d6f56;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* ======================= */
+/* Gráficos centrados      */
+/* ======================= */
+
+.main-content img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* ======================= */
+/* Responsive             */
+/* ======================= */
+
+@media (max-width: 1024px) {
+  .dashboard-container {
+    flex-direction: column; /* navbar arriba, contenido debajo */
+  }
+
+  .nav-personalizada {
+    width: 100%;
+    min-height: auto;
+    position: relative; /* deja de ser sticky en pantallas chicas */
+    padding: 10px 0;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .historial {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+  }
+
+  .clima_actual img,
+  .historial div > img,
+  .main-content img {
+    max-width: 90%;
+  }
+
+  /* Ajuste para links de la navbar */
+  .nav-personalizada ul.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-personalizada ul.nav-links li {
+    list-style: none;
+  }
+}
