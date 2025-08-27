@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { Header } from './header/header';
-import { Footer } from './footer/footer';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header';
+import { FooterComponent } from './footer/footer';
 
 @Component({
-  selector: 'app-home.view',
-  imports: [Header, Footer],
+  selector: 'app-home-view',
+  standalone: true,
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './home_view.html',
-  styleUrl: './home_view.css'
+  styleUrls: ['./home_view.css']
 })
-export class HomeView {
-
-}
+export class HomeView { }
