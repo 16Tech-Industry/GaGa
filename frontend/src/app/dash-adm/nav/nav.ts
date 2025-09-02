@@ -1,17 +1,19 @@
+// src/app/dash-adm/nav/nav.ts
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'; // Importa CommonModule
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, CommonModule], // Añádelo aquí
   templateUrl: './nav.html',
   styleUrl: './nav.css'
 })
 export class Nav {
-  isOpen: boolean = false; // Declara la propiedad 'isOpen'
+  isOpen: boolean = false;
 
   toggleSidebar() {
-    this.isOpen = !this.isOpen; // Método para cambiar su valor
+    this.isOpen = !this.isOpen;
   }
 }
