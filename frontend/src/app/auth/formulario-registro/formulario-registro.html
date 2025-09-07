@@ -15,19 +15,21 @@
             <section class="form-grupo">
                 <label for="email"> Email: </label>
                 <input type="email" id="email" formControlName="email" placeholder="hola@xxx.com">
-                <p class="error" *ngIf="formularioRegistro.get('email')?.invalid && formularioRegistro.get('email')?.touched">
+                <p class="error" *ngIf="email?.invalid && email?.touched">
+                        Por favor, ingrese un email válido.</p>
+                <!---<p class="error" *ngIf="formularioRegistro.get('email')?.invalid && formularioRegistro.get('email')?.touched">
                         Por favor, ingrese un email válido.
-                    </p>
+                    </p>--->
             </section>
             <section class="form-grupo">
                 <label for="contrasenia">Contraseña: </label>
-                <input type="password" id="contrasenia" formControlName="contrasenia" placeholder="Al menos 8 caracteres">
-                <p class="error" *ngIf="formularioRegistro.get('contrasenia')?.invalid && formularioRegistro.get('contrasenia')?.touched">
-                        La contraseña debe tener 5-8 caracteres, una mayúscula y un caracter especial.
-                    </p>
+                <input type="password" id="contrasenia" formControlName="contrasenia" placeholder="5-12 caracteres, una mayúscula y un caracter especial">
+                <p class="error" *ngIf="contrasenia?.invalid && contrasenia?.touched">La contraseña debe tener 5-8 caracteres, una mayúscula y un caracter especial.</p>
+                <!---<p class="error" *ngIf="formularioRegistro.get('contrasenia')?.invalid && formularioRegistro.get('contrasenia')?.touched">
+                        La contraseña debe tener 5-12 caracteres, una mayúscula y un caracter especial.                   </p>--->
             </section>
             <section id="btn-registrar">
-                <button class="btn btn-primary" type="submit">Enviar</button> 
+                <button class="btn btn-primary" type="submit">Enviar</button>
             </section>
         </form>
     </article>

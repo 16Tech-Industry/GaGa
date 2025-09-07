@@ -18,10 +18,19 @@ formularioRegistro: FormGroup;
     nombre: new FormControl('', Validators.required),
     apellido: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
-    contrasenia: new FormControl('', [Validators.required, Validators.pattern('^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{5,12}$') ])
+    contrasenia: new FormControl('', [Validators.required, Validators.pattern('^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{5,12}$'),Validators.minLength(5), Validators.maxLength(12) ])
 
 });
 }
+/* se mueven los get del html al typescript */
+get contrasenia() {
+  return this.formularioRegistro.get('contrasenia');
+}
+
+get email() {
+  return this.formularioRegistro.get('email');
+}
+
 
 onSubmit() {
   console.log('El formulario es válido:', this.formularioRegistro.valid);
