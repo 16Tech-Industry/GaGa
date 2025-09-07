@@ -8,10 +8,26 @@ main {
   box-sizing: border-box;
 }
 
+.header-con-icono {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.enlace-icono:hover{
+  cursor: pointer;
+}
+
 .registro-tit {
-  text-align: center;
   font-size: 3.2rem;
   margin-bottom: 25px;
+  text-align: initial;
+}
+
+.enlace-icono img {
+  width: 3rem;
+  height: 3rem;
 }
 
 label {
@@ -56,6 +72,7 @@ input {
   cursor: pointer;
   transform: scale(1.1);
 }
+
 
 .error{
   color: rgb(192, 13, 13);

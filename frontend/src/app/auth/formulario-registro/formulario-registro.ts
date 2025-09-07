@@ -31,6 +31,9 @@ get email() {
   return this.formularioRegistro.get('email');
 }
 
+inicio() {
+  this.router.navigate(['/']);
+}
 
 onSubmit() {
   console.log('El formulario es válido:', this.formularioRegistro.valid);

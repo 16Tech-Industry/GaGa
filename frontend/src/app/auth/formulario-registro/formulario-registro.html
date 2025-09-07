@@ -1,8 +1,13 @@
 <main>
     <article class="contenedor-registro">
-        <article>
-            <h2 class="registro-tit">Registrarse</h2>
-        </article>
+      <article class="tit-reg-container">
+        <div class="header-con-icono">
+          <a class="enlace-icono" (click)="inicio()" title="Inicio">
+            <img src="public/img/logo_hoja.png" alt="Logo">
+          </a>
+          <h2 class="registro-tit">Registrarse</h2>
+        </div>
+      </article>
         <form [formGroup]="formularioRegistro" (ngSubmit)="onSubmit()">
             <section class="form-grupo">
                 <label for="nombre">Nombre: </label>
