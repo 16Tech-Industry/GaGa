@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-    background-color: #cceee0; /* Mueve esta línea aquí */
+    background-color:var(--color-800); /* Mueve esta línea aquí */
 }
 *{
     margin: 0;
