@@ -1,8 +1,18 @@
 import { Component } from '@angular/core';
-import {ReactiveFormsModule, FormGroup, FormControl, Validators,} from '@angular/forms';
+import {ReactiveFormsModule, FormGroup, FormControl, Validators, ValidatorFn, AbstractControl,} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
+export const validacionContIguales: ValidatorFn= (control: AbstractControl):{[key: string]:any} | null => {
+  const contrasenia = control.get('contrasenia');
+  const confirmarContrasenia = control.get('confirmarContrasenia');
+
+  if (contrasenia && confirmarContrasenia && contrasenia.value !== confirmarContrasenia.value) {
+    return { 'contraseniasOk': true };
+  } else {
+    return null;
+  }
+};
 @Component({
   selector: 'app-formulario-registro',
   standalone: true,
@@ -22,7 +32,8 @@ formularioRegistro: FormGroup;
     contrasenia: new FormControl('', [Validators.required, Validators.pattern('^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{5,12}$') ]),
     confirmarContrasenia: new FormControl('', [Validators.required,]),
     cuit: new  FormControl('', [Validators.required, Validators.pattern('^[0-9]{11}$')]),
-});
+},
+  {validators: validacionContIguales});
 }
 /* se mueven los get del html al typescript */
 get nombre() {
