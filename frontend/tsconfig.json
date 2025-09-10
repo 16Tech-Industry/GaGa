@@ -3,6 +3,10 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "src",/*agrega Heyme*/
+    "paths": {
+      "@app/*": ["app/*"]/*agrega Heyme*/
+    },
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,

@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import {ReactiveFormsModule, FormGroup, FormControl, Validators, ValidatorFn, AbstractControl,} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
+import { AuthService } from '@app/services/auth';
+import { User } from '@app/models/User';
+
 
 export const validacionContIguales: ValidatorFn= (control: AbstractControl):{[key: string]:any} | null => {
   const contrasenia = control.get('contrasenia');
@@ -24,7 +28,7 @@ export const validacionContIguales: ValidatorFn= (control: AbstractControl):{[ke
 export class FormularioRegistro {
 formularioRegistro: FormGroup;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private authService: AuthService) {
     this.formularioRegistro = new FormGroup({
     nombre: new FormControl('', Validators.required),
     apellido: new FormControl('', Validators.required),
@@ -73,20 +77,38 @@ get mostrarContraseniaInvalida(){
 }
 
 get contraseniasNoCoinciden(){
-  return this.contrasenia?.value !== this.confirmarContrasenia?.value && this.confirmarContrasenia?.touched;
+  return this.formularioRegistro.hasError('contraseniasOk') && this.confirmarContrasenia?.touched;
 }
 
 /**Eventos */
 inicio() {
   this.router.navigate(['/']);
 }
-onSubmit() {
-  console.log('El formulario es válido:', this.formularioRegistro.valid);
-  console.log('Valores del formulario:', this.formularioRegistro.value);
-  console.log('Formulario completo:', this.formularioRegistro);
 
+onSubmit(): void {
   if (this.formularioRegistro.valid) {
-    this.router.navigate(['/login']);
+    const { nombre, apellido, email, contrasenia, cuit } = this.formularioRegistro.value;
+    const newUser: Omit<User, 'id'> = {
+      nombre,
+      apellido,
+      email,
+      contrasenia,
+      cuitEmpresa: cuit
+    };
+
+    this.authService.createUser(newUser).subscribe({
+      next: (response: User) => {
+        console.log('Usuario creado:', response);
+        alert('¡Registro exitoso!');
+        this.router.navigate(['/login']);
+      },
+      error: (error: HttpErrorResponse) => {
+        console.error('Error en el registro:', error);
+        alert('Hubo un error durante el registro. Por favor, inténtalo de nuevo.');
+      }
+    });
+  } else {
+    this.formularioRegistro.markAllAsTouched();
   }
 }
 }
