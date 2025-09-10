@@ -9,7 +9,7 @@ import { User } from '@app/models/User';
 
 export class AuthService {
 
-  url="https://reqres.in/api/users";
+  url="http://localhost:3000/usuarios";
 
   constructor(private http:HttpClient){}
 

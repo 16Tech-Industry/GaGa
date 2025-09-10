@@ -1,0 +1,68 @@
+{
+  "usuarios": [
+    {
+      "id": "",
+      "nombre": "",
+      "apellido": "",
+      "cuitEmpresa": "",
+      "correo": "",
+      "contrasena": "",
+      "rol": 1
+    },
+    {
+      "id": "",
+      "nombre": "",
+      "apellido": "",
+      "cuitEmpresa": "",
+      "correo": "",
+      "contrasena": "",
+      "rol": 2
+    },
+    {
+      "id": "3163",
+      "nombre": "Heyme",
+      "apellido": "Coraspe",
+      "email": "heyme.coraspe@gmail.com",
+      "contrasenia": "Heyme*",
+      "cuitEmpresa": "20191359985"
+    },
+    {
+      "id": "5a34",
+      "nombre": "Federico García Lorca",
+      "apellido": "García Lorca",
+      "email": "dfg@mmm.com",
+      "contrasenia": "Gatos.",
+      "cuitEmpresa": "20460361312"
+    }
+  ],
+  "empresas": [
+    {
+      "id": "",
+      "email": "",
+      "nombre": "",
+      "direccion": "",
+      "cuit": ""
+    },
+    {
+      "id": "",
+      "email": "",
+      "nombre": "",
+      "direccion": "",
+      "cuit": ""
+    }
+  ],
+  "centrales": [
+    {
+      "id": "",
+      "nombre": "",
+      "direccion": "",
+      "empresaId": ""
+    },
+    {
+      "id": "",
+      "nombre": "",
+      "direccion": "",
+      "empresaId": ""
+    }
+  ]
+}
