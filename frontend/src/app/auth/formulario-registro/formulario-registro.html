@@ -1,33 +1,53 @@
 <main>
     <article class="contenedor-registro">
-        <article>
-            <h2 class="registro-tit">Registrarse</h2>
-        </article>
+      <article class="tit-reg-container">
+        <div class="header-con-icono">
+          <a class="enlace-icono" (click)="inicio()" title="Inicio">
+            <img src="public/img/logo_hoja.png" alt="Logo">
+          </a>
+          <h2 class="registro-tit">Registrarse</h2>
+        </div>
+      </article>
         <form [formGroup]="formularioRegistro" (ngSubmit)="onSubmit()">
+
             <section class="form-grupo">
                 <label for="nombre">Nombre: </label>
                 <input type="text" id="nombre" formControlName="nombre" placeholder="Ingrese su nombre(s)">
             </section>
+
             <section class="form-grupo">
                 <label for="apellido"> Apellido: </label>
                 <input type="text" id="apellido" formControlName="apellido" placeholder="Ingrese su apellido(s)">
             </section>
+
+            <section class="form-grupo">
+                <label for="cuit"> Cuit: </label>
+                <input type="text" id="cuit" formControlName="cuit" placeholder="Ingrese el CUIT de la empresa sin guiones">
+                <p class="error" *ngIf="mostrarCuitInvalido">
+                  Por favor, ingrese un CUIT válido.</p>
+            </section>
+
             <section class="form-grupo">
                 <label for="email"> Email: </label>
                 <input type="email" id="email" formControlName="email" placeholder="hola@xxx.com">
-                <p class="error" *ngIf="formularioRegistro.get('email')?.invalid && formularioRegistro.get('email')?.touched">
-                        Por favor, ingrese un email válido.
-                    </p>
+                <p class="error" *ngIf="mostrarEmailIvalido">
+                  Por favor, ingrese un email válido.</p>
             </section>
+
             <section class="form-grupo">
                 <label for="contrasenia">Contraseña: </label>
-                <input type="password" id="contrasenia" formControlName="contrasenia" placeholder="Al menos 8 caracteres">
-                <p class="error" *ngIf="formularioRegistro.get('contrasenia')?.invalid && formularioRegistro.get('contrasenia')?.touched">
-                        La contraseña debe tener 5-8 caracteres, una mayúscula y un caracter especial.
-                    </p>
+                <input type="password" id="contrasenia" formControlName="contrasenia" placeholder="5-12 caracteres, una mayúscula y un caracter especial">
+                <p class="error" *ngIf="mostrarContraseniaInvalida">La contraseña debe tener 5-8  caracteres, una mayúscula y un caracter especial.</p>
             </section>
+
+            <section class="form-grupo">
+                <label for="confirmarContrasenia">Confirmar contraseña: </label>
+                <input type="password" id="confirmarContrasenia" formControlName="confirmarContrasenia" placeholder="5-12 caracteres, una mayúscula y un caracter especial">
+                <p class="error" *ngIf="contraseniasNoCoinciden">Las contraseñas no coinciden.</p>
+            </section>
+
             <section id="btn-registrar">
-                <button class="btn btn-primary" type="submit">Enviar</button> 
+                <button class="btn btn-primary" type="submit">Enviar</button>
             </section>
         </form>
     </article>
