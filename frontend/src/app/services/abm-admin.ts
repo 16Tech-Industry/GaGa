@@ -1,21 +1,25 @@
+// src/app/services/abm-admin.ts
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '@app/models/User';
-import { empresa } from '@app/models/admin-abm';
-import { central } from '@app/models/admin-abm';
 
 @Injectable({
   providedIn: 'root'
 })
+export class UserService { // Nombre de clase corregido a UserService
+  url = "http://localhost:3000/usuarios";
 
-export class AuthService {
+  constructor(private http: HttpClient) {}
 
-  url="http://localhost:3000/usuarios";
-
-  constructor(private http:HttpClient){}
-
-  createUser(user: User): Observable<User> {
+  // POST: Agrega un nuevo usuario al servidor
+  createUser(user: Omit<User, 'id'>): Observable<User> {
     return this.http.post<User>(this.url, user);
+  }
+
+  // GET: Obtiene todos los usuarios del servidor
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(this.url);
   }
 }

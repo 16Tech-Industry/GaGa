@@ -1,26 +1,45 @@
-// src/app/usuario/usuario.ts
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Importa CommonModule para *ngFor
-import { AuthService } from '@app/services/auth'; // Asegúrate de que la ruta sea correcta
-import { AbmAdminService } from '@app/services/abm-admin';
-
+// src/app/dash-adm/usuario/usuario.ts
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { UserService } from '@app/services/abm-admin'; // Asegúrate de que la ruta sea correcta
+import { User } from '@app/models/User';
 
 @Component({
   selector: 'app-usuario',
-  standalone: true, // Esto es correcto para componentes independientes
-  imports: [CommonModule], // Necesario para directivas como *ngFor
+  standalone: true,
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './usuario.html',
-  styleUrl: './usuario.css'
+  styleUrls: ['./usuario.css'],
+  providers: [UserService]
 })
-export class UsuarioComponent { 
-  usuarios: any;
-  constructor(private obtenerUsuarios: AbmAdminService) {
+export class UsuarioComponent implements OnInit {
+  usuarios: User[] = [];
 
-    this.usuarios=obtenerUsuarios.obtenerUsuarios().subscribe(
-      {next:()=>{ this.usuarios= this.usuarios; },
-      error:(e)=>console.error(e),
-      complete:()=>console.info(this.usuarios)
+  constructor(private usuarioService: UserService) { }
+
+  ngOnInit(): void {
+    this.cargarUsuarios();
+  }
+
+  cargarUsuarios(): void {
+    this.usuarioService.getUsers().subscribe(data => {
+      this.usuarios = data;
+      console.log('Usuarios cargados:', this.usuarios);
     });
   }
-}
 
+  agregarUsuario(): void {
+    const nuevoUsuario: Omit<User, 'id'> = {
+      nombre: 'Nuevo',
+      apellido: 'Usuario',
+      cuitEmpresa: '30-12345678-9',
+      email: 'nuevo@example.com',
+      contrasenia: 'contrasenia123',
+    };
+    this.usuarioService.createUser(nuevoUsuario).subscribe(() => {
+      this.cargarUsuarios();
+    });
+  }
+
+}
