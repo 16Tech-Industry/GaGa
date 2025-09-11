@@ -97,6 +97,9 @@
             ],
             "scripts": [
             ]
+  }       }
+      }
+    }
   },
   "cli": {
     "analytics": false
