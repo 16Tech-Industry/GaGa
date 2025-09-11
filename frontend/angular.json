@@ -5,7 +5,6 @@
   "projects": {
     "GaGa": {
       "projectType": "application",
-      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -30,9 +29,6 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
-            ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           },
           "configurations": {
@@ -95,12 +91,16 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": [
-            ]
+            "scripts": []
+          }
+        }
+      }
+    }
   },
   "cli": {
     "analytics": false
   }
+
 },
 "cli": {
   "analytics": false
@@ -147,3 +147,6 @@
 "cli": {
   "analytics": false
 }
+=======
+}
+>>>>>>> ac17c728 (feat sidebar)
