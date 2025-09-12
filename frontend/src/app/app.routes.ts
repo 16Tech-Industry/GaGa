@@ -14,7 +14,7 @@ import { CentralesComponent } from './dash-adm/centrales/centrales';
 // Componentes del dashboard de usuario
 import { DashUser } from './dash-user/dash-user';
 import { Metricas } from './components/metricas/metricas';
-import { Historial } from './components/historial/historial';
+import { HistorialComponent } from './components/historial/historial';
 import { Alertas } from './components/alertas/alertas';
 
 // componente de ruta no encontrada
@@ -49,7 +49,7 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'temperatura', pathMatch: 'full' },
       { path: 'temperatura', component: Metricas },
-      { path: 'historial', component: Historial },
+      { path: 'historial', component: HistorialComponent },
       { path: 'alertas', component: Alertas },
     ]
   },

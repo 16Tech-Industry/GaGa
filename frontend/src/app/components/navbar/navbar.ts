@@ -1,11 +1,22 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.css']
 })
-export class Navbar {}
+export class Navbar {
+  isOpen = false;
+
+  toggleNavbar() {
+    this.isOpen = !this.isOpen;
+  }
+
+  closeNavbar() {
+    this.isOpen = false;
+  }
+}

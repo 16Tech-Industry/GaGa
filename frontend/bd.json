@@ -64,5 +64,48 @@
       "direccion": "",
       "empresaId": ""
     }
+  ],
+  "metricas": [
+    {
+      "id": 1,
+      "temperatura": 22,
+      "consumo": 150
+    },
+    {
+      "id": 2,
+      "temperatura": 24,
+      "consumo": 200
+    },
+    {
+      "id": 3,
+      "temperatura": 21,
+      "consumo": 170
+    }
+  ],
+  "historial": [
+    {
+      "id": 1,
+      "fecha": "2025-09-01",
+      "temperatura": 22,
+      "humedad": 55,
+      "consumo": 150,
+      "ahorro": 20
+    },
+    {
+      "id": 2,
+      "fecha": "2025-09-02",
+      "temperatura": 24,
+      "humedad": 60,
+      "consumo": 180,
+      "ahorro": 25
+    },
+    {
+      "id": 3,
+      "fecha": "2025-09-03",
+      "temperatura": 21,
+      "humedad": 58,
+      "consumo": 170,
+      "ahorro": 18
+    }
   ]
 }

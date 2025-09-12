@@ -1,3 +1,9 @@
+<!-- Navbar solo si la ruta no es login o sing-up -->
+<app-header *ngIf="!['/login','/sing-up'].includes(router.url)"></app-header>
+
 <main>
   <router-outlet></router-outlet>
 </main>
+
+<!-- Footer solo si la ruta no es login o sing-up -->
+<app-footer *ngIf="!['/login','/sing-up'].includes(router.url)"></app-footer>

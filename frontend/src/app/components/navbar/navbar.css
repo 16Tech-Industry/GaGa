@@ -1,16 +1,27 @@
+/* === NAVBAR / SIDEBAR === */
 .navbar-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #0d6f56;
-  width: 100%;
+  width: 250px;
   min-height: 100vh;
   padding-top: 20px;
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0; /* visible en desktop */
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
 }
 
-.navbar-container .logo img {
+.logo img {
   margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
 }
 
 .nav-links {
@@ -32,10 +43,75 @@
   font-weight: bold;
   text-decoration: none;
   padding: 10px 0;
+  transition: background-color 0.3s ease;
 }
 
 .nav-links li a.active,
 .nav-links li a:hover {
   background-color: #0b5e45;
   border-radius: 5px;
+}
+
+/* Contenedor del contenido dentro del sidebar */
+.sidebar-content {
+  width: 100%;
+}
+
+/* === BOTÓN HAMBURGUESA === */
+.hamburger-button {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1101;
+}
+
+.hamburger-button span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .navbar-container {
+    left: -250px; /* oculto por defecto */
+    width: 250px;
+    padding: 0;
+  }
+
+  .navbar-container.open {
+    left: 0; /* se abre al hacer click */
+    padding-top: 20px;
+  }
+
+  .hamburger-button {
+    display: flex;
+  }
+
+  .sidebar-content {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .navbar-container.open .sidebar-content {
+    opacity: 1;
+  }
+}
+
+/* Desktop: sidebar siempre visible, botón oculto */
+@media (min-width: 769px) {
+  .hamburger-button {
+    display: none;
+  }
 }
