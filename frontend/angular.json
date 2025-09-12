@@ -13,79 +13,49 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              {
-                "glob": "**/*",
-                "input": "public",
-                "output": "/public"
-              }
+              { "glob": "**/*", "input": "public", "output": "/public" }
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
-            ]
+            ],
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
           },
           "configurations": {
             "production": {
               "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
-                }
+                { "type": "initial", "maximumWarning": "500kB", "maximumError": "1MB" },
+                { "type": "anyComponentStyle", "maximumWarning": "4kB", "maximumError": "8kB" }
               ],
               "outputHashing": "all"
             },
-            "development": {
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
-            }
+            "development": { "optimization": false, "extractLicenses": false, "sourceMap": true }
           },
           "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular/build:dev-server",
           "configurations": {
-            "production": {
-              "buildTarget": "GaGa:build:production"
-            },
-            "development": {
-              "buildTarget": "GaGa:build:development"
-            }
+            "production": { "buildTarget": "GaGa:build:production" },
+            "development": { "buildTarget": "GaGa:build:development" }
           },
           "defaultConfiguration": "development"
         },
-        "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
-        },
+        "extract-i18n": { "builder": "@angular/build:extract-i18n" },
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              {
-                "glob": "**/*",
-                "input": "public",
-                "output": "/public"
-              }
+              { "glob": "**/*", "input": "public", "output": "/public" }
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -97,56 +67,5 @@
       }
     }
   },
-  "cli": {
-    "analytics": false
-  }
-
-},
-"cli": {
-  "analytics": false
-},
-"cli": {
-  "analytics": "fc522eba-2c16-49c9-8493-91bd68cb2fc0"
-},
-"cli": {
-  "analytics": "cc3c6800-6fdf-463b-a2fa-991cd1334a25"
-},
-"cli": {
-  "analytics": "83fb929d-bd35-4c70-a6a6-93ed23c538e8"
-},
-"cli": {
-  "analytics": "b70e24db-d1b0-470e-8131-c25e6fe00b33"
-},
-"cli": {
-  "analytics": false
-},
-"cli": {
-  "analytics": "7edc3885-1aa9-4f68-8ce1-95aeb44db330"
-},
-"cli": {
-  "analytics": "bf47e763-8b5a-4389-b05a-c7008259d935"
-},
-"cli": {
-  "analytics": false
-},
-"cli": {
-  "analytics": false
-},
-"cli": {
-  "analytics": "4a894d55-c657-4299-9b75-e72b609036d3"
-},
-"cli": {
-  "analytics": "b87e7482-dfff-4e6a-9c93-3efff95116f8"
-},
-"cli": {
-  "analytics": "7a957dee-c446-4641-87da-a5572b367a3d"
-},
-"cli": {
-  "analytics": false
-},
-"cli": {
-  "analytics": false
+  "cli": { "analytics": false }
 }
-=======
-}
->>>>>>> ac17c728 (feat sidebar)
