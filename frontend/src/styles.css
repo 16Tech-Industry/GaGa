@@ -37,3 +37,10 @@ body {
 body {
   font-family: "Montserrat", sans-serif;
 }
+.ng-valid:not(form).ng-touched {
+  border: green;
+}
+
+.ng-invalid:not(form).ng-touched {
+  border: red;
+}
