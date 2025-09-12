@@ -8,6 +8,6 @@ import { FooterComponent } from './footer/footer';
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './home_view.html',
-  styleUrls: ['./home_view.css']
+  styleUrls: ['./home_view.css'],
 })
 export class HomeView { }
