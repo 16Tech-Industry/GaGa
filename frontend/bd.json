@@ -1,24 +1,6 @@
 {
   "usuarios": [
     {
-      "id": "",
-      "nombre": "",
-      "apellido": "",
-      "cuitEmpresa": "",
-      "correo": "",
-      "contrasena": "",
-      "rol": 1
-    },
-    {
-      "id": "",
-      "nombre": "",
-      "apellido": "",
-      "cuitEmpresa": "",
-      "correo": "",
-      "contrasena": "",
-      "rol": 2
-    },
-    {
       "id": "3163",
       "nombre": "Heyme",
       "apellido": "Coraspe",
@@ -33,6 +15,70 @@
       "email": "dfg@mmm.com",
       "contrasenia": "Gatos.",
       "cuitEmpresa": "20460361312"
+    },
+    {
+      "id": "89f2",
+      "nombre": "pepito",
+      "apellido": "juan",
+      "email": "admin@gmail.com",
+      "contrasenia": "Admin!123",
+      "cuitEmpresa": "22222222222"
+    },
+    {
+      "id": "101d",
+      "nombre": "Nuevo",
+      "apellido": "Usuario",
+      "cuitEmpresa": "30-12345678-9",
+      "email": "nuevo@example.com",
+      "contrasenia": "contrasenia123"
+    },
+    {
+      "id": "669e",
+      "nombre": "Nuevo",
+      "apellido": "Usuario",
+      "cuitEmpresa": "30-12345678-9",
+      "email": "nuevo@example.com",
+      "contrasenia": "contrasenia123"
+    },
+    {
+      "id": "9fe8",
+      "nombre": "sisis",
+      "apellido": "nonon",
+      "email": "test@gmail.com",
+      "cuitEmpresa": "22222222",
+      "contrasenia": "contrasenia123"
+    },
+    {
+      "id": "ecc6",
+      "nombre": "full",
+      "apellido": "anito",
+      "email": "test@test.coj",
+      "cuitEmpresa": "2222222",
+      "contrasenia": "contrasenia123"
+    },
+    {
+      "id": "4eef",
+      "nombre": "sisis",
+      "apellido": "nono",
+      "email": "admin@gmail.com",
+      "contrasenia": "Admin123!",
+      "cuitEmpresa": "22222222222"
+    },
+    {
+      "id": "2eb6",
+      "nombre": "pitocorto",
+      "apellido": "pitolargo",
+      "email": "ihqwohieoiqwe@21oi31",
+      "cuitEmpresa": "5555555555",
+      "contrasenia": "contrasenia123"
+    },
+    {
+      "id": "269e",
+      "nombre": "pito",
+      "apellido": "corto",
+      "email": "admin@gmail.com",
+      "contrasenia": "Angular123!",
+      "cuitEmpresa": "55555555555"
     }
   ],
   "empresas": [
