@@ -1,5 +1,5 @@
 export interface User{
-  /*id:number,*/
+  id:number,
   nombre:string,
   apellido:string,
   cuitEmpresa:string,

@@ -1,24 +1,6 @@
 {
   "usuarios": [
     {
-      "id": "",
-      "nombre": "",
-      "apellido": "",
-      "cuitEmpresa": "",
-      "correo": "",
-      "contrasena": "",
-      "rol": 1
-    },
-    {
-      "id": "",
-      "nombre": "",
-      "apellido": "",
-      "cuitEmpresa": "",
-      "correo": "",
-      "contrasena": "",
-      "rol": 2
-    },
-    {
       "id": "3163",
       "nombre": "Heyme",
       "apellido": "Coraspe",
@@ -33,6 +15,54 @@
       "email": "dfg@mmm.com",
       "contrasenia": "Gatos.",
       "cuitEmpresa": "20460361312"
+    },
+    {
+      "id": "89f2",
+      "nombre": "pepito",
+      "apellido": "juan",
+      "email": "admin@gmail.com",
+      "contrasenia": "Admin!123",
+      "cuitEmpresa": "22222222222"
+    },
+    {
+      "id": "101d",
+      "nombre": "Nuevo",
+      "apellido": "Usuario",
+      "cuitEmpresa": "30-12345678-9",
+      "email": "nuevo@example.com",
+      "contrasenia": "contrasenia123"
+    },
+    {
+      "id": "669e",
+      "nombre": "Nuevo",
+      "apellido": "Usuario",
+      "cuitEmpresa": "30-12345678-9",
+      "email": "nuevo@example.com",
+      "contrasenia": "contrasenia123"
+    },
+    {
+      "id": "9fe8",
+      "nombre": "sisis",
+      "apellido": "nonon",
+      "email": "test@gmail.com",
+      "cuitEmpresa": "22222222",
+      "contrasenia": "contrasenia123"
+    },
+    {
+      "id": "4eef",
+      "nombre": "sisis",
+      "apellido": "nono",
+      "email": "admin@gmail.com",
+      "contrasenia": "Admin123!",
+      "cuitEmpresa": "22222222222"
+    },
+    {
+      "id": "2feb",
+      "nombre": "qweqwe",
+      "apellido": "qwe",
+      "email": "qwe",
+      "cuitEmpresa": "qwe",
+      "contrasenia": "contrasenia123"
     }
   ],
   "empresas": [
@@ -67,24 +97,24 @@
   ],
   "metricas": [
     {
-      "id": 1,
+      "id": "1",
       "temperatura": 22,
       "consumo": 150
     },
     {
-      "id": 2,
+      "id": "2",
       "temperatura": 24,
       "consumo": 200
     },
     {
-      "id": 3,
+      "id": "3",
       "temperatura": 21,
       "consumo": 170
     }
   ],
   "historial": [
     {
-      "id": 1,
+      "id": "1",
       "fecha": "2025-09-01",
       "temperatura": 22,
       "humedad": 55,
@@ -92,7 +122,7 @@
       "ahorro": 20
     },
     {
-      "id": 2,
+      "id": "2",
       "fecha": "2025-09-02",
       "temperatura": 24,
       "humedad": 60,
@@ -100,7 +130,7 @@
       "ahorro": 25
     },
     {
-      "id": 3,
+      "id": "3",
       "fecha": "2025-09-03",
       "temperatura": 21,
       "humedad": 58,
