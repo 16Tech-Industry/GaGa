@@ -59,6 +59,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css", 
               "src/styles.css"
             ],
             "scripts": []
@@ -68,4 +69,38 @@
     }
   },
   "cli": { "analytics": false }
+}
+  "cli": {
+    "analytics": false
+  }
+},
+"cli": {
+  "analytics": false
+},
+"cli": {
+  "analytics": "fc522eba-2c16-49c9-8493-91bd68cb2fc0"
+},
+"cli": {
+  "analytics": "cc3c6800-6fdf-463b-a2fa-991cd1334a25"
+},
+"cli": {
+  "analytics": "83fb929d-bd35-4c70-a6a6-93ed23c538e8"
+},
+"cli": {
+  "analytics": "b70e24db-d1b0-470e-8131-c25e6fe00b33"
+},
+"cli": {
+  "analytics": false
+},
+"cli": {
+  "analytics": "7edc3885-1aa9-4f68-8ce1-95aeb44db330"
+},
+"cli": {
+  "analytics": "bf47e763-8b5a-4389-b05a-c7008259d935"
+},
+"cli": {
+  "analytics": false
+},
+"cli": {
+  "analytics": false
 }
