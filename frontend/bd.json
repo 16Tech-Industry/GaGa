@@ -63,6 +63,22 @@
       "email": "qwe",
       "cuitEmpresa": "qwe",
       "contrasenia": "contrasenia123"
+    },
+    {
+      "id": "dd0d",
+      "nombre": "pablito",
+      "apellido": "matera",
+      "email": "pablitopalito@gmail.com",
+      "cuitEmpresa": "5552525252555",
+      "contrasenia": "contrasenia123"
+    },
+    {
+      "id": "afab",
+      "nombre": "julian",
+      "apellido": "montolla",
+      "email": "monedamontolla@gmail.com",
+      "contrasenia": "Migui123!",
+      "cuitEmpresa": "55555555555"
     }
   ],
   "empresas": [
