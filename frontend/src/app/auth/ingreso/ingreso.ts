@@ -7,18 +7,13 @@ import { catchError } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '@app/services/auth';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-ingreso',
   templateUrl: './ingreso.html',
   styleUrl: './ingreso.css',
-  standalone:false
+  imports: [ReactiveFormsModule],
 })
 
 export class Ingreso implements OnInit {
