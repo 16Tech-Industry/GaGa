@@ -2,11 +2,11 @@
   "usuarios": [
     {
       "id": "3163",
-      "nombre": "Heyme",
-      "apellido": "Coraspe",
-      "email": "heyme.coraspe@gmail.com",
-      "contrasenia": "Heyme*",
-      "cuitEmpresa": "20191359985"
+      "nombre": "Heymo",
+      "apellido": "Coraspso",
+      "email": "heyme.coraspsse@gmail.com",
+      "cuitEmpresa": "20191359985",
+      "contrasenia": "Heyme*"
     },
     {
       "id": "5a34",
@@ -36,8 +36,8 @@
       "id": "669e",
       "nombre": "Nuevo",
       "apellido": "Usuario",
+      "email": "nuevo@anti-ample.com",
       "cuitEmpresa": "30-12345678-9",
-      "email": "nuevo@example.com",
       "contrasenia": "contrasenia123"
     },
     {

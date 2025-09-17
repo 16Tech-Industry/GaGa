@@ -59,4 +59,36 @@ export class UsuarioComponent implements OnInit {
       }
     });
   }
+
+  // Nuevo método para editar un usuario
+  editarUsuario(usuario: User): void {
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+      data: {
+        nombre: usuario.nombre,
+        apellido: usuario.apellido,
+        email: usuario.email,
+        cuitEmpresa: usuario.cuitEmpresa
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(usuarioActualizado => {
+      if (usuarioActualizado) {
+        // Se crea un objeto 'usuarioCompleto' con los datos actualizados,
+        // incluyendo el 'id' y 'contrasenia' del usuario original.
+        const usuarioCompleto: User = {
+          id: usuario.id,
+          nombre: usuarioActualizado.nombre,
+          apellido: usuarioActualizado.apellido,
+          email: usuarioActualizado.email,
+          cuitEmpresa: usuarioActualizado.cuitEmpresa,
+          contrasenia: usuario.contrasenia
+        };
+
+        // Se llama al servicio para actualizar el usuario en el servidor
+        this.usuarioService.updateUser(usuarioCompleto).subscribe(() => {
+          this.cargarUsuarios();
+        });
+      }
+    });
+  }
 }
