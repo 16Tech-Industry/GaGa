@@ -1,5 +1,3 @@
-// src/app/services/abm-admin.ts
-
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -8,7 +6,7 @@ import { User } from '@app/models/User';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService { // Nombre de clase corregido a UserService
+export class UserService {
   url = "http://localhost:3000/usuarios";
 
   constructor(private http: HttpClient) {}
@@ -21,5 +19,10 @@ export class UserService { // Nombre de clase corregido a UserService
   // GET: Obtiene todos los usuarios del servidor
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.url);
+  }
+
+  // DELETE: Elimina un usuario del servidor
+  deleteUser(id: number): Observable<any> {
+    return this.http.delete(`${this.url}/${id}`);
   }
 }

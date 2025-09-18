@@ -59,4 +59,11 @@ export class UsuarioComponent implements OnInit {
       }
     });
   }
+  borrarUsuario(id: number): void {
+    if (confirm('¿Estás seguro de que quieres borrar este usuario?')) {
+      this.usuarioService.deleteUser(id).subscribe(() => {
+        this.cargarUsuarios();
+      });
+    }
+  }
 }
