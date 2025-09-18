@@ -20,10 +20,10 @@
 </mat-dialog-content>
 <mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Cancelar</button>
-  <button mat-button [mat-dialog-close]="{
-    nombre: nombre(),
-    apellido: apellido(),
-    email: email(),
-    cuitEmpresa: cuitEmpresa()
-  }" cdkFocusInitial>Guardar</button>
+<button mat-button [mat-dialog-close]="{
+  nombre: nombre,
+  apellido: apellido,
+  email: email,
+  cuitEmpresa: cuitEmpresa
+}" cdkFocusInitial>Guardar</button>
 </mat-dialog-actions>

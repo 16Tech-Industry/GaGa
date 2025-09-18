@@ -26,8 +26,8 @@
       <td>{{ usuario.cuitEmpresa }}</td>
       <td>
         <div class="action-buttons">
-          <button class="square-button edit-button">Editar</button>
           <button class="square-button delete-button" (click)="borrarUsuario(usuario.id)">Borrar</button>
+          <button class="square-button edit-button" (click)="editarUsuario(usuario)">Editar</button>
         </div>
       </td>  
     </tr>

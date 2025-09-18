@@ -1,14 +1,6 @@
 {
   "usuarios": [
     {
-      "id": "5a34",
-      "nombre": "Federico García Lorca",
-      "apellido": "García Lorca",
-      "email": "dfg@mmm.com",
-      "contrasenia": "Gatos.",
-      "cuitEmpresa": "20460361312"
-    },
-    {
       "id": "89f2",
       "nombre": "pepito",
       "apellido": "juan",
@@ -18,14 +10,6 @@
     },
     {
       "id": "101d",
-      "nombre": "Nuevo",
-      "apellido": "Usuario",
-      "cuitEmpresa": "30-12345678-9",
-      "email": "nuevo@example.com",
-      "contrasenia": "contrasenia123"
-    },
-    {
-      "id": "669e",
       "nombre": "Nuevo",
       "apellido": "Usuario",
       "cuitEmpresa": "30-12345678-9",
