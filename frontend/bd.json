@@ -66,10 +66,10 @@
     },
     {
       "id": "dd0d",
-      "nombre": "pablito",
+      "nombre": "pablito123123123",
       "apellido": "matera",
       "email": "pablitopalito@gmail.com",
-      "cuitEmpresa": "5552525252555",
+      "cuitEmpresa": "2222111123123123",
       "contrasenia": "contrasenia123"
     },
     {
@@ -79,6 +79,14 @@
       "email": "monedamontolla@gmail.com",
       "contrasenia": "Migui123!",
       "cuitEmpresa": "55555555555"
+    },
+    {
+      "id": "0fff",
+      "nombre": "123123",
+      "apellido": "123",
+      "email": "123",
+      "cuitEmpresa": "123",
+      "contrasenia": "contrasenia123"
     }
   ],
   "empresas": [
