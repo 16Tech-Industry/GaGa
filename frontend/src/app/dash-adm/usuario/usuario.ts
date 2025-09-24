@@ -77,7 +77,6 @@ export class UsuarioComponent implements OnInit {
         cuitEmpresa: usuario.cuitEmpresa
       }
     });
-
     dialogRef.afterClosed().subscribe(usuarioActualizado => {
       if (usuarioActualizado) {
         // Se crea un objeto 'usuarioCompleto' con los datos actualizados,

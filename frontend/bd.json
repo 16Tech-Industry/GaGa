@@ -1,6 +1,22 @@
 {
   "usuarios": [
     {
+      "id": "3163",
+      "nombre": "Hey222",
+      "apellido": "Coraspso1",
+      "email": "heyme.coraspsse@gmail.com",
+      "cuitEmpresa": "20191359985",
+      "contrasenia": "Heyme*"
+    },
+    {
+      "id": "5a34",
+      "nombre": "Federico García Lorca",
+      "apellido": "García Lorca",
+      "email": "dfg@mmm.com",
+      "cuitEmpresa": "204603613123",
+      "contrasenia": "Gatos."
+    },
+    {
       "id": "89f2",
       "nombre": "pepito",
       "apellido": "juan",
@@ -14,6 +30,46 @@
       "apellido": "Usuario",
       "cuitEmpresa": "30-12345678-9",
       "email": "nuevo@example.com",
+      "contrasenia": "contrasenia123"
+    },
+    {
+      "id": "669e",
+      "nombre": "Nuevo",
+      "apellido": "Usuario",
+      "email": "nuevo@anti-ample.com",
+      "cuitEmpresa": "30-12345678-9",
+      "contrasenia": "contrasenia123"
+    },
+    {
+      "id": "9fe8",
+      "nombre": "sisis",
+      "apellido": "nonon",
+      "email": "test@gmail.com",
+      "cuitEmpresa": "22222222",
+      "contrasenia": "contrasenia123"
+    },
+    {
+      "id": "4eef",
+      "nombre": "sisis",
+      "apellido": "nono",
+      "email": "admin@gmail.com",
+      "contrasenia": "Admin123!",
+      "cuitEmpresa": "22222222222"
+    },
+    {
+      "id": "2feb",
+      "nombre": "qweqwe123",
+      "apellido": "qwe123",
+      "email": "qwe123",
+      "cuitEmpresa": "qwe123",
+      "contrasenia": "contrasenia123"
+    },
+    {
+      "id": "95c6",
+      "nombre": "Mal",
+      "apellido": "Escrito",
+      "email": "malescroto@gmail.com",
+      "cuitEmpresa": "123123",
       "contrasenia": "contrasenia123"
     }
   ],

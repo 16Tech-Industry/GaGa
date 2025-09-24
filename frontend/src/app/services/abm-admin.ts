@@ -1,3 +1,5 @@
+// frontend/src/app/services/abm-admin.ts
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -20,6 +22,8 @@ export class UserService {
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.url);
   }
+
+  // PUT: Actualiza un usuario existente
   updateUser(user: User): Observable<User> {
     return this.http.put<User>(`${this.url}/${user.id}`, user);
   }
@@ -28,6 +32,4 @@ export class UserService {
   deleteUser(id: number): Observable<any> {
     return this.http.delete(`${this.url}/${id}`);
   }
-
-
 }
