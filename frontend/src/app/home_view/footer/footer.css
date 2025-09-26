@@ -1,34 +1,32 @@
+/* Estilos para el contenedor del footer personalizado */
 .foot-personalizado {
-    background-color: #1daf83;
-    padding: 20px 0;
+  background-color: #1daf83; /* color de fondo verde */
+  padding: 20px 0;          /* espacio arriba y abajo */
+  font-size: 0.85rem;       /* texto más chico */
+  opacity: 0.8;             /* un poco transparente */
 }
 
-.foot-personalizado {
-    background-color: #1daf83;
-    padding: 20px 0;
-}
-
+/* Estilos para los párrafos dentro del footer */
 .p-footer {
-    font-size: 17px;
-    font-weight: 600;
-    margin: 4px 0;
+  font-size: 17px;     /* tamaño de letra */
+  font-weight: 600;    /* semi-negrita */
+  margin: 4px 0;       /* espacio vertical reducido */
 }
+
+/* Estilos para los enlaces de redes sociales */
 .social-icons a {
-  transition: transform 0.3s, color 0.3s;
+  transition: transform 0.3s, color 0.3s; /* animación suave al pasar el mouse */
 }
 
+/* Efecto hover en los íconos de redes sociales */
 .social-icons a:hover {
-  transform: translateY(-5px);
-  color: #0d6efd; /* azul bootstrap */
+  transform: translateY(-5px); /* se eleva un poco el ícono */
+  color: #0d6efd; /* azul Bootstrap */
 }
 
+/* Responsive: íconos más grandes en pantallas pequeñas */
 @media (max-width: 576px) {
   .social-icons a {
     font-size: 1.5rem;
   }
-}
-
-.foot-personalizado {
-  font-size: 0.85rem;
-  opacity: 0.8;
 }

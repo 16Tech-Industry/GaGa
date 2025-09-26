@@ -8,7 +8,10 @@ import { Router } from '@angular/router'; // Agrega esto
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './ingreso.html',
-  styleUrl: './ingreso.css',
+  styleUrls: [
+    './ingreso.css',
+    '../formulario-ingreso.css'  // compartido
+     ]
 })
 
 export class Ingreso {
