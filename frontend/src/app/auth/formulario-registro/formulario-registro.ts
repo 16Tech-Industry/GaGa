@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { AuthService } from '@app/services/auth';
 import { User } from '@app/models/User';
+import { FormsModule } from '@angular/forms';
 
 
 export const validacionContIguales: ValidatorFn= (control: AbstractControl):{[key: string]:any} | null => {

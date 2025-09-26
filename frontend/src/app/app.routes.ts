@@ -12,6 +12,14 @@ import { Metricas } from './components/metricas/metricas';
 import { HistorialComponent } from './components/historial/historial';
 import { Alertas } from './components/alertas/alertas';
 import { Error404Component } from './error404/error404.component';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { App } from './app';
+import { AuthService } from './services/auth';
+
 
 export const routes: Routes = [
   { path: '', component: HomeView, title: 'Home' },
@@ -41,3 +49,4 @@ export const routes: Routes = [
   },
   { path: '**', component: Error404Component }
 ];
+
