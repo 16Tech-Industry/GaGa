@@ -7,7 +7,7 @@ import { FooterComponent } from './footer/footer';
   selector: 'app-home-view',
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
-  templateUrl: './home_view.html',
-  styleUrls: ['./home_view.css'],
+  templateUrl:'./home_view.html',
+  styleUrls: ['./home_view.css']
 })
 export class HomeView { }
