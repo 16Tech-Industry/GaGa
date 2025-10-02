@@ -1,15 +1,16 @@
-/* src/app/usuario/usuario.css */
+/* ====== ESTILOS GENERALES COMPARTIDOS ====== */
 
-/* Contenedor para alinear el buscador y los botones */
+/* Contenedor para buscador y botones */
 .top-controls {
   display: flex;
-  align-items: center; /* Alinea verticalmente los elementos */
-  gap: 10px; /* Espacio entre los elementos */
+  align-items: center;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
+/* Input buscador */
 .buscador {
-  flex-grow: 1; /* Permite que el buscador ocupe el espacio disponible */
+  flex-grow: 1;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -17,13 +18,14 @@
   box-sizing: border-box;
 }
 
-/* Estilos para los botones cuadrados */
+/* Contenedor de botones */
 .action-buttons {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+/* Botones cuadrados */
 .square-button {
   width: 60px;
   height: 40px;
@@ -37,25 +39,27 @@
   font-weight: bold;
 }
 
-/* Estilos para cada botón específico */
+.square-button:hover {
+  opacity: 0.8;
+}
+
+/* Variantes de botones */
 .add-button {
   background-color: #28a745;
   color: white;
 }
+
 .edit-button {
   background-color: #ffc107;
   color: #333;
 }
+
 .delete-button {
   background-color: #dc3545;
   color: white;
 }
 
-.square-button:hover {
-  opacity: 0.8;
-}
-
-/* Resto de los estilos de la tabla */
+/* Estilos para tablas */
 table {
   width: 100%;
   border-collapse: collapse;

@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { AuthService } from '@app/services/auth';
 import { User } from '@app/models/User';
+import { FormsModule } from '@angular/forms';
 
 
 export const validacionContIguales: ValidatorFn= (control: AbstractControl):{[key: string]:any} | null => {
@@ -20,9 +21,12 @@ export const validacionContIguales: ValidatorFn= (control: AbstractControl):{[ke
 @Component({
   selector: 'app-formulario-registro',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule ],
+  imports: [ReactiveFormsModule, CommonModule,],
   templateUrl: './formulario-registro.html',
-  styleUrl: './formulario-registro.css'
+  styleUrls:  [
+    './formulario-registro.css',
+  '../formulario-ingreso.css'  // compartido
+            ]
 })
 
 export class FormularioRegistro {
