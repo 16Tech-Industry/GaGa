@@ -6,20 +6,26 @@ import { map, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '@app/services/auth';
+// ReactiveFormsModule fue movido de aquí (solo se importa FormBuilder, FormGroup, etc.)
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 
 
 @Component({
-  selector: 'app-ingreso',
+selector: 'app-ingreso',
+ standalone: true, // Ya lo tienes, ¡perfecto!
   templateUrl: './ingreso.html',
   styleUrls: [
-    './ingreso.css',
-    '../formulario-ingreso.css'  // compartido
-     ]
+'./ingreso.css',
+'../formulario-ingreso.css' // compartido
+],
+imports: [
+ ReactiveFormsModule // <--- ¡Esta es la corrección crucial!
+ ]
 })
 
 export class Ingreso implements OnInit {
-  loginForm!: FormGroup;
+    loginForm!: FormGroup;
+// ... (el resto de tu clase sigue igual)
   errorMessage: string = '';
   isLoading: boolean = false;
 

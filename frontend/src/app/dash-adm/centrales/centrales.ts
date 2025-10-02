@@ -9,7 +9,7 @@ export interface Centrales {
   selector: 'app-centrales',
   imports: [CommonModule],
   templateUrl: './centrales.html',
-  styleUrls: ['./centrales.css']
+  styleUrls: ['../estilos-generales.css']
 })
 export class CentralesComponent {
   Centrales: Centrales[] = [
