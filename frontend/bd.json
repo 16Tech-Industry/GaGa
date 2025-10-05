@@ -33,6 +33,30 @@
       "email": "dfg@mmm.com",
       "contrasenia": "Gatos.",
       "cuitEmpresa": "20460361312"
+    },
+    {
+      "id": "fdbf",
+      "nombre": "davi",
+      "apellido": "caremani",
+      "email": "dfg@mmm.com",
+      "contrasenia": "Davi.123",
+      "cuitEmpresa": "20191359985"
+    },
+    {
+      "id": "ffb1",
+      "nombre": "rita",
+      "apellido": "lagordita",
+      "email": "dfg@mmm.com",
+      "contrasenia": "Rita.123",
+      "cuitEmpresa": "20191359985"
+    },
+    {
+      "id": "b001",
+      "nombre": "franco",
+      "apellido": "avila",
+      "email": "dfg@mmm.com",
+      "contrasenia": "Franco*789",
+      "cuitEmpresa": "20460361312"
     }
   ],
   "empresas": [
