@@ -4,31 +4,29 @@
   <input type="text" class="buscador" placeholder="Buscar...">
   
   <div class="action-buttons">
-    <button class="square-button add-button">Agregar</button>
+    <button class="square-button add-button" (click)="agregarUsuario()">Agregar</button>
   </div>
 </div>
 
 <table class="table">
   <thead>
-    <!-- ACA ESTA ESTA LA TABLA-->
-    <tr>   <!-- estos son los header-->
-      <th>ID</th>
+    <tr>
       <th>Nombre</th>
-      <th>Email</th>
-      <th>Empresa</th>
+      <th>Apellido</th>
+      <th>Correo</th>
+      <th>Cuit de Empresa</th>
       <th></th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
     <tr *ngFor="let usuario of usuarios">
-      <!-- aca se genera dinamicamente las filas-->
-      <th scope="row">{{ usuario.id }}</th>
       <td>{{ usuario.nombre }}</td>
+      <td>{{ usuario.apellido }}</td>
       <td>{{ usuario.email }}</td>
-      <td>{{ usuario.empresa }}</td>
+      <td>{{ usuario.cuitEmpresa }}</td>
       <td>
         <div class="action-buttons">
-          <button class="square-button edit-button">Editar</button>
+          <button class="square-button edit-button" (click)="editarUsuario(usuario)">Editar</button>
           <button class="square-button delete-button">Borrar</button>
         </div>
       </td>  

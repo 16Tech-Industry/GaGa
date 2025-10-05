@@ -1,4 +1,4 @@
-// src/app/services/auth.ts
+// src/app/services/abm-admin.ts
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -8,14 +8,23 @@ import { User } from '@app/models/User';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
-
+export class UserService {
   url = "http://localhost:3000/usuarios";
 
   constructor(private http: HttpClient) {}
 
-  // Corregido: Ahora el método acepta un objeto sin la propiedad 'id'
+  // POST: Agrega un nuevo usuario
   createUser(user: Omit<User, 'id'>): Observable<User> {
     return this.http.post<User>(this.url, user);
+  }
+
+  // GET: Obtiene todos los usuarios
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(this.url);
+  }
+
+  // PUT: Actualiza un usuario existente
+  updateUser(user: User): Observable<User> {
+    return this.http.put<User>(`${this.url}/${user.id}`, user);
   }
 }

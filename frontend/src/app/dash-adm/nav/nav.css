@@ -1,18 +1,27 @@
+/* src/app/dash-adm/nav/nav.css */
+
+/* Estilos para el contenedor del layout */
+.layout-container {
+  display: flex;
+}
+
+.content-area {
+  flex-grow: 1; /* Permite que el contenido ocupe el espacio restante */
+}
+
 /* Estilos generales para pantallas de escritorio */
 .sidebar {
-  align-content: top;
   width: 300px;
   height: 100vh;
   background-color: var(--color-800);
   color: white;
   padding: 24px;
-  transition: all 0.3s ease-in-out; /* Transición para un efecto de apertura suave */
+  transition: all 0.3s ease-in-out;
 }
 
 .sidebar-header {
   display: flex;
   flex-direction: row;
-  align-items: row;
   align-items: center;
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--color-50);
@@ -22,6 +31,7 @@
 .sidebar-header h3 {
   margin: 0;
   font-size: 1.5rem;
+  margin-left: 10px;
 }
 
 ul {
@@ -42,4 +52,50 @@ li a {
 li a:hover,
 li a.active {
   background-color: var(--color-600);
+}
+
+/* Ocultar el botón de hamburguesa por defecto en escritorio */
+.hamburger-button {
+  display: none;
+}
+
+/* Media query para pantallas más pequeñas (teléfonos y tablets) */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow-x: hidden;
+  }
+  
+  .sidebar.open {
+    width: 250px;
+    padding: 24px;
+  }
+
+  .sidebar-content {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .sidebar.open .sidebar-content {
+    opacity: 1;
+  }
+
+  /* Mostrar el botón de hamburguesa en pantallas pequeñas */
+  .hamburger-button {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 80%;
+    background: var(--color-800);
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding:8px;
+    border-radius: 20px;
+  }
 }

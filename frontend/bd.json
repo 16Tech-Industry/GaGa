@@ -1,30 +1,12 @@
 {
   "usuarios": [
     {
-      "id": "",
-      "nombre": "",
-      "apellido": "",
-      "cuitEmpresa": "",
-      "correo": "",
-      "contrasena": "",
-      "rol": 1
-    },
-    {
-      "id": "",
-      "nombre": "",
-      "apellido": "",
-      "cuitEmpresa": "",
-      "correo": "",
-      "contrasena": "",
-      "rol": 2
-    },
-    {
       "id": "3163",
-      "nombre": "Heyme",
-      "apellido": "Coraspe",
-      "email": "heyme.coraspe@gmail.com",
-      "contrasenia": "Heyme*",
-      "cuitEmpresa": "20191359985"
+      "nombre": "Hey222",
+      "apellido": "Coraspso1",
+      "email": "heyme.coraspsse@gmail.com",
+      "cuitEmpresa": "20191359985",
+      "contrasenia": "Heyme*"
     },
     {
       "id": "5a34",
@@ -32,30 +14,6 @@
       "apellido": "García Lorca",
       "email": "dfg@mmm.com",
       "contrasenia": "Gatos.",
-      "cuitEmpresa": "20460361312"
-    },
-    {
-      "id": "fdbf",
-      "nombre": "davi",
-      "apellido": "caremani",
-      "email": "dfg@mmm.com",
-      "contrasenia": "Davi.123",
-      "cuitEmpresa": "20191359985"
-    },
-    {
-      "id": "ffb1",
-      "nombre": "rita",
-      "apellido": "lagordita",
-      "email": "dfg@mmm.com",
-      "contrasenia": "Rita.123",
-      "cuitEmpresa": "20191359985"
-    },
-    {
-      "id": "b001",
-      "nombre": "franco",
-      "apellido": "avila",
-      "email": "dfg@mmm.com",
-      "contrasenia": "Franco*789",
       "cuitEmpresa": "20460361312"
     }
   ],
@@ -87,6 +45,49 @@
       "nombre": "",
       "direccion": "",
       "empresaId": ""
+    }
+  ],
+  "metricas": [
+    {
+      "id": "1",
+      "temperatura": 22,
+      "consumo": 150
+    },
+    {
+      "id": "2",
+      "temperatura": 24,
+      "consumo": 200
+    },
+    {
+      "id": "3",
+      "temperatura": 21,
+      "consumo": 170
+    }
+  ],
+  "historial": [
+    {
+      "id": "1",
+      "fecha": "2025-09-01",
+      "temperatura": 22,
+      "humedad": 55,
+      "consumo": 150,
+      "ahorro": 20
+    },
+    {
+      "id": "2",
+      "fecha": "2025-09-02",
+      "temperatura": 24,
+      "humedad": 60,
+      "consumo": 180,
+      "ahorro": 25
+    },
+    {
+      "id": "3",
+      "fecha": "2025-09-03",
+      "temperatura": 21,
+      "humedad": 58,
+      "consumo": 170,
+      "ahorro": 18
     }
   ]
 }
