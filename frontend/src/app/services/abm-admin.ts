@@ -1,4 +1,4 @@
-// src/app/services/abm-admin.ts
+// frontend/src/app/services/abm-admin.ts
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -26,5 +26,10 @@ export class UserService {
   // PUT: Actualiza un usuario existente
   updateUser(user: User): Observable<User> {
     return this.http.put<User>(`${this.url}/${user.id}`, user);
+  }
+
+  // DELETE: Elimina un usuario del servidor
+  deleteUser(id: number): Observable<any> {
+    return this.http.delete(`${this.url}/${id}`);
   }
 }

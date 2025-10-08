@@ -21,7 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 })
 export class UsuarioComponent implements OnInit {
   usuarios: User[] = [];
-  
+
   private dialog = inject(MatDialog);
   constructor(private usuarioService: UserService) { }
 
@@ -60,7 +60,14 @@ export class UsuarioComponent implements OnInit {
     });
   }
 
-  // Nuevo método para editar un usuario
+  borrarUsuario(id: number): void {
+    if (confirm('¿Estás seguro de que quieres borrar este usuario?')) {
+      this.usuarioService.deleteUser(id).subscribe(() => {
+        this.cargarUsuarios();
+      });
+    }
+  }
+
   editarUsuario(usuario: User): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
       data: {
@@ -70,7 +77,6 @@ export class UsuarioComponent implements OnInit {
         cuitEmpresa: usuario.cuitEmpresa
       }
     });
-
     dialogRef.afterClosed().subscribe(usuarioActualizado => {
       if (usuarioActualizado) {
         // Se crea un objeto 'usuarioCompleto' con los datos actualizados,
