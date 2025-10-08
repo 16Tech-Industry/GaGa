@@ -53,16 +53,8 @@
       "nombre": "sisis",
       "apellido": "nono",
       "email": "admin@gmail.com",
-      "contrasenia": "Admin123!",
-      "cuitEmpresa": "22222222222"
-    },
-    {
-      "id": "2feb",
-      "nombre": "qweqwe123",
-      "apellido": "qwe123",
-      "email": "qwe123",
-      "cuitEmpresa": "qwe123",
-      "contrasenia": "contrasenia123"
+      "cuitEmpresa": "2543214",
+      "contrasenia": "Admin123!"
     }
   ],
   "empresas": [
