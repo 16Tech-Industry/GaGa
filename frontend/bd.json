@@ -15,6 +15,14 @@
       "email": "dfg@mmm.com",
       "contrasenia": "Gatos.",
       "cuitEmpresa": "20460361312"
+    },
+    {
+      "id": "495c",
+      "nombre": "hola",
+      "apellido": "adios",
+      "email": "holayadios@xxx.com",
+      "cuitEmpresa": "254313",
+      "contrasenia": "contrasenia123"
     }
   ],
   "empresas": [
