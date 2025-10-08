@@ -63,14 +63,6 @@
       "email": "qwe123",
       "cuitEmpresa": "qwe123",
       "contrasenia": "contrasenia123"
-    },
-    {
-      "id": "95c6",
-      "nombre": "Mal",
-      "apellido": "Escrito",
-      "email": "malescroto@gmail.com",
-      "cuitEmpresa": "123123",
-      "contrasenia": "contrasenia123"
     }
   ],
   "empresas": [
