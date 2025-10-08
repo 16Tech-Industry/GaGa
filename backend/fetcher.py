@@ -1,4 +1,5 @@
 import psycopg2, requests, datetime, random
+
 # establece datos para la conexion
 conector =psycopg2.connect(
             host="localhost",
