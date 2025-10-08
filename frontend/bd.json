@@ -13,8 +13,8 @@
       "nombre": "Federico García Lorca",
       "apellido": "García Lorca",
       "email": "dfg@mmm.com",
-      "contrasenia": "Gatos.",
-      "cuitEmpresa": "20460361312"
+      "cuitEmpresa": "204603613123",
+      "contrasenia": "Gatos."
     },
     {
       "id": "89f2",
@@ -70,22 +70,6 @@
       "apellido": "matera",
       "email": "pablitopalito@gmail.com",
       "cuitEmpresa": "2222111123123123",
-      "contrasenia": "contrasenia123"
-    },
-    {
-      "id": "afab",
-      "nombre": "julian",
-      "apellido": "montolla",
-      "email": "monedamontolla@gmail.com",
-      "contrasenia": "Migui123!",
-      "cuitEmpresa": "55555555555"
-    },
-    {
-      "id": "0fff",
-      "nombre": "123123123123",
-      "apellido": "123123123123",
-      "email": "123@ſ€123",
-      "cuitEmpresa": "1231231232",
       "contrasenia": "contrasenia123"
     }
   ],
