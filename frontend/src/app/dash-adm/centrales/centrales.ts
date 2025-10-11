@@ -7,7 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
-// Componente del Diálogo e interfaces
+// Componente de la modal e interfaces
 import {
   DialogCentralesComponent,
   DialogCentralesResult,
@@ -33,13 +33,13 @@ import { CentralesService } from '../../services/centrales.service';
   styleUrls: ['./centrales.css']
 })
 export class CentralesComponent implements OnInit {
+// Inyección de dependencias utilizando la nueva función 'inject' (más limpia que el constructor)
+  private dialog = inject(MatDialog); // Servicio de Angular Material para abrir diálogos modales
+  private centralesService = inject(CentralesService); // Servicio personalizado que gestiona la comunicación con la API
 
-  private dialog = inject(MatDialog);
-  private centralesService = inject(CentralesService);
+  centrales = signal<Centrales[]>([]); // Signal reactivo que almacena la lista de centrales
 
-  centrales = signal<Centrales[]>([]);
-
-  // Carga los datos al iniciar el componente
+  // Carga los datos al iniciar el componente. Llama a la función que carga las centrales desde el backend
   ngOnInit(): void {
     this.cargarCentrales();
   }
@@ -55,7 +55,7 @@ export class CentralesComponent implements OnInit {
           Ubicacion: c.direccion,
           empresa: c.empresaId
         }));
-        this.centrales.set(mappedData);
+        this.centrales.set(mappedData); // Actualiza el signal con la nueva lista
       },
       error: (err) => {
         console.error('Error al cargar las centrales. Verifica que JSON Server esté corriendo.', err);
@@ -65,10 +65,11 @@ export class CentralesComponent implements OnInit {
 
   private openCentralDialog(data: DialogData | null): void {
     const dialogRef = this.dialog.open(DialogCentralesComponent, {
+      // Se abre el componente de diálogo
       width: '400px',
       data: data
     });
-
+   // afterClosed() se ejecuta cuando el usuario cierra el modal (ya sea guardando o cancelando)
     dialogRef.afterClosed().subscribe((result: DialogCentralesResult | undefined) => {
       if (result) {
         if (data && data.id) {
@@ -79,10 +80,11 @@ export class CentralesComponent implements OnInit {
             Ubicacion: result.Ubicacion,
             empresa: result.empresa,
           };
-
+        // Se envía la central editada al backend y, si tiene éxito, se actualiza el estado local
           this.centralesService.updateCentral(centralEditada).subscribe({
             next: () => {
               this.centrales.update(currentCentrales =>
+                // Reemplaza la central modificada en la lista actual
                 currentCentrales.map(c => c.id === centralEditada.id ? centralEditada : c)
               );
               console.log('Central editada y guardada en BD:', centralEditada);
@@ -97,7 +99,7 @@ export class CentralesComponent implements OnInit {
             Ubicacion: result.Ubicacion,
             empresa: result.empresa,
           };
-
+          // Se crea una nueva central en el servidor
           this.centralesService.createCentral(nuevaCentral).subscribe({
             next: (savedCentral: any) => {
               // Mapea el objeto guardado de vuelta al formato de Angular
@@ -107,7 +109,7 @@ export class CentralesComponent implements OnInit {
                 Ubicacion: savedCentral.direccion,
                 empresa: savedCentral.empresaId,
               };
-
+            // Actualiza el estado agregando la nueva central
               this.centrales.update(currentCentrales => [...currentCentrales, centralConId]);
               console.log('Nueva Central guardada en BD:', centralConId);
             },
@@ -119,15 +121,15 @@ export class CentralesComponent implements OnInit {
   }
 
   // === FUNCIONES PÚBLICAS ===
-
+ // Abre modal sin datos para crear una nueva central
   agregarCentral(): void {
     this.openCentralDialog(null);
   }
 
-  editarCentral(central: Centrales): void {
+  editarCentral(central: Centrales): void { // abre modal con datos ya cargados para editar
     this.openCentralDialog(central);
   }
-
+// Confirma y elimina una central seleccionada
   borrarCentral(central: Centrales): void {
     const confirmacion = window.confirm(`¿Estás seguro de que deseas borrar la central: ${central.nombre} (ID: ${central.id})?`);
 
@@ -135,7 +137,7 @@ export class CentralesComponent implements OnInit {
       // Caso BORRAR (DELETE)
       this.centralesService.deleteCentral(central.id).subscribe({
         next: () => {
-          this.centrales.update(currentCentrales =>
+          this.centrales.update(currentCentrales => // Actualiza la lista local eliminando la central borrada
             currentCentrales.filter(c => c.id !== central.id)
           );
           console.log('Central eliminada de la BD:', central.id);
@@ -145,47 +147,3 @@ export class CentralesComponent implements OnInit {
     }
   }
 }
-/*import { Component, signal, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-export interface Centrales {
-  id: number;
-  Ubicacion: string;
-  empresa: string;
-}
-@Component({
-  selector: 'aa-dialog-centrales'/*'app-centrales',
-  standalone: true,
-  imports: [CommonModule, FormsModule, MatButtonModule, MatDialogModule, MatFormFieldModule, MatInputModule,MatDialog],
-  templateUrl: './centrales.html',
-  styleUrls: ['./centrales.css']
-})
-
-export class DialogCentralesComponent {
-  // 1. Inyectar MatDialogRef para poder cerrar el diálogo
-  private dialogRef = inject(MatDialogRef<DialogCentralesComponent>);
-
-  // 2. Signals para vincular a los campos del formulario
-  ubicacion = signal<string>('');
-  nombre = signal<string>(''); // Asumo que 'nombre' es el nombre de la central basado en tu JSON
-  empresa = signal<string>('');
-
-  // Función para cancelar y cerrar el diálogo
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-}*/
-/*
-export class CentralesComponent {
-  Centrales: Centrales[] = [
-        { id: 1, Ubicacion: 'Empire State Building  34th Street - Estados Unidos', empresa: 'Ardu'},
-        { id: 2, Ubicacion: 'Charing Cross Road - Reino Unido', empresa: 'Fiat'},
-        { id: 3, Ubicacion: 'Greater London - Reino Unido', empresa: 'Samsung'},
-        { id: 4, Ubicacion: 'Texas State Capitol, 1100 Congress Ave - Estados Unidos', empresa: 'Walmart'},
-      ];
-}*/

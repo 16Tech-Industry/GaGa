@@ -2,7 +2,7 @@ import { Component, signal, inject, OnInit } from '@angular/core'; // <-- Import
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-
+//VENTABA MODAL
 import {
   MatDialogModule,
   MatDialogRef,

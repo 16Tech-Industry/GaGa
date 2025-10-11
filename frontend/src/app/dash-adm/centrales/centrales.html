@@ -4,6 +4,7 @@
 
   <div class="action-buttons">
     <button class="square-button add-button" (click)="agregarCentral()">Agregar</button>
+      <!-- Al hacer clic ejecuta el método agregarCentral() del componente TS -->
   </div>
 </div>
 
@@ -18,12 +19,15 @@
     </tr>
   </thead>
   <tbody class="table-group-divider">
+    <!-- 🔁 Itera sobre la lista de 'centrales' proveniente del componente TypeScript -->
+    <!-- La función centrales() devuelve un arreglo de objetos 'central' -->
     <tr *ngFor="let central of centrales()">
       <td>{{ central.nombre }}</td> <th scope="row">{{ central.id }}</th>
       <td>{{ central.Ubicacion }}</td>
       <td>{{ central.empresa }}</td>
       <td>
         <div class="action-buttons">
+          <!-- Llama al método editarCentral() pasando el objeto 'central' como parámetro -->
           <button class="square-button edit-button" (click)="editarCentral(central)">Editar</button>
           <button class="square-button delete-button" (click)="borrarCentral(central)">Borrar</button>
         </div>

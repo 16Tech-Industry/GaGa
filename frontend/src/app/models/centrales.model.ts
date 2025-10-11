@@ -5,3 +5,4 @@ export interface Centrales {
   Ubicacion: string;
   empresa: string;
 }
+//datos necesarios a completar para crear registro central

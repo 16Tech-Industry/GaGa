@@ -6,11 +6,17 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { AuthService } from '@app/services/auth';
 import { User } from '@app/models/User';
 
+/**
+ * ✅ Validador personalizado: validación cruzada entre dos campos del formulario
+ * Se asegura de que los campos 'contrasenia' y 'confirmarContrasenia' sean iguales.
+ * Si no coinciden, devuelve un objeto de error con la clave 'contraseniasOk'.
+ */
 
 export const validacionContIguales: ValidatorFn= (control: AbstractControl):{[key: string]:any} | null => {
   const contrasenia = control.get('contrasenia');
   const confirmarContrasenia = control.get('confirmarContrasenia');
 
+  // Retorna error si los valores son distintos
   if (contrasenia && confirmarContrasenia && contrasenia.value !== confirmarContrasenia.value) {
     return { 'contraseniasOk': true };
   } else {
@@ -19,27 +25,35 @@ export const validacionContIguales: ValidatorFn= (control: AbstractControl):{[ke
 };
 @Component({
   selector: 'app-formulario-registro',
-  standalone: true,
-  imports: [ReactiveFormsModule, CommonModule ],
+  standalone: true, //Permite que el componente sea independiente (sin módulo)
+  imports: [ReactiveFormsModule, CommonModule ], // Módulos requeridos para formularios reactivos y directivas comunes
   templateUrl: './formulario-registro.html',
   styleUrl: './formulario-registro.css'
 })
 
-export class FormularioRegistro {
+export class FormularioRegistro {//FormGroup principal que agrupa todos los campos del formulario
 formularioRegistro: FormGroup;
-
+/**
+   * Constructor:
+   * - Inyecta Router para navegar entre rutas
+   * - Inyecta AuthService para registrar usuarios en el backend
+   */
   constructor(private router: Router, private authService: AuthService) {
+    //Inicializa el formulario con sus controles y validaciones
     this.formularioRegistro = new FormGroup({
     nombre: new FormControl('', Validators.required),
     apellido: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
+    // Patrón: 5-12 caracteres, al menos una mayúscula y un carácter especial
     contrasenia: new FormControl('', [Validators.required, Validators.pattern('^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{5,12}$') ]),
     confirmarContrasenia: new FormControl('', [Validators.required,]),
+    // Solo números, exactamente 11 dígitos
     cuit: new  FormControl('', [Validators.required, Validators.pattern('^[0-9]{11}$')]),
-},
+},//validador personalizado aplica a grupo completo
   {validators: validacionContIguales});
 }
 /* se mueven los get del html al typescript */
+//métodos para obtener los datos ingresados
 get nombre() {
   return this.formularioRegistro.get('nombre');
 }
@@ -55,7 +69,7 @@ get cuit() {
 get email() {
   return this.formularioRegistro.get('email');
 }
-/**gets mostrar invalidos */
+/**gets mostrar invalidos, validaciones lógicas */
 get mostrarCuitInvalido(){
   return this.cuit?.invalid && this.cuit?.touched;
 }
@@ -82,25 +96,33 @@ get contraseniasNoCoinciden(){
 
 /**Eventos */
 inicio() {
+  //va al inicio al hacer click en el logo
   this.router.navigate(['/']);
 }
+/**
+   * Evento principal al enviar el formulario.
+   * - Verifica si el formulario es válido.
+   * - Crea un objeto 'User' con los datos ingresados.
+   * - Llama al servicio AuthService para registrar el usuario.
+   * - Muestra alertas según el resultado (éxito o error).
+   */
 
 onSubmit(): void {
   if (this.formularioRegistro.valid) {
     const { nombre, apellido, email, contrasenia, cuit } = this.formularioRegistro.value;
-    const newUser: Omit<User, 'id'> = {
+    const newUser: Omit<User, 'id'> = {// Crea un nuevo usuario omitiendo la propiedad 'id' (el backend la genera)
       nombre,
       apellido,
       email,
       contrasenia,
       cuitEmpresa: cuit
     };
-
+   // Llamada HTTP al servicio de autenticación
     this.authService.createUser(newUser).subscribe({
       next: (response: User) => {
         console.log('Usuario creado:', response);
         alert('¡Registro exitoso!');
-        this.router.navigate(['/login']);
+        this.router.navigate(['/login']);// Redirige al login después del registro
       },
       error: (error: HttpErrorResponse) => {
         console.error('Error en el registro:', error);
@@ -108,7 +130,7 @@ onSubmit(): void {
       }
     });
   } else {
-    this.formularioRegistro.markAllAsTouched();
+    this.formularioRegistro.markAllAsTouched();// Marca todos los campos como "touched" para mostrar errores visuales
   }
 }
 }
