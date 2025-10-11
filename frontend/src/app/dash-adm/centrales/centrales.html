@@ -21,7 +21,8 @@
   <tbody class="table-group-divider">
     <!-- 🔁 Itera sobre la lista de 'centrales' proveniente del componente TypeScript -->
     <!-- La función centrales() devuelve un arreglo de objetos 'central' -->
-    <tr *ngFor="let central of centrales()">
+    @for (central of centrales(); track central.id){
+    <tr>
       <td>{{ central.nombre }}</td> <th scope="row">{{ central.id }}</th>
       <td>{{ central.Ubicacion }}</td>
       <td>{{ central.empresa }}</td>
@@ -33,5 +34,10 @@
         </div>
       </td>
     </tr>
+    }@empty{
+      <tr>
+        <td colspan="5" class="text-center">No hay centrales registradas</td>
+      </tr>
+    }
   </tbody>
 </table>
