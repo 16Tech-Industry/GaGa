@@ -15,7 +15,7 @@ interface Usuario {
   email: string;
   contrasenia: string;
   cuitEmpresa: string;
-  rol: string; // puede ser 'admin' o 'usuario'
+  rol : string; // puede ser 'admin' o 'usuario'
 }
 
 // Decorador que marca este servicio como inyectable en toda la app
