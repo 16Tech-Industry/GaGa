@@ -26,7 +26,7 @@
 
             <section class="form-grupo">
                 <label for="cuit"> Cuit: </label>
-                <input type="text" id="cuit" formControlName="cuit" placeholder="Ingrese el CUIT de la empresa sin guiones">
+                <input type="number" id="cuit" formControlName="cuit" placeholder="Ingrese el CUIT de la empresa sin guiones">
                  <!-- Muestra mensaje de error si el CUIT ingresado es inválido mostrarCuitInvalido función en archivo ts-->
                 @if(mostrarCuitInvalido){
                   <p class="error">Por favor, ingrese un CUIT válido.</p>

@@ -50,7 +50,7 @@ export class UsuarioComponent implements OnInit {
       data: {
         nombre: '',
         apellido: '',
-        cuitEmpresa: '',
+        cuit_empresa: '',
         email: ''
       }
     });
@@ -92,7 +92,8 @@ export class UsuarioComponent implements OnInit {
         nombre: usuario.nombre,
         apellido: usuario.apellido,
         email: usuario.email,
-        cuitEmpresa: usuario.cuitEmpresa
+        cuit_empresa: usuario.cuit_empresa
+
       }
     });
     // Se suscribe al evento de cierre del diálogo para obtener los datos actualizados
@@ -105,8 +106,9 @@ export class UsuarioComponent implements OnInit {
           nombre: usuarioActualizado.nombre,
           apellido: usuarioActualizado.apellido,
           email: usuarioActualizado.email,
-          cuitEmpresa: usuarioActualizado.cuitEmpresa,
-          contrasenia: usuario.contrasenia
+          cuit_empresa: usuarioActualizado.cuit_empresa,
+          contrasenia: usuario.contrasenia,
+          rol:'usuario'
         };
 
         // Se llama al servicio para actualizar el usuario en el servidor

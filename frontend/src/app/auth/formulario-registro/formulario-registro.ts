@@ -110,19 +110,24 @@ inicio() {
 onSubmit(): void {
   if (this.formularioRegistro.valid) {
     const { nombre, apellido, email, contrasenia, cuit } = this.formularioRegistro.value;
-    const newUser: Omit<User, 'id'> = {// Crea un nuevo usuario omitiendo la propiedad 'id' (el backend la genera)
+    const newUser: Omit<User, 'id'> = {
       nombre,
       apellido,
       email,
       contrasenia,
-      cuitEmpresa: cuit
+      cuit_empresa: cuit,
+      rol:'usuario'
     };
-   // Llamada HTTP al servicio de autenticación
+
+    // ▼▼▼ AÑADE LA LÍNEA AQUÍ ▼▼▼
+    console.log('Datos que se envían al backend:', newUser);
+
+    // Llamada HTTP al servicio de autenticación
     this.authService.createUser(newUser).subscribe({
       next: (response: User) => {
         console.log('Usuario creado:', response);
         alert('¡Registro exitoso!');
-        this.router.navigate(['/login']);// Redirige al login después del registro
+        this.router.navigate(['/login']);
       },
       error: (error: HttpErrorResponse) => {
         console.error('Error en el registro:', error);
@@ -130,7 +135,7 @@ onSubmit(): void {
       }
     });
   } else {
-    this.formularioRegistro.markAllAsTouched();// Marca todos los campos como "touched" para mostrar errores visuales
+    this.formularioRegistro.markAllAsTouched();
   }
 }
 }
