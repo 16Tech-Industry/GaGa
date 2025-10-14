@@ -60,7 +60,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/bootstrap-icons/font/bootstrap-icons.css", 
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -98,6 +98,21 @@
 },
 "cli": {
   "analytics": "bf47e763-8b5a-4389-b05a-c7008259d935"
+},
+"cli": {
+  "analytics": false
+},
+"cli": {
+  "analytics": false
+},
+"cli": {
+  "analytics": false
+},
+"cli": {
+  "analytics": false
+},
+"cli": {
+  "analytics": false
 },
 "cli": {
   "analytics": false

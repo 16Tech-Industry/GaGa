@@ -6,3 +6,4 @@ export interface User{
   email:string,
   contrasenia:string,
 }
+//datos necesarios a completar para crear registro usuario

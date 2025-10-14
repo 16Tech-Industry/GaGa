@@ -9,4 +9,4 @@ import { Nav } from './nav/nav'; // La ruta correcta es aquí
   templateUrl: './dash-adm.html',
   styleUrl: './dash-adm.css'
 })
-export class DashAdm { }  
+export class DashAdm { }

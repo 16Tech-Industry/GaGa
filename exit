@@ -1,0 +1,248 @@
+[33mcommit d32889ff4b3684db263c086733978c6ce83e34cf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mheyme-coraspe[m[33m, [m[1;31morigin/heyme-coraspe[m[33m)[m
+Merge: 1de86f94 ef354a91
+Author: Heyme <heyme.coraspe@gmail.com>
+Date:   Sun Oct 5 12:26:43 2025 -0300
+
+    Merge branch 'bauti_dev' of https://github.com/16Tech-Industry/GaGa into heyme-coraspe
+
+[33mcommit 1de86f94ebfcfec556cb31b2e095ffcafe3ed231[m
+Author: Heyme <heyme.coraspe@gmail.com>
+Date:   Sun Oct 5 12:17:41 2025 -0300
+
+    refactor: cambios en control de flujo @if y @for en lugar de *ngIf y *ngFor en el formulario de registro
+
+[33mcommit ef354a91e46386debb1cc19cecab4f34d06477b7[m
+Author: BautiBustos <bautibustos10@gmail.com>
+Date:   Wed Oct 1 08:14:39 2025 -0300
+
+    feat: conector a base de datos
+
+[33mcommit 4a01305e8d83026d3bc4612b4a950188de398c24[m
+Author: BautiBustos <bautibustos10@gmail.com>
+Date:   Tue Sep 23 20:08:28 2025 -0300
+
+    estable
+
+[33mcommit 0adcf51090339310486bf741b7d7ccbbd2370e76[m
+Author: BautiBustos <bautibustos10@gmail.com>
+Date:   Tue Sep 23 18:34:59 2025 -0300
+
+    fix: boton agregar andando
+
+[33mcommit dbc6ab0ab6f0183a8636a58f6e6f848683322923[m
+Author: BautiBustos <bautibustos10@gmail.com>
+Date:   Tue Sep 16 21:27:37 2025 -0300
+
+    feat: se permiten modificaciones de archivos.
+
+[33mcommit 732514b14802b4bb21753def4d179d466661bd00[m
+Author: BautiBustos <bautibustos10@gmail.com>
+Date:   Tue Sep 16 21:22:28 2025 -0300
+
+    feat: se agrego la posibilidad de modificar un registro existente
+
+[33mcommit 45f122d7a49dd1e99bd2a8d3279e65e730d3adef[m
+Author: BautiBustos <bautibustos10@gmail.com>
+Date:   Sat Sep 13 19:57:40 2025 -0300
+
+    fix: arreglado warnings
+
+[33mcommit b85e1f44f46a105b3910747362f5f4132bc7ab29[m
+Author: BautiBustos <bautibustos10@gmail.com>
+Date:   Sat Sep 13 19:57:29 2025 -0300
+
+    fix: arreglado warnings
+
+[33mcommit 6c6b39cb9f5d1b36f0891d873203e39920011833[m
+Merge: 3baf1d01 7e38eac5
+Author: BautiBustos <bautibustos10@gmail.com>
+Date:   Fri Sep 12 20:42:19 2025 -0300
+
+    feat: dinamismo dentro de la pagina de usuarios y modal para la carga de un nuevo usuario dentro de la vista administrador
+
+[33mcommit 7e38eac567457fda04325b33a50f810b2b13544e[m
+Author: BautiBustos <bautibustos10@gmail.com>
+Date:   Fri Sep 12 19:31:32 2025 -0300
+
+    si
+
+[33mcommit 3baf1d0127c934bb0123a85e38abeb35d68ec412[m
+Author: Franco <francoavila9356@gmail.com>
+Date:   Fri Sep 12 18:27:06 2025 -0300
+
+    correciones del footer y componente del quienes somos
+
+[33mcommit 44c8bdf106ec171b4844fafba7b4aeffcbd1f97c[m
+Merge: ee85c89b 430fecd4
+Author: Franco <francoavila9356@gmail.com>
+Date:   Fri Sep 12 18:25:06 2025 -0300
+
+    Merge branch 'Franco' into dev
+
+[33mcommit ee85c89b3e00782938470c5a8486a75daaa58b44[m
+Merge: 5048b921 0f33f0b4
+Author: GuillermoGiraudo7 <giraudoguillermo7@gmail.com>
+Date:   Fri Sep 12 17:27:19 2025 -0300
+
+    Merge branch 'Guillermo_Dev' into dev
+
+[33mcommit 5048b921a69cf9f5eb391189540759cd5a2ae00f[m
+Author: GuillermoGiraudo7 <giraudoguillermo7@gmail.com>
+Date:   Fri Sep 12 17:10:51 2025 -0300
+
+    Update README.md
+
+[33mcommit 0f33f0b42b4cada636ab8f056be5cb0d8df3dbb9[m[33m ([m[1;31morigin/Guillermo_Dev[m[33m)[m
+Author: GuillermoGiraudo7 <giraudoguillermo7@gmail.com>
+Date:   Fri Sep 12 17:06:09 2025 -0300
+
+    feat: paso de frontend estatico a dinámico en dash-user
+
+[33mcommit 4a878e62afd3fa9af4d0c3300258f0459c38408e[m
+Merge: 2f8e270e a1cd6cc3
+Author: Valentin-Juarez <168031722+Valentin-Juarez@users.noreply.github.com>
+Date:   Fri Sep 12 15:51:01 2025 -0300
+
+    Merge branch 'Vale_Dev' into dev
+
+[33mcommit a1cd6cc3788f7f2836795bbd62f889974cc6d2f8[m[33m ([m[1;31morigin/Vale_Dev[m[33m)[m
+Author: Valentin-Juarez <168031722+Valentin-Juarez@users.noreply.github.com>
+Date:   Fri Sep 12 15:33:47 2025 -0300
+
+    actually
+
+[33mcommit 5b8c6c85ed8580bb43bc2e18f7b8cccf6713a6ea[m
+Author: BautiBustos <bautibustos10@gmail.com>
+Date:   Thu Sep 11 23:42:06 2025 -0300
+
+    feat: modal para formulario de agregar usuario ok
+
+[33mcommit 430fecd4edccdb5d24988647ad5226264f403210[m
+Merge: d38e6388 2f8e270e
+Author: Franco <francoavila9356@gmail.com>
+Date:   Thu Sep 11 15:54:56 2025 -0300
+
+    Merge branch 'dev' of https://github.com/16Tech-Industry/GaGa into Franco
+
+[33mcommit 0fdf780e25b34f7c0c1573e3525ea5e709529cad[m
+Author: bautibustos <bautibustos10@gmail.com>
+Date:   Thu Sep 11 13:51:56 2025 -0300
+
+    update: tabla dinamica con servidor json dentro de usuarios anda.
+
+[33mcommit 6bb10b3eced41143933e2d76d4fee72ca69a38e0[m
+Author: GuillermoGiraudo7 <giraudoguillermo7@gmail.com>
+Date:   Thu Sep 11 10:28:25 2025 -0300
+
+    feat sidebar
+
+[33mcommit d51a6de2725853041ff86bac061c2de13b7b3920[m
+Author: GuillermoGiraudo7 <giraudoguillermo7@gmail.com>
+Date:   Sun Aug 24 21:00:39 2025 -0300
+
+    Update README.md
+
+[33mcommit eb1455d2883e50700758755524509fa7e13f98e6[m
+Author: GuillermoGiraudo7 <giraudoguillermo7@gmail.com>
+Date:   Sun Aug 24 20:14:23 2025 -0300
+
+    refactor:portfolio
+
+[33mcommit de7ee83c65e7bbcb7c0f5837ad3dc73f3932c8e2[m
+Author: GuillermoGiraudo7 <giraudoguillermo7@gmail.com>
+Date:   Sun Aug 24 17:12:27 2025 -0300
+
+    fix:resolucion de fallos después de merge
+
+[33mcommit a5f5ccbe358285f03972e436fa50338b915240b6[m
+Author: BautiBustos <bautibustos10@gmail.com>
+Date:   Thu Sep 11 01:38:19 2025 -0300
+
+    update: se trata de actualizar la tabla de usuarios a dinamica con la base de datos
+
+[33mcommit 10431e7b658819ee9d445dcc792e9bf025b66b02[m
+Author: BautiBustos <bautibustos10@gmail.com>
+Date:   Wed Sep 10 21:55:16 2025 -0300
+
+    si
+
+[33mcommit ab42a009d1dcbf2d0401077b74203246225d1adc[m
+Merge: 2f8e270e 5c7d2908
+Author: BautiBustos <bautibustos10@gmail.com>
+Date:   Wed Sep 10 21:48:16 2025 -0300
+
+    feat: en proceso de creacion de servicio
+
+[33mcommit 5c7d2908d6efca6923f671b7cf764f049ccdc7b4[m
+Author: BautiBustos <bautibustos10@gmail.com>
+Date:   Wed Sep 10 20:52:12 2025 -0300
+
+    si
+
+[33mcommit 2f8e270e126cb1ab42db1e4bfaeee87c4ff0af2f[m[33m ([m[1;32mdev[m[33m)[m
+Author: Heyme <heyme.coraspe@gmail.com>
+Date:   Wed Sep 10 20:37:35 2025 -0300
+
+    feat: servidor json y api andando, guarda datos en bd
+
+[33mcommit bc01e3b6bf46333fe4bb615a982cc50c7cd2b2ac[m
+Author: Heyme <heyme.coraspe@gmail.com>
+Date:   Wed Sep 10 20:07:04 2025 -0300
+
+    feat: llamado a la api
+
+[33mcommit 22bc4bca70b453ee1b8cbc8fca4e023585bd8a8e[m
+Author: Heyme <heyme.coraspe@gmail.com>
+Date:   Tue Sep 9 20:32:41 2025 -0300
+
+    feat: control de flujo cuit y validacion contrasenias iguales
+
+[33mcommit db928b390b6e21fa36280a0c9f928a3929f36b96[m
+Author: Heyme <heyme.coraspe@gmail.com>
+Date:   Tue Sep 9 19:51:54 2025 -0300
+
+    feat: se agrega cuit y sus validaciones. fix: se corrije warning de control de flujo
+
+[33mcommit d38e6388aad18abfd0d792ec8b9236bca18b142c[m
+Author: Franco <francoavila9356@gmail.com>
+Date:   Tue Sep 9 18:06:56 2025 -0300
+
+    Eliminacion de Carpetas
+
+[33mcommit 4d70bae9b00daf53ff521f700701051e5f7b0603[m
+Author: Heyme <heyme.coraspe@gmail.com>
+Date:   Sun Sep 7 16:46:58 2025 -0300
+
+    refactor: agrego icono dirige a inicio
+
+[33mcommit 00a5cb7ff7781fed2b1b580375896562019b2ed1[m
+Author: Heyme <heyme.coraspe@gmail.com>
+Date:   Sun Sep 7 12:47:29 2025 -0300
+
+    style: ajustes de css variable color global. refactor:se mueven los get del html al typescript
+
+[33mcommit 95b5265df56f7af2099043a32cb951b32a8795c6[m
+Author: BautiBustos <bautibustos10@gmail.com>
+Date:   Mon Sep 1 23:41:56 2025 -0300
+
+    update: SideBar dash-admin responsive
+
+[33mcommit 1095ce5121b28ef3827c621623467b54554cab94[m
+Author: Valentin-Juarez <168031722+Valentin-Juarez@users.noreply.github.com>
+Date:   Wed Aug 27 17:10:46 2025 -0300
+
+    Modificaciones a la home_view y su nav
+
+[33mcommit 677fa8f298bf817f896df83e1975ab8ee81e402e[m
+Author: GuillermoGiraudo7 <giraudoguillermo7@gmail.com>
+Date:   Sun Aug 24 21:00:39 2025 -0300
+
+    Update README.md
+
+[33mcommit e79dfb3f90f016f6c4f5523aa0e563dcb1afde0f[m[33m ([m[1;33mtag: [m[1;33mv1.0[m[33m)[m
+Author: GuillermoGiraudo7 <giraudoguillermo7@gmail.com>
+Date:   Sun Aug 24 20:14:23 2025 -0300
+
+    refactor:portfolio
+
+[33mcommit d84b052ec4e76366e2dcf64800c752b94af20f0

@@ -1,30 +1,6 @@
 {
   "usuarios": [
     {
-      "id": "3163",
-      "nombre": "Hey222",
-      "apellido": "Coraspso1",
-      "email": "heyme.coraspsse@gmail.com",
-      "cuitEmpresa": "20191359985",
-      "contrasenia": "Heyme*"
-    },
-    {
-      "id": "5a34",
-      "nombre": "Federico García Lorca",
-      "apellido": "García Lorca",
-      "email": "dfg@mmm.com",
-      "cuitEmpresa": "204603613123",
-      "contrasenia": "Gatos."
-    },
-    {
-      "id": "89f2",
-      "nombre": "pepito",
-      "apellido": "juan",
-      "email": "admin@gmail.com",
-      "contrasenia": "Admin!123",
-      "cuitEmpresa": "22222222222"
-    },
-    {
       "id": "101d",
       "nombre": "Nuevo",
       "apellido": "Usuario",
@@ -53,23 +29,15 @@
       "nombre": "sisis",
       "apellido": "nono",
       "email": "admin@gmail.com",
-      "contrasenia": "Admin123!",
-      "cuitEmpresa": "22222222222"
+      "cuitEmpresa": "2543214",
+      "contrasenia": "Admin123!"
     },
     {
-      "id": "2feb",
-      "nombre": "qweqwe",
-      "apellido": "qwe",
-      "email": "qwe",
-      "cuitEmpresa": "qwe",
-      "contrasenia": "contrasenia123"
-    },
-    {
-      "id": "dd0d",
-      "nombre": "pablito123123123",
-      "apellido": "matera",
-      "email": "pablitopalito@gmail.com",
-      "cuitEmpresa": "2222111123123123",
+      "id": "75d7",
+      "nombre": "Rita",
+      "apellido": "La Gordita",
+      "email": "ritalagortida@lamasgordita",
+      "cuitEmpresa": "666",
       "contrasenia": "contrasenia123"
     }
   ],
@@ -91,16 +59,16 @@
   ],
   "centrales": [
     {
-      "id": "",
-      "nombre": "",
-      "direccion": "",
-      "empresaId": ""
+      "nombre": "xd",
+      "direccion": "hola",
+      "empresaId": "hola",
+      "id": "4af5"
     },
     {
-      "id": "",
-      "nombre": "",
-      "direccion": "",
-      "empresaId": ""
+      "id": "8809",
+      "nombre": "Rita",
+      "direccion": "La Gordita",
+      "empresaId": "DeLasGatas"
     }
   ],
   "metricas": [

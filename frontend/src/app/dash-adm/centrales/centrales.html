@@ -1,16 +1,17 @@
-<h2>Lista de Centrales Registrados</h2>
+<h2>Lista de Centrales Registradas</h2>
 <div class="top-controls">
   <input type="text" class="buscador" placeholder="Buscar...">
-  
+
   <div class="action-buttons">
-    <button class="square-button add-button">Agregar</button>
+    <button class="square-button add-button" (click)="agregarCentral()">Agregar</button>
+      <!-- Al hacer clic ejecuta el método agregarCentral() del componente TS -->
   </div>
 </div>
 
 <table class="table">
   <thead>
-    <!-- ACA ESTA ESTA LA TABLA-->
-    <tr>   <!-- estos son los header-->
+    <tr>
+      <th>Nombre</th>
       <th>ID</th>
       <th>Ubicacion</th>
       <th>Empresa</th>
@@ -18,17 +19,25 @@
     </tr>
   </thead>
   <tbody class="table-group-divider">
-    <tr *ngFor="let Centrales of Centrales">
-      <!-- aca se genera dinamicamente las filas-->
-      <th scope="row">{{ Centrales.id }}</th>
-      <td>{{ Centrales.Ubicacion }}</td>
-      <td>{{ Centrales.empresa }}</td>
+    <!-- 🔁 Itera sobre la lista de 'centrales' proveniente del componente TypeScript -->
+    <!-- La función centrales() devuelve un arreglo de objetos 'central' -->
+    @for (central of centrales(); track central.id){
+    <tr>
+      <td>{{ central.nombre }}</td> <th scope="row">{{ central.id }}</th>
+      <td>{{ central.Ubicacion }}</td>
+      <td>{{ central.empresa }}</td>
       <td>
         <div class="action-buttons">
-          <button class="square-button edit-button">Editar</button>
-          <button class="square-button delete-button">Borrar</button>
+          <!-- Llama al método editarCentral() pasando el objeto 'central' como parámetro -->
+          <button class="square-button edit-button" (click)="editarCentral(central)">Editar</button>
+          <button class="square-button delete-button" (click)="borrarCentral(central)">Borrar</button>
         </div>
-      </td>  
+      </td>
     </tr>
+    }@empty{
+      <tr>
+        <td colspan="5" class="text-center">No hay centrales registradas</td>
+      </tr>
+    }
   </tbody>
 </table>
