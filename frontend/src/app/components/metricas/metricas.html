@@ -1,10 +1,12 @@
 <section class="metricas">
+    <!-- Título principal de la sección -->
   <h2>Temperatura y Consumo Actual</h2>
   <div class="clima_actual">
     <div style="display: block;">
+       <!-- Gráfico de barras usando ng2-charts -->
       <canvas baseChart
         [data]="chartData"
-        [options]="chartOptions"
+        [options]="chartOptions"  
         chartType="bar">
       </canvas>
     </div>
