@@ -2,16 +2,15 @@
 
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import UserViewSet, MetricaViewSet
+# Importa la nueva RegistroView
+from .views import MetricaViewSet, LoginView, RegistroView
 
-# 1. Crear el router
 router = DefaultRouter()
-
-# 2. Registrar TODAS las vistas en el router
-router.register(r'users', UserViewSet, basename='user')
 router.register(r'metricas', MetricaViewSet)
 
-# 3. Finalmente, incluir las URLs del router en urlpatterns
 urlpatterns = [
     path('', include(router.urls)),
+    path('login/', LoginView.as_view(), name='login'),
+    # AÑADE ESTA LÍNEA PARA LA RUTA DE REGISTRO
+    path('registro/', RegistroView.as_view(), name='registro'),
 ]

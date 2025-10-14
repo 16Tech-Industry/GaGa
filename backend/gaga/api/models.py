@@ -2,26 +2,107 @@
 
 from django.db import models
 
-# Modelo para representar la tabla CENTRALES
+class Empresa(models.Model):
+    """
+    Representación de la tabla EMPRESAS.
+    """
+    id_empresa = models.AutoField(primary_key=True)
+    email = models.CharField(max_length=160)
+    nombre_empresa = models.CharField(max_length=160)
+    direccion = models.CharField(max_length=255, blank=True, null=True)
+    cuit = models.BigIntegerField(unique=True)
+
+    class Meta:
+        managed = False  # Le dice a Django que no gestione esta tabla
+        db_table = '"gaga"."EMPRESAS"'
+
+
+class Usuario(models.Model):
+    """
+    Representación de la tabla USUARIOS.
+    """
+    # Django no soporta claves primarias compuestas,
+    # así que designamos id_usuario como la principal para el ORM.
+    id_usuario = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=160, blank=True, null=True)
+    apellido = models.CharField(max_length=45, blank=True, null=True)
+    email = models.CharField(max_length=160, blank=True, null=True)
+    cuit_empresa = models.BigIntegerField()
+
+    # Mapeamos el campo 'contrasenia' a 'password' para compatibilidad
+    password = models.CharField(max_length=16, db_column='contrasenia')
+    
+    # Campo para el rol con las opciones del CHECK
+    ROL_CHOICES = [
+        ('admin', 'Admin'),
+        ('usuario', 'Usuario'),
+    ]
+    rol = models.CharField(max_length=10, choices=ROL_CHOICES, blank=True, null=True)
+
+    # Relación ForeignKey con la tabla Empresa
+    empresa = models.ForeignKey(
+        Empresa, 
+        models.DO_NOTHING, 
+        db_column='empresas_id_empresa'
+    )
+
+    class Meta:
+        managed = False
+        db_table = '"gaga"."USUARIOS"'
+        # Le informamos a Django de la clave primaria compuesta a nivel de base de datos
+        unique_together = (('id_usuario', 'empresa', 'cuit_empresa'),)
+
+    # Propiedades para que funcione con el sistema de login de Django
+    @property
+    def is_anonymous(self):
+        return False
+
+    @property
+    def is_authenticated(self):
+        return True
+    
+
 class Central(models.Model):
-    id_central = models.IntegerField(primary_key=True)
+    """
+    Representación de la tabla CENTRALES.
+    """
+    id_central = models.AutoField(primary_key=True)
+    n_serie = models.BigIntegerField()
+    direccion = models.CharField(max_length=160, blank=True, null=True)
+    fecha_carga = models.DateTimeField(blank=True, null=True)
+    
+    # Relación ForeignKey con la tabla Empresa
+    empresa = models.ForeignKey(
+        Empresa, 
+        models.DO_NOTHING, 
+        db_column='EMPRESAS_id_empresa'
+    )
 
     class Meta:
         managed = False
         db_table = '"gaga"."CENTRALES"'
 
 
-# Modelo para representar tu tabla METRICAS
 class Metrica(models.Model):
+    """
+    Representación de la tabla METRICAS.
+    """
     id_metrica = models.AutoField(primary_key=True)
-    fecha = models.DateTimeField()
-    temperatura = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
-    humedad = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
-    viento = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
-    litros_consumidos = models.DecimalField(max_digits=10, decimal_places=3, blank=True, null=True)
-    watt_consumidos = models.DecimalField(max_digits=10, decimal_places=3, blank=True, null=True)
-    centrales_id_central = models.ForeignKey(Central, models.DO_NOTHING, db_column='centrales_id_central')
+    fecha = models.DateTimeField(blank=True, null=True)
+    temperatura = models.FloatField(blank=True, null=True)
+    humedad = models.FloatField(blank=True, null=True)
+    viento = models.FloatField(blank=True, null=True)
+    litros_consumidos = models.FloatField(blank=True, null=True)
+    watt_consumidos = models.FloatField(blank=True, null=True)
+    
+    # Relación ForeignKey con la tabla Central
+    central = models.ForeignKey(
+        Central, 
+        models.DO_NOTHING, 
+        db_column='CENTRALES_id_central'
+    )
 
     class Meta:
         managed = False
         db_table = '"gaga"."METRICAS"'
+

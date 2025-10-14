@@ -129,3 +129,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Le decimos a Django que use nuestro backend personalizado para la autenticación
+AUTHENTICATION_BACKENDS = ['api.backends.login_check']
