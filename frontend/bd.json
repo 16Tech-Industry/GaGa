@@ -40,8 +40,8 @@
       "id": "669e",
       "nombre": "Nuevo",
       "apellido": "Usuario",
+      "email": "nuevo@anti-ample.com",
       "cuitEmpresa": "30-12345678-9",
-      "email": "nuevo@example.com",
       "contrasenia": "contrasenia123"
     },
     {
@@ -70,10 +70,10 @@
     },
     {
       "id": "dd0d",
-      "nombre": "pablito",
+      "nombre": "pablito123123123",
       "apellido": "matera",
       "email": "pablitopalito@gmail.com",
-      "cuitEmpresa": "5552525252555",
+      "cuitEmpresa": "2222111123123123",
       "contrasenia": "contrasenia123"
     },
     {

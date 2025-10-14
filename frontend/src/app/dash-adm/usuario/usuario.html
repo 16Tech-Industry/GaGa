@@ -1,3 +1,4 @@
+<!-- frontend/src/app/dash-adm/usuario/usuario.html -->
 <h2>Lista de Usuarios Registrados</h2>
 
 <div class="top-controls">
@@ -26,8 +27,8 @@
       <td>{{ usuario.cuitEmpresa }}</td>
       <td>
         <div class="action-buttons">
-          <button class="square-button edit-button">Editar</button>
-          <button class="square-button delete-button">Borrar</button>
+          <button class="square-button delete-button" (click)="borrarUsuario(usuario.id)">Borrar</button>
+          <button class="square-button edit-button" (click)="editarUsuario(usuario)">Editar</button>
         </div>
       </td>  
     </tr>
