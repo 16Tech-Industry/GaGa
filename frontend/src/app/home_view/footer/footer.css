@@ -13,3 +13,22 @@
     font-weight: 600;
     margin: 4px 0;
 }
+.social-icons a {
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  color: #0d6efd; /* azul bootstrap */
+}
+
+@media (max-width: 576px) {
+  .social-icons a {
+    font-size: 1.5rem;
+  }
+}
+
+.foot-personalizado {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}

@@ -1,27 +1,31 @@
-<nav class="sidebar">
-  <div class="sidebar-header">
-    <h3>Dashboard</h3>
+<nav class="sidebar" [ngClass]="{'open': isOpen}">
+  <button class="hamburger-button" (click)="toggleSidebar()">
+    <img src="public/img/dash-admin/logoHoja.png" alt="Logo" width="30" height="30">
+  </button>
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <a class="logo" routerLink="/" routerLinkActive="active">
+        <img src="public/img/dash-admin/logoHoja.png" width="50" height="50" alt="Logo">
+      </a>
+      <h3 class="">Dashboard</h3>
+    </div>
+    <ul>
+      <li>
+        <a routerLink="/dash-admin/empresa" routerLinkActive="active" ariaCurrentWhenActive="page">
+          Empresa
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dash-admin/usuario" routerLinkActive="active" ariaCurrentWhenActive="page">
+          Usuario
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dash-admin/centrales" routerLinkActive="active" ariaCurrentWhenActive="page">
+          Centrales
+        </a>
+      </li>
+    </ul>
   </div>
-  <ul>
-    <li>
-      <a routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page">
-        Cargar Central
-      </a>
-    </li>
-    <li>
-      <a routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page">
-        Modificar Central
-      </a>
-    </li>
-    <li>
-      <a routerLink="/usuarios" routerLinkActive="active" ariaCurrentWhenActive="page">
-        Usuarios
-      </a>
-    </li>
-    <li>
-      <a routerLink="/ajustes" routerLinkActive="active" ariaCurrentWhenActive="page">
-        Ajustes
-      </a>
-    </li>
-  </ul>
 </nav>

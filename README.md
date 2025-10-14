@@ -16,11 +16,29 @@ Los usuarios del sistema estarán conformados por:
 - Gobiernos y entes reguladores: que usan esta información para diseñar políticas públicas.
 
 ## 🛠️ Tecnologías Utilizadas
-🟧 HTML  
-🟦 CSS  
-🐙 GitHub  
-🧪 W3C Validator  
 
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="20"/> | HTML |
+| :---: | :---: |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="20"/> | CSS |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" width="20"/> | Bootstrap |
+| <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20"/> | GitHub |
+| <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo.svg" width="20"/> | W3C Validator |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angular/angular-original.svg" width="20"/> | Angular |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="20"/> | TypeScript |
+ 
+
+| Logo | Tecnología |
+|:----:|------------|
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="25"/> | HTML |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="25"/> | CSS |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" width="25"/> | Bootstrap |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angular/angular-original.svg" width="25"/> | Angular |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="25"/> | TypeScript |
+| <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25"/> | GitHub |
+| <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo.svg" width="25"/> | W3C Validator |
+| ⚡ | MQTT |
+| 📡 | WiFi / Internet |
+| 🖥️ | ESP32 y sensores |
 ## 👨‍💻 Equipo
 - Bustos Bautista 
 - Coraspe Bueno Heyme
@@ -29,7 +47,7 @@ Los usuarios del sistema estarán conformados por:
 - Giraudo Guillermo
 - Juárez Valentín
 
-Entre sus Funcionalidades econtramos:
+Entre sus Funcionalidades encontramos:
 - Recolección automática de datos desde sensores o fuentes externas (API).
 - Almacenamiento estructurado de la información recolectada.
 - Procesamiento de los datos y cálculo de métricas.
@@ -37,6 +55,7 @@ Entre sus Funcionalidades econtramos:
 
 Tecnologias utilizadas:
 - Lenguajes de programacion (HTML, CSS, JS);
+- Frameworks (Bootstrap, Angular);
 - Protocolos de envios de informacion (MQTT);
 - Hardware (Microprocesador ESP32, Sensores)
 - Redes (WIFI, Internet)

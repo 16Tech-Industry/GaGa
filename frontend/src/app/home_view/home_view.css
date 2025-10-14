@@ -23,26 +23,16 @@
 }
 
 body .hero-section {
-    background-image:
-        linear-gradient(rgba(13, 111, 86, 0.7), rgba(13, 111, 86, 0.7)),
-        /* overlay oscuro */
-        url('/assets/img/background_hero.jpg');
-    /* ruta de tu imagen */
-    background-size: cover;
-    /* la imagen cubre toda la sección */
-    background-position: center;
-    /* centrada */
-    background-repeat: no-repeat;
-    /* no se repite */
-    height: calc(100vh - 75px);
-    /* altura completa menos header */
+    background-image: 
+        linear-gradient(rgba(13, 111, 86, 0.7), rgba(13, 111, 86, 0.7)), /* overlay oscuro */
+        url('/assets/img/background_hero.jpg'); /* ruta de tu imagen */
+    background-size: cover;        /* la imagen cubre toda la sección */
+    background-position: center;   /* centrada */
+    background-repeat: no-repeat;  /* no se repite */
+    height: calc(100vh - 75px);    /* altura completa menos header */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    /* opcional, centra horizontalmente */
-    color: var(--color-50);
-    /* texto claro */
 }
 
 /*Modificacion para Celulares*/

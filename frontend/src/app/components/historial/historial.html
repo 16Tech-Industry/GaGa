@@ -1,0 +1,21 @@
+<section class="historial">
+  <h2>Historial de Temperatura</h2>
+  <div class="chart-container">
+    <canvas baseChart [data]="temperaturaData" [options]="options" chartType="line"></canvas>
+  </div>
+
+  <h2>Historial de Humedad</h2>
+  <div class="chart-container">
+    <canvas baseChart [data]="humedadData" [options]="options" chartType="line"></canvas>
+  </div>
+
+  <h2>Historial de Consumo</h2>
+  <div class="chart-container">
+    <canvas baseChart [data]="consumoData" [options]="options" chartType="bar"></canvas>
+  </div>
+
+  <h2>Historial de Ahorro</h2>
+  <div class="chart-container">
+    <canvas baseChart [data]="ahorroData" [options]="options" chartType="doughnut"></canvas>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+<!-- frontend/src/app/dash-adm/usuario/usuario.html -->
+<h2>Lista de Usuarios Registrados</h2>
+
+<div class="top-controls">
+  <input type="text" class="buscador" placeholder="Buscar...">
+  
+  <div class="action-buttons">
+    <button class="square-button add-button" (click)="agregarUsuario()">Agregar</button>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Correo</th>
+      <th>Cuit de Empresa</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let usuario of usuarios">
+      <td>{{ usuario.nombre }}</td>
+      <td>{{ usuario.apellido }}</td>
+      <td>{{ usuario.email }}</td>
+      <td>{{ usuario.cuitEmpresa }}</td>
+      <td>
+        <div class="action-buttons">
+          <button class="square-button delete-button" (click)="borrarUsuario(usuario.id)">Borrar</button>
+          <button class="square-button edit-button" (click)="editarUsuario(usuario)">Editar</button>
+        </div>
+      </td>  
+    </tr>
+  </tbody>
+</table>

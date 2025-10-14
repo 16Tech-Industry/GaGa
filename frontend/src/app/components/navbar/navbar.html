@@ -1,0 +1,33 @@
+<!-- Botón hamburguesa -->
+<button class="hamburger-button" (click)="toggleNavbar()">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<!-- Sidebar / Navbar -->
+<nav class="navbar-container" [ngClass]="{'open': isOpen}">
+  <a class="logo" routerLink="/" routerLinkActive="active">
+    <img src="assets/img/logo_hoja.png" alt="Logo" width="65" height="65">
+  </a>
+
+  <div class="sidebar-content">
+    <ul class="nav-links">
+      <li>
+        <a routerLink="/dash-user/temperatura" 
+           routerLinkActive="active" 
+           (click)="closeNavbar()">Temperatura y Consumo Actual</a>
+      </li>
+      <li>
+        <a routerLink="/dash-user/historial" 
+           routerLinkActive="active" 
+           (click)="closeNavbar()">Historial</a>
+      </li>
+      <li>
+        <a routerLink="/dash-user/alertas" 
+           routerLinkActive="active" 
+           (click)="closeNavbar()">Alertas</a>
+      </li>
+    </ul>
+  </div>
+</nav>

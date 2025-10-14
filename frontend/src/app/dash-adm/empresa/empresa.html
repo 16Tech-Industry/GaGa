@@ -1,0 +1,34 @@
+<h2>Lista de Empresas Registrados</h2>
+<div class="top-controls">
+  <input type="text" class="buscador" placeholder="Buscar...">
+  
+  <div class="action-buttons">
+    <button class="square-button add-button">Agregar</button>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <!-- ACA ESTA ESTA LA TABLA-->
+    <tr>   <!-- estos son los header-->
+      <th>ID</th>
+      <th>Email</th>
+      <th>Empresa</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let Empresa of Empresas">
+      <!-- aca se genera dinamicamente las filas-->
+      <th scope="row">{{ Empresa.id }}</th>
+      <td>{{ Empresa.email }}</td>
+      <td>{{ Empresa.empresa }}</td>
+      <td>
+        <div class="action-buttons">
+          <button class="square-button edit-button">Editar</button>
+          <button class="square-button delete-button">Borrar</button>
+        </div>
+      </td>  
+    </tr>
+  </tbody>
+</table>

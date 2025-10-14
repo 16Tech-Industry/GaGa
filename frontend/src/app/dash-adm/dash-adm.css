@@ -1,0 +1,18 @@
+/* src/app/dash-adm/dash-adm.css */
+
+/* Contenedor principal para el layout de dos columnas */
+*{
+  background-color: var(--color-50);
+}
+.layout-container {
+  display: flex; /* Habilita el flexbox */
+  height: 100vh; /* Ocupa la altura completa de la ventana */
+}
+
+/* El área de contenido que contendrá el router-outlet */
+.content-area {
+  flex-grow: 1; /* Permite que el contenido ocupe el espacio restante */
+  padding: 20px;
+  overflow-y: auto; /* Permite desplazamiento si el contenido es muy largo */
+}
+
