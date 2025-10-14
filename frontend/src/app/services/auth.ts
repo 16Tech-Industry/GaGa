@@ -2,23 +2,23 @@
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { User } from '@app/models/User';
+import { Observable, of } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { map, of } from 'rxjs';
-import { catchError } from 'rxjs/operators';
-import { FormsModule } from '@angular/forms';
+import { User } from '@app/models/User';
 
-
+// Interfaz que representa la estructura de un usuario
 interface Usuario {
-  id: number;
+  id: string;
   nombre: string;
   apellido: string;
   email: string;
   contrasenia: string;
-  cuitEmpresa: number
+  cuitEmpresa: string;
+  rol: string; // puede ser 'admin' o 'usuario'
 }
 
+// Decorador que marca este servicio como inyectable en toda la app
 @Injectable({
   providedIn: 'root'
 })
@@ -26,35 +26,49 @@ export class AuthService {
 
   url = "http://localhost:3000/usuarios";
 
-  constructor(private http: HttpClient,
-              private router: Router
-  ) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
-  // Corregido: Ahora el método acepta un objeto sin la propiedad 'id'
+  // Crear usuario
   createUser(user: Omit<User, 'id'>): Observable<User> {
     return this.http.post<User>(this.url, user);
   }
-  
-  login(email: string, contrasenia: string): Observable<{ success: boolean, message: string }> {
-    return this.http.get<User[]>(this.url).pipe(
-      map(usuarios => {
-        // Buscar usuario con email y password coincidentes
-        const user = usuarios.find(u => u.email === email && u.contrasenia === contrasenia);
-        
-        if (user) {
-          // Login exitoso - redirigir a dashboard
+
+   //login
+ login(email: string, contrasenia: string): Observable<{ success: boolean, message: string }> {
+  return this.http.get<Usuario[]>(this.url).pipe(
+    map(usuarios => {
+      const emailClean = email.trim().toLowerCase();
+      const contraseniaClean = contrasenia.trim();
+
+      const user = usuarios.find(u =>
+        u.email.trim().toLowerCase() === emailClean &&
+        u.contrasenia === contraseniaClean
+      );
+// Si el usuario existe...
+      if (user) {
+        // Guardar usuario actual en localStorage
+        localStorage.setItem('usuarioActual', JSON.stringify(user));
+
+        // Redirigir según el rol
+        if (user.rol === 'admin') {
           this.router.navigate(['/dash-admin']);
-          return { success: true, message: 'Login exitoso' };
+        } else if (user.rol === 'usuario') {
+          this.router.navigate(['/dash-user']);
         } else {
-          // Credenciales incorrectas
-          return { success: false, message: 'Email o contraseña incorrectos' };
+          console.error('Usuario sin rol definido');
         }
-      }),
-      catchError(error => {
-        // Error de conexión
-        console.error('Error:', error);
-        return of({ success: false, message: 'Error de conexión. Verifica que json-server esté ejecutándose.' });
-      })
-    );
-  }
+
+        return { success: true, message: 'Login exitoso' };
+      } else {
+        return { success: false, message: 'Email o contraseña incorrectos' };
+      }
+    }),
+     // Si ocurre un error de conexión con el backend
+    catchError(error => {
+      console.error('Error de conexión:', error);
+      return of({ success: false, message: 'Error de conexión. Verifica que json-server esté corriendo.' });
+    })
+  );
 }
+ } // <-- cierra login()
+

@@ -1,22 +1,58 @@
 <div class="text-center">
-    <main class="form-signin">
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-            <h2 class="registro-tit">Ingresar</h2>
-            <div class="contenedor-registro">
-                <label for="email"> Usuario: </label>
-                <input type="email" formControlName="email" class="form-control" placeholder="Ingrese su email" required [class.error]="hasError('email')">
-                <label for="contrasenia">Contraseña:</label>
-                <input type="password" formControlName="contrasenia" class="form-control" minlength="5" maxlength="12" placeholder="Ingrese Contraseña" required [class.error]="hasError('contrasenia')">
-            <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="Recordarme"> Recordarme
-                </label>
-            </div>
-            <button class="btn btn-primary btn-registro" type="submit" [disabled]="isLoading" [class.disabled]="isLoading">
-                    Iniciar Sesión
-            </button>
+  <main class="form-signin">
+    <!-- LOGO que lleva al inicio -->
+    <a class="enlace-icono" (click)="inicio()" title="Inicio">
+      <img src="assets/img/logo_hoja.png" alt="Logo" class="logo-inicio">
+    </a>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <h2 class="registro-tit">Ingresar</h2>
+
+      <div class="contenedor-registro">
+        <!-- Email -->
+        <label for="email">Usuario:</label>
+        <input 
+          type="email" 
+          id="email"
+          formControlName="email" 
+          class="form-control"
+          [ngClass]="{'input-error': hasError('email')}"
+          placeholder="Ingrese su email" />
+        <p *ngIf="hasError('email')" class="error">{{ getErrorMessage('email') }}</p>
+
+        <!-- Contraseña -->
+        <label for="contrasenia">Contraseña:</label>
+        <input 
+          type="password"
+          id="contrasenia"
+          formControlName="contrasenia"
+          class="form-control"
+          [ngClass]="{'input-error': hasError('contrasenia')}"
+          placeholder="Ingrese Contraseña" />
+        <p *ngIf="hasError('contrasenia')" class="error">{{ getErrorMessage('contrasenia') }}</p>
+
+        <!-- Recordarme -->
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" /> Recordarme
+          </label>
         </div>
-        </form>
-    </main>
+
+        <!-- Botón de login -->
+        <button class="btn btn-primary btn-registro" type="submit">
+          Iniciar Sesión
+        </button>
+
+        <!-- Mensaje de error general del login -->
+        <p *ngIf="errorMessage" class="error mt-2">{{ errorMessage }}</p>
+
+        <!-- ENLACE al registro -->
+        <p class="mt-3">
+          ¿No tenés cuenta?
+          <a (click)="irARegistro()" class="text-link">Registrate aquí</a>
+        </p>
+      </div>
+    </form>
+  </main>
 </div>
 

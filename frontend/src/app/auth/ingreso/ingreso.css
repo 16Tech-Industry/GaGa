@@ -92,3 +92,31 @@ padding: 1rem;
     background-color: var(--color-700);
     color: var(--color-50);
 }
+
+.enlace-icono {
+  display: inline-block;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.enlace-icono:hover {
+  transform: scale(1.1);
+}
+
+.logo-inicio {
+  width: 80px;
+  height: auto;
+}
+
+.error{
+  color: rgb(192, 13, 13);
+}
+
+/* Texto del mensaje de error */
+.error {
+  color: #e63946;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  text-align: left;
+}
