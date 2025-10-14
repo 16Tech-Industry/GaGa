@@ -5,7 +5,7 @@ conector =psycopg2.connect(
             host="localhost",
             database="postgres",
             user="postgres",
-            password="admin",
+            password="admin", 
             port="5432"
         )
 #ejecutador para consultas
