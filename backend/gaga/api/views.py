@@ -14,35 +14,32 @@ from .serializers import MetricaSerializer
 from .backends import RegistroForm
 
 
+#definicion de las respuesas
 class MetricaViewSet(viewsets.ModelViewSet):
     queryset = Metrica.objects.all()
     serializer_class = MetricaSerializer
 
-
+# checkeo del login 
 class LoginView(APIView):
     permission_classes = [AllowAny]
-
+    # recibe el emial y contraseña
     def post(self, request):
         email = request.data.get("email")
         password = request.data.get("password")
-
+        # verifica en la base de datos
         user = authenticate(request, username=email, password=password)
 
-        if user is not None:
+        if user is not None: # si no esta vacio lo que retorna existe el usuario 
             request.session['_auth_user_id'] = user.pk
             request.session.save()
+            # se pasa el rol que tiene el usuario
             rol = user.rol
-            
+            # mensaje de retorno
             return Response({
                 "mensaje": "Login exitoso",
-                "rol": rol,
-                "usuario": {
-                    "id": user.id_usuario,
-                    "email": user.email,
-                    "nombre": user.nombre
-                }
-            }, status=status.HTTP_200_OK)
-        
+                "rol": rol
+                }, status=status.HTTP_200_OK)
+        #si hay algun valor incorrecto da error
         else:
             return Response(
                 {"error": "Email o contraseña incorrectos"},
@@ -50,21 +47,22 @@ class LoginView(APIView):
             )
 
 
-# --- NUEVA VISTA DE REGISTRO BASADA EN CLASES ---
+
 class RegistroView(APIView):
     permission_classes = [AllowAny] # Cualquiera puede intentar registrarse
 
     def post(self, request):
-        # 1. Recibimos los datos que envía el frontend
+        # Recibimos los datos del frontend
         datos = request.data
         
-        # 2. Pasamos los datos al formulario para que los valide
+        # usamos la funcion "personalizada" que dejamos en backends.py
         form = RegistroForm(data=datos)
         
-        # 3. Comprobamos si los datos son válidos
+        # Comprobamos si los datos son válidos
         if form.is_valid():
-            # Si son válidos, .save() crea el nuevo usuario en la BD
+            #.save() crea el nuevo usuario en la BD
             form.save()
+            # respuesta de la creacion
             return Response({"mensaje": "Usuario creado con éxito"}, status=status.HTTP_201_CREATED)
         else:
             # Si no son válidos, devolvemos un diccionario con los errores

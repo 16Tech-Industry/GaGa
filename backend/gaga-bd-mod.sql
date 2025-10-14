@@ -81,13 +81,12 @@ insert into gaga."EMPRESAS"(id_empresa, email, nombre_empresa, direccion, cuit) 
 insert into gaga."CENTRALES" (id_central, n_serie, direccion, empresas_id_empresa, fecha_carga) values (default, 000003, 'Calle siempre viva 1234', 1, '2000-01-01 00:00:00');
 insert into gaga."CENTRALES" (id_central, n_serie, direccion, empresas_id_empresa, fecha_carga) values (default, 000002, 'Calle siempre viva 1235', 1, '2000-01-01 00:00:00');
 insert into gaga."CENTRALES" (id_central, n_serie, direccion, empresas_id_empresa, fecha_carga) values (default, 000003, 'Calle siempre viva 1236', 1, '2000-01-01 00:00:00');
+
+
 select * from gaga."USUARIOS";
 
 
-
 insert into gaga."USUARIOS"(id_usuario, nombre, apellido, email, cuit_empresa, rol, contrasenia, empresas_id_empresa) values (default, 'admin', 'admin','admin@admin.com', 30999999992, 'admin', 'admin', 1);
-
-
 
 
 
