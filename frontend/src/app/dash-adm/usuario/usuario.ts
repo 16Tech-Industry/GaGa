@@ -75,6 +75,7 @@ export class UsuarioComponent implements OnInit {
         apellido: usuario.apellido,
         email: usuario.email,
         cuitEmpresa: usuario.cuitEmpresa
+
       }
     });
     dialogRef.afterClosed().subscribe(usuarioActualizado => {
@@ -87,7 +88,8 @@ export class UsuarioComponent implements OnInit {
           apellido: usuarioActualizado.apellido,
           email: usuarioActualizado.email,
           cuitEmpresa: usuarioActualizado.cuitEmpresa,
-          contrasenia: usuario.contrasenia
+          contrasenia: usuario.contrasenia,
+          rol:'usuario'
         };
 
         // Se llama al servicio para actualizar el usuario en el servidor

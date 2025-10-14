@@ -5,5 +5,6 @@ export interface User{
   cuitEmpresa:string,
   email:string,
   contrasenia:string,
+  rol:string
 }
 //datos necesarios a completar para crear registro usuario

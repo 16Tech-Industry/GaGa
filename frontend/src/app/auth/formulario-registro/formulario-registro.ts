@@ -115,7 +115,8 @@ onSubmit(): void {
       apellido,
       email,
       contrasenia,
-      cuitEmpresa: cuit
+      cuitEmpresa: cuit,
+      rol:'usuario'
     };
    // Llamada HTTP al servicio de autenticación
     this.authService.createUser(newUser).subscribe({
