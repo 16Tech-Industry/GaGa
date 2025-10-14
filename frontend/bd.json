@@ -2,19 +2,19 @@
   "usuarios": [
     {
       "id": "3163",
-      "nombre": "Heyme",
-      "apellido": "Coraspe",
-      "email": "heyme.coraspe@gmail.com",
-      "contrasenia": "Heyme*",
-      "cuitEmpresa": "20191359985"
+      "nombre": "Hey222",
+      "apellido": "Coraspso1",
+      "email": "heyme.coraspsse@gmail.com",
+      "cuitEmpresa": "20191359985",
+      "contrasenia": "Heyme*"
     },
     {
       "id": "5a34",
       "nombre": "Federico García Lorca",
       "apellido": "García Lorca",
       "email": "dfg@mmm.com",
-      "contrasenia": "Gatos.",
-      "cuitEmpresa": "20460361312"
+      "cuitEmpresa": "204603613123",
+      "contrasenia": "Gatos."
     },
     {
       "id": "89f2",
@@ -36,8 +36,8 @@
       "id": "669e",
       "nombre": "Nuevo",
       "apellido": "Usuario",
+      "email": "nuevo@anti-ample.com",
       "cuitEmpresa": "30-12345678-9",
-      "email": "nuevo@example.com",
       "contrasenia": "contrasenia123"
     },
     {
@@ -66,19 +66,11 @@
     },
     {
       "id": "dd0d",
-      "nombre": "pablito",
+      "nombre": "pablito123123123",
       "apellido": "matera",
       "email": "pablitopalito@gmail.com",
-      "cuitEmpresa": "5552525252555",
+      "cuitEmpresa": "2222111123123123",
       "contrasenia": "contrasenia123"
-    },
-    {
-      "id": "afab",
-      "nombre": "julian",
-      "apellido": "montolla",
-      "email": "monedamontolla@gmail.com",
-      "contrasenia": "Migui123!",
-      "cuitEmpresa": "55555555555"
     }
   ],
   "empresas": [
