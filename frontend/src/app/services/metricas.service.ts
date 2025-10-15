@@ -2,42 +2,34 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+//Nueva interfaz para reflejar los campos reales del modelo Django
 export interface Metrica {
-  id: number;
+  id_metrica: number;
+  fecha: string;
   temperatura: number;
-  consumo: number;
+  humedad: number;
+  viento: number;
+  litros_consumidos: number;
+  watt_consumidos: number;
+  centrales_id_central: number;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class MetricasService {
-  private apiUrl = 'http://localhost:3000/metricas'; // JSON Server o tu API
+  // Nueva URL que apunta a tu API Django (DRF)
+  private apiUrl = 'http://127.0.0.1:8000/api/v1/metricas/';
 
   constructor(private http: HttpClient) {}
 
-  // Obtener todas las métricas
+  // Obtener todas las métricas desde Django/Postgres
   getMetricas(): Observable<Metrica[]> {
     return this.http.get<Metrica[]>(this.apiUrl);
   }
 
-  // Obtener una métrica por ID
+  // Obtener una métrica específica (opcional)
   getMetrica(id: number): Observable<Metrica> {
-    return this.http.get<Metrica>(`${this.apiUrl}/${id}`);
-  }
-
-  // Crear nueva métrica
-  addMetrica(metrica: Metrica): Observable<Metrica> {
-    return this.http.post<Metrica>(this.apiUrl, metrica);
-  }
-
-  // Actualizar métrica existente
-  updateMetrica(id: number, metrica: Metrica): Observable<Metrica> {
-    return this.http.put<Metrica>(`${this.apiUrl}/${id}`, metrica);
-  }
-
-  // Eliminar métrica
-  deleteMetrica(id: number): Observable<Metrica> {
-    return this.http.delete<Metrica>(`${this.apiUrl}/${id}`);
+    return this.http.get<Metrica>(`${this.apiUrl}${id}/`);
   }
 }

@@ -1,65 +1,64 @@
 /* === NAVBAR / SIDEBAR === */
 .navbar-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;    /* Elementos uno debajo del otro */
   align-items: center;
-  background-color: #0d6f56;
-  width: 250px;
-  min-height: 100vh;
+  background-color: #0d6f56; /* Fondo verde */
+  width: 250px;              /* Ancho fijo del sidebar */
+  min-height: 100vh;         /* Ocupa toda la altura de la pantalla */
   padding-top: 20px;
   box-sizing: border-box;
-  position: fixed;
+  position: fixed;           /* Fijo a la izquierda */
   top: 0;
-  left: 0; /* visible en desktop */
+  left: 0;                   /* Visible en desktop */
   transition: all 0.3s ease-in-out;
   z-index: 1000;
 }
 
+/* Estilo del logo con efecto hover */
 .logo img {
   margin-bottom: 30px;
   transition: transform 0.3s ease;
 }
-
 .logo img:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Zoom al pasar el mouse */
 }
 
+/* === LINKS === */
 .nav-links {
   list-style: none;
   padding: 0;
   width: 100%;
 }
-
 .nav-links li {
   width: 100%;
   text-align: center;
   margin-bottom: 15px;
 }
-
 .nav-links li a {
   display: block;
   width: 100%;
-  color: #fff;
+  color: #fff;                     /* Texto blanco */
   font-weight: bold;
   text-decoration: none;
   padding: 10px 0;
   transition: background-color 0.3s ease;
 }
-
+/* Efecto activo y hover */
 .nav-links li a.active,
 .nav-links li a:hover {
-  background-color: #0b5e45;
+  background-color: #0b5e45; /* Verde más oscuro */
   border-radius: 5px;
 }
 
-/* Contenedor del contenido dentro del sidebar */
+/* Contenido interno del sidebar */
 .sidebar-content {
   width: 100%;
 }
 
 /* === BOTÓN HAMBURGUESA === */
 .hamburger-button {
-  display: none;
+  display: none;   /* Oculto en desktop */
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
@@ -72,7 +71,6 @@
   left: 15px;
   z-index: 1101;
 }
-
 .hamburger-button span {
   display: block;
   height: 4px;
@@ -84,26 +82,26 @@
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
+  /* Sidebar oculto en mobile */
   .navbar-container {
-    left: -250px; /* oculto por defecto */
+    left: -250px;
     width: 250px;
     padding: 0;
   }
-
+  /* Sidebar visible cuando se abre */
   .navbar-container.open {
-    left: 0; /* se abre al hacer click */
+    left: 0;
     padding-top: 20px;
   }
-
+  /* Botón hamburguesa visible en mobile */
   .hamburger-button {
     display: flex;
   }
-
+  /* Contenido aparece con transición */
   .sidebar-content {
     opacity: 0;
     transition: opacity 0.3s ease;
   }
-
   .navbar-container.open .sidebar-content {
     opacity: 1;
   }

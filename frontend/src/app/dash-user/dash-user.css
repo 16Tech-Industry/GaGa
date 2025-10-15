@@ -2,6 +2,7 @@
 /* Layout general          */
 /* ======================= */
 
+/* Contenedor principal: navbar a la izquierda, contenido a la derecha */
 .dashboard-container {
   display: flex;
   flex-direction: row;
@@ -12,12 +13,11 @@
 /* ======================= */
 /* Navbar izquierda        */
 /* ======================= */
-
 .nav-personalizada {
   width: 220px;
   min-height: 100vh;
   background-color: #0d6f56;
-  position: sticky;
+  position: sticky; /* Navbar queda fija al hacer scroll */
   top: 0;
   display: flex;
   flex-direction: column;
@@ -29,9 +29,8 @@
 /* ======================= */
 /* Contenido central       */
 /* ======================= */
-
 .main-content {
-  flex: 1;
+  flex: 1;                  /* Ocupa todo el espacio restante */
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -44,7 +43,6 @@
 /* ======================= */
 /* Métricas               */
 /* ======================= */
-
 .metricas {
   width: 100%;
   max-width: 900px;
@@ -73,7 +71,6 @@
 /* ======================= */
 /* Historial              */
 /* ======================= */
-
 .historial {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -104,7 +101,6 @@
 /* ======================= */
 /* Footer                 */
 /* ======================= */
-
 footer.foot-personalizado {
   background-color: #0d6f56;
   color: #fff;
@@ -117,7 +113,6 @@ footer.foot-personalizado {
 /* ======================= */
 /* Gráficos centrados      */
 /* ======================= */
-
 .main-content img {
   width: 100%;
   max-width: 600px;
@@ -131,38 +126,42 @@ footer.foot-personalizado {
 /* ======================= */
 /* Responsive             */
 /* ======================= */
-
 @media (max-width: 1024px) {
+  /* Cambia layout a columna: navbar arriba, contenido debajo */
   .dashboard-container {
-    flex-direction: column; /* navbar arriba, contenido debajo */
+    flex-direction: column;
   }
 
+  /* Navbar se vuelve horizontal y relativa */
   .nav-personalizada {
     width: 100%;
     min-height: auto;
-    position: relative; /* deja de ser sticky en pantallas chicas */
+    position: relative; 
     padding: 10px 0;
     flex-direction: row;
     justify-content: space-around;
   }
 
+  /* Contenido principal ocupa todo el ancho */
   .main-content {
     width: 100%;
     padding: 15px;
   }
 
+  /* Ajusta grilla del historial en mobile */
   .historial {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 10px;
   }
 
+  /* Ajusta tamaño máximo de las imágenes */
   .clima_actual img,
   .historial div > img,
   .main-content img {
     max-width: 90%;
   }
 
-  /* Ajuste para links de la navbar */
+  /* Navbar links horizontal en mobile */
   .nav-personalizada ul.nav-links {
     display: flex;
     flex-direction: row;
