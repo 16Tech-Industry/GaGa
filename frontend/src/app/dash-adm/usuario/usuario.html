@@ -12,6 +12,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th>ID</th>
       <th>Nombre</th>
       <th>Apellido</th>
       <th>Correo</th>
@@ -21,10 +22,11 @@
   </thead>
   <tbody class="table-group-divider">
     <tr *ngFor="let usuario of usuarios">
+      <td>{{ usuario.id }}</td>
       <td>{{ usuario.nombre }}</td>
       <td>{{ usuario.apellido }}</td>
       <td>{{ usuario.email }}</td>
-      <td>{{ usuario.cuit_empresa}}</td>
+      <td>{{ usuario.cuit_empresa }}</td>
       <td>
         <div class="action-buttons">
           <button class="square-button delete-button" (click)="borrarUsuario(usuario.id)">Borrar</button>

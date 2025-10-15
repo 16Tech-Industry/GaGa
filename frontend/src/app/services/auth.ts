@@ -49,8 +49,6 @@ export class AuthService {
      // Realiza una solicitud POST a usuarios enviando los datos del nuevo usuario
   }
 
-
-
    //login
 
   login(email: string, password: string): Observable<{ success: boolean; message: string }> {

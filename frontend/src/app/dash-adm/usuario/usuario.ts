@@ -2,11 +2,11 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { UserService } from '@app/services/abm-admin';
-import { User } from '@app/models/User';
+import { UserService } from '../../services/abm-admin'; // Ruta corregida
+import { User } from '../../models/User'; // Ruta corregida
 import { FormsModule } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogOverviewExampleDialog } from '@app/dash-adm/form/form';
+import { DialogOverviewExampleDialog } from '../form/form'; // Asume que este es el modal
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -23,29 +23,24 @@ export class UsuarioComponent implements OnInit {
   // lista que se mostrara en la vista.
   usuarios: User[] = [];
   
-  // servicio para poder abrir modales.
   private dialog = inject(MatDialog);
-
-  // inyecta el servicio de usuarios para poder hacer las operaciones CRUD
   constructor(private usuarioService: UserService) { }
 
-  // Metodo que se ejecuta al inicializar el componente y carga los usuarios
   ngOnInit(): void {
     this.cargarUsuarios();
   }
 
-  // metodo que se subscribe al observable del servicio para obtener los usuarios
   cargarUsuarios(): void {
+    // Usa el nuevo endpoint GET: /api/admin/usuarios/
     this.usuarioService.getUsers().subscribe(data => {
-      // guarda la lista en usuarios y permite la actualizacion de la vista de forma automatica
       this.usuarios = data;
+      console.log()
     });
   }
 
   agregarUsuario(): void {
-    // abre el modal que se llama DialogOverviewExampleDialog
+    // ... (El código de agregarUsuario sigue igual si usa el POST a /admin/usuario/)
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      // se pasan datos vacios al modal ya que es un nuevo usuario
       data: {
         nombre: '',
         apellido: '',
@@ -54,66 +49,59 @@ export class UsuarioComponent implements OnInit {
       }
     });
 
-    // se suscribe al evento de cierre de modal y obtiene los datos del nuevo usuario
     dialogRef.afterClosed().subscribe(nuevoUsuario => {
       if (nuevoUsuario) {
-        // Asignamos una contraseña por defecto ya que el formulario no la pide 
-        // idealmente deberia ser una contraseña generada al azar o que luego el usuario deberia cambiar
         const usuarioCompleto = {
-          ...nuevoUsuario, // Copia todas las propiedades de nuevoUsuario (nombre, apellido, etc.)
-          contrasenia: 'contrasenia123'
-        };
-        // / Llama al servicio para crear el nuevo usuario en la base de datos.
+          ...nuevoUsuario,
+          contrasenia: 'Contra123!'
+        } as User; // Se asegura que sea de tipo User
+        
         this.usuarioService.createUser(usuarioCompleto).subscribe(() => {
-          // luego de la carga exitosa del usuario recarga la lista de usuarios y la tabla
           this.cargarUsuarios();
         });
       }
     });
   }
   
-  // borra usuario por id despues de confirmar la accion
   borrarUsuario(id: number): void {
-    // genera un cuadro de confirmacion antes de borrar
     if (confirm('¿Estás seguro de que quieres borrar este usuario?')) {
+      // Usa el nuevo endpoint DELETE: /api/admin/usuario/{id}/
       this.usuarioService.deleteUser(id).subscribe(() => {
-        //vuelve a actualizar la lista de usuarios
         this.cargarUsuarios();
       });
     }
   }
 
-  // edicion de usuario
+  // Lógica de edición actualizada
   editarUsuario(usuario: User): void {
-    // Abre el diálogo, pero esta vez le pasa los datos del usuario seleccionado
+    // Abre el diálogo con los datos actuales
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      data: { // ahora que es la edicion, se pasan los datos actuales del usuario
+      data: { 
+        id: usuario.id, // Es VITAL pasar el ID al modal para que se devuelva
         nombre: usuario.nombre,
         apellido: usuario.apellido,
         email: usuario.email,
         cuit_empresa: usuario.cuit_empresa
-
       }
     });
-    // Se suscribe al evento de cierre del diálogo para obtener los datos actualizados
+
     dialogRef.afterClosed().subscribe(usuarioActualizado => {
       if (usuarioActualizado) {
-        // Se crea un objeto 'usuarioCompleto' con los datos actualizados,
-        // incluyendo el 'id' y 'contrasenia' del usuario original.
+        // Se crea un objeto 'usuarioCompleto' con los datos actualizados
         const usuarioCompleto: User = {
-          id: usuario.id,
+          // Usa el ID original y el resto de datos del formulario/usuario original
+          id: usuario.id, 
           nombre: usuarioActualizado.nombre,
           apellido: usuarioActualizado.apellido,
           email: usuarioActualizado.email,
           cuit_empresa: usuarioActualizado.cuit_empresa,
-          contrasenia: usuario.contrasenia,
-          rol:'usuario'
+          contrasenia: usuario.contrasenia, // Mantiene la contraseña original
+          rol: usuario.rol // Mantiene el rol original
         };
 
-        // Se llama al servicio para actualizar el usuario en el servidor
+        // Llama al servicio con el método PUT
         this.usuarioService.updateUser(usuarioCompleto).subscribe(() => {
-          // vuelve a cargar la lista de usuarios para reflejar los cambios
-          this.cargarUsuarios();
+          this.cargarUsuarios(); // Recarga la lista para reflejar los cambios
         });
       }
     });

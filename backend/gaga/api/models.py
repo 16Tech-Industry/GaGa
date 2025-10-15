@@ -60,7 +60,27 @@ class Usuario(models.Model):
     @property
     def is_authenticated(self):
         return True
+
+class Central(models.Model):
+    """
+    Representación de la tabla CENTRALES.
+    Esta estructura coincide con los campos definidos en CentralSerializer.
+    """
+    id_central = models.AutoField(primary_key=True)
+    n_serie = models.BigIntegerField()
+    direccion = models.CharField(max_length=160, blank=True, null=True)
+    fecha_carga = models.DateTimeField(blank=True, null=True)
     
+    # Relación ForeignKey con la tabla Empresa (clave foránea)
+    empresa = models.ForeignKey(
+        Empresa, 
+        models.DO_NOTHING, 
+        db_column='EMPRESAS_id_empresa'
+    )
+
+    class Meta:
+        managed = False
+        db_table = '"gaga"."CENTRALES"'
 
 class Central(models.Model):
     """
