@@ -16,8 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   standalone: true,
   imports: [CommonModule, HttpClientModule, FormsModule, MatButtonModule, MatInputModule, MatFormFieldModule],
   templateUrl: './usuario.html',
-  styleUrls: ['./usuario.css'],
-  // Especifica que este componente (y sus hijos) tendrá su propia instancia del UserService.
+  styleUrls: [ '../estilos-generales.css' ],
   providers: [UserService]
 })
 export class UsuarioComponent implements OnInit {

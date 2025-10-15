@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { AuthService } from '@app/services/auth';
 import { User } from '@app/models/User';
+import { FormsModule } from '@angular/forms';
 
 /**
  * ✅ Validador personalizado: validación cruzada entre dos campos del formulario
@@ -28,7 +29,10 @@ export const validacionContIguales: ValidatorFn= (control: AbstractControl):{[ke
   standalone: true, //Permite que el componente sea independiente (sin módulo)
   imports: [ReactiveFormsModule, CommonModule ], // Módulos requeridos para formularios reactivos y directivas comunes
   templateUrl: './formulario-registro.html',
-  styleUrl: './formulario-registro.css'
+  styleUrls:  [
+    './formulario-registro.css',
+  '../formulario-ingreso.css'  // compartido
+            ]
 })
 
 export class FormularioRegistro {//FormGroup principal que agrupa todos los campos del formulario
@@ -119,14 +123,11 @@ onSubmit(): void {
       rol:'usuario'
     };
 
-    // ▼▼▼ AÑADE LA LÍNEA AQUÍ ▼▼▼
-    console.log('Datos que se envían al backend:', newUser);
-
     // Llamada HTTP al servicio de autenticación
     this.authService.createUser(newUser).subscribe({
       next: (response: User) => {
         console.log('Usuario creado:', response);
-        alert('¡Registro exitoso!');
+        alert('Registro exitoso');
         this.router.navigate(['/login']);
       },
       error: (error: HttpErrorResponse) => {

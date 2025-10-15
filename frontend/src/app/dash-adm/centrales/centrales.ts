@@ -30,7 +30,7 @@ import { CentralesService } from '../../services/centrales.service';
     MatFormFieldModule,
   ],
   templateUrl: './centrales.html',
-  styleUrls: ['./centrales.css']
+  styleUrls: ['../estilos-generales.css']
 })
 export class CentralesComponent implements OnInit {
 // Inyección de dependencias utilizando la nueva función 'inject' (más limpia que el constructor)

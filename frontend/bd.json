@@ -6,7 +6,8 @@
       "apellido": "Usuario",
       "cuitEmpresa": "30-12345678-9",
       "email": "nuevo@example.com",
-      "contrasenia": "contrasenia123"
+      "contrasenia": "contrasenia123",
+      "rol": "admin"
     },
     {
       "id": "669e",

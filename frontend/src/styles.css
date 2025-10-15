@@ -40,6 +40,10 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.ng-valid:not(form).ng-touched {
+  border: green;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.ng-invalid:not(form).ng-touched {
+  border: red;
+}

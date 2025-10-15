@@ -9,7 +9,7 @@ export interface Empresas {
   selector: 'app-empresa',
   imports: [CommonModule],
   templateUrl: './empresa.html',
-  styleUrls: ['./empresa.css']
+  styleUrls: ['../estilos-generales.css']
 })
 export class EmpresaComponent {
   Empresas: Empresas[] = [
