@@ -9,7 +9,7 @@ from rest_framework.permissions import AllowAny
 
 # Importamos los modelos y serializers que SÍ usamos
 from .models import Metrica, Usuario
-from .serializers import MetricaSerializer, UsuarioSerializer, Central#, CentralSerializer
+from .serializers import MetricaSerializer, UsuarioSerializer, CentralSerializer#, CentralSerializer
 # Importamos el formulario de registro desde backends.py
 from .backends import RegistroForm, ActualizacionUsuarioForm
 

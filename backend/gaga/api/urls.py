@@ -25,7 +25,7 @@ urlpatterns = [
     path('admin/usuarios/', UsuarioListView.as_view(), name='admin-usuario-list'), 
 
     # GET (Detalle), PUT (Modificar), DELETE (Eliminar) para un usuario específico
-    path('admin/usuario/<int:pk>/', UsuarioDetailView.as_view(), name='admin-usuario-detail'), 
+    path('admin/usuarios/<int:pk>/', UsuarioDetailView.as_view(), name='admin-usuario-detail'), 
     
     # Rutas para la gestión de Centrales
     # GET (Detalle), PUT (Modificar), DELETE (Eliminar) para una central específica

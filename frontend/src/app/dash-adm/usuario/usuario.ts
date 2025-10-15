@@ -34,7 +34,7 @@ export class UsuarioComponent implements OnInit {
     // Usa el nuevo endpoint GET: /api/admin/usuarios/
     this.usuarioService.getUsers().subscribe(data => {
       this.usuarios = data;
-      console.log()
+      console.log(this.usuarios)
     });
   }
 
@@ -53,9 +53,10 @@ export class UsuarioComponent implements OnInit {
       if (nuevoUsuario) {
         const usuarioCompleto = {
           ...nuevoUsuario,
-          contrasenia: 'Contra123!'
+          contrasenia: 'Contra123!',
+          rol: 'usuario'
         } as User; // Se asegura que sea de tipo User
-        
+        console.log(usuarioCompleto)
         this.usuarioService.createUser(usuarioCompleto).subscribe(() => {
           this.cargarUsuarios();
         });

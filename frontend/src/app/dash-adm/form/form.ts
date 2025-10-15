@@ -18,7 +18,7 @@ export interface DialogData {
   nombre: string;
   apellido: string;
   email: string;
-  cuitEmpresa: string;
+  cuit_empresa: string;
 }
 
 @Component({
@@ -47,7 +47,7 @@ export class DialogOverviewExampleDialog {
   readonly nombre = model(this.data.nombre);
   readonly apellido = model(this.data.apellido);
   readonly email = model(this.data.email);
-  readonly cuitEmpresa = model(this.data.cuitEmpresa);
+  readonly cuit_empresa = model(this.data.cuit_empresa);
 
   //Método que se llama cuando se hace clic en el botón de cancelar/cerrar.
   //    Cierra el diálogo sin devolver ningún dato.

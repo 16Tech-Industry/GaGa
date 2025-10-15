@@ -10,10 +10,11 @@ class UsuarioSerializer(serializers.ModelSerializer):
     Serializer para el modelo Usuario.
     Utilizado para serializar (Py -> JSON) el objeto Usuario.
     """
+    id = serializers.IntegerField(source='id_usuario', read_only=True)
     class Meta:
         model = Usuario
         
-        fields = ['id_usuario',# id_usuario es la clave principal (pk)
+        fields = ['id',# id_usuario es la clave principal (pk)
                   'nombre', # Los campos nombre, apellido, email, rol son para visualización y edición
                   'apellido', 
                   'email', 

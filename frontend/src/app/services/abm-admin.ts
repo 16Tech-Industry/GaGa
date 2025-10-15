@@ -33,6 +33,7 @@ export class UserService {
   // PUT: Actualiza un usuario existente
   updateUser(user: User): Observable<User> {
     // Construimos la URL correcta para la actualización según la API de Django
+    console.log(user)
     return this.http.put<User>(`${this.apiUrl}/admin/usuarios/${user.id}/`, user);
   }
 

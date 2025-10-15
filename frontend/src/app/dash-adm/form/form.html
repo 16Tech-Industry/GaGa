@@ -15,7 +15,7 @@
   </mat-form-field>
   <mat-form-field>
     <mat-label>CUIT de Empresa</mat-label>
-    <input matInput [ngModel]="cuitEmpresa()" (ngModelChange)="cuitEmpresa.set($event)" />
+    <input matInput [ngModel]="cuit_empresa()" (ngModelChange)="cuit_empresa.set($event)" />
   </mat-form-field>
 </mat-dialog-content>
 <mat-dialog-actions>
@@ -24,6 +24,6 @@
     nombre: nombre(),
     apellido: apellido(),
     email: email(),
-    cuitEmpresa: cuitEmpresa()
+    cuit_empresa: cuit_empresa()
   }" cdkFocusInitial>Guardar</button>
 </mat-dialog-actions>
