@@ -1,14 +1,30 @@
 <section class="metricas">
-    <!-- Título principal de la sección -->
-  <h2>Temperatura y Consumo Actual</h2>
-  <div class="clima_actual">
-    <div style="display: block;">
-       <!-- Gráfico de barras usando ng2-charts -->
-      <canvas baseChart
-        [data]="chartData"
-        [options]="chartOptions"  
-        chartType="bar">
-      </canvas>
-    </div>
+
+  <h2>Temperatura Actual</h2>
+  <div class="chart-container" *ngIf="temperaturaData.datasets[0].data.length">
+    <canvas #temperaturaChart baseChart 
+            [data]="temperaturaData" 
+            [options]="chartOptions" 
+            chartType="line">
+    </canvas>
   </div>
+
+  <h2>Consumo Actual</h2>
+  <div class="chart-container" *ngIf="consumoData.datasets[0].data.length">
+    <canvas #consumoChart baseChart 
+            [data]="consumoData" 
+            [options]="chartOptions" 
+            chartType="bar">
+    </canvas>
+  </div>
+
+  <h2>Consumo Energético</h2>
+  <div class="chart-container" *ngIf="ahorroData.datasets[0].data.length">
+    <canvas #ahorroChart baseChart 
+            [data]="ahorroData" 
+            [options]="chartOptions" 
+            chartType="doughnut">
+    </canvas>
+  </div>
+
 </section>

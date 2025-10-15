@@ -1,28 +1,39 @@
 <section class="historial">
-  <!-- Título y gráfico de temperatura -->
+
   <h2>Historial de Temperatura</h2>
   <div class="chart-container">
-    <!-- Gráfico tipo "line" usando ng2-charts -->
-    <canvas baseChart [data]="temperaturaData" [options]="options" chartType="line"></canvas>
+    <canvas #temperaturaChart baseChart 
+            [data]="temperaturaData" 
+            [options]="options" 
+            chartType="line">
+    </canvas>
   </div>
 
-  <!-- Título y gráfico de humedad -->
   <h2>Historial de Humedad</h2>
   <div class="chart-container">
-    <canvas baseChart [data]="humedadData" [options]="options" chartType="line"></canvas>
+    <canvas #humedadChart baseChart 
+            [data]="humedadData" 
+            [options]="options" 
+            chartType="line">
+    </canvas>
   </div>
 
-  <!-- Título y gráfico de consumo -->
-  <h2>Historial de Consumo</h2>
+  <h2>Consumo</h2>
   <div class="chart-container">
-    <!-- Este gráfico se representa como "bar" -->
-    <canvas baseChart [data]="consumoData" [options]="options" chartType="bar"></canvas>
+    <canvas #consumoChart baseChart 
+            [data]="consumoData" 
+            [options]="options" 
+            chartType="bar">
+    </canvas>
   </div>
 
-  <!-- Título y gráfico de ahorro -->
-  <h2>Historial de Ahorro</h2>
+  <h2>Consumo Energético (Ahorro)</h2>
   <div class="chart-container">
-    <!-- Este gráfico se representa como "doughnut" -->
-    <canvas baseChart [data]="ahorroData" [options]="options" chartType="doughnut"></canvas>
+    <canvas #ahorroChart baseChart 
+            [data]="ahorroData" 
+            [options]="options" 
+            chartType="doughnut">
+    </canvas>
   </div>
+
 </section>

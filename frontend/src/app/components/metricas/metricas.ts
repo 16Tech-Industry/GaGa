@@ -1,44 +1,68 @@
-import { Component, OnInit } from '@angular/core';
+// metricas.ts
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgChartsModule } from 'ng2-charts';
 import { ChartData, ChartOptions } from 'chart.js';
-import { MetricasService, Metrica } from '../../services/metricas.service';
+import { MetricasService, Metrica as MetricaData } from '../../services/metricas.service';
 
 @Component({
-  selector: 'app-metricas',            // Selector del componente para usarlo en HTML
-  standalone: true,                    // Componente independiente (Angular 15+)
-  imports: [CommonModule, NgChartsModule], // Importa módulos necesarios
-  templateUrl: './metricas.html',      // Template asociado
-  styleUrls: ['./metricas.css']        // Estilos asociados
+  selector: 'app-metricas',
+  standalone: true,
+  imports: [CommonModule, NgChartsModule],
+  templateUrl: './metricas.html',
+  styleUrls: ['./metricas.css']
 })
-export class Metricas implements OnInit {
-  // Configuración inicial del gráfico
-  public chartData: ChartData<'bar'> = {
-    labels: [], // Etiquetas dinámicas que se mostrarán en el eje X
-    datasets: [
-      { data: [], label: 'Temperatura (°C)' }, // Primer dataset para temperaturas
-      { data: [], label: 'Consumo (kWh)' }     // Segundo dataset para consumo eléctrico
-    ]
+export class Metricas implements OnInit, AfterViewInit {
+
+  temperaturaData: ChartData<'line', number[], string> = {
+    labels: [],
+    datasets: [{ label: 'Temperatura (°C)', data: [], borderColor: '#ff6384', fill: false }]
   };
 
-  // Opciones de configuración del gráfico
-  public chartOptions: ChartOptions<'bar'> = {
-    responsive: true // Hace que el gráfico se adapte al tamaño de la pantalla
+  consumoData: ChartData<'bar', number[], string> = {
+    labels: [],
+    datasets: [{ label: 'Consumo (L)', data: [], backgroundColor: 'rgba(54, 162, 235, 0.6)' }]
   };
 
-  // Inyección del servicio que provee las métricas
+  ahorroData: ChartData<'doughnut', number[], string> = {
+    labels: ['Watt Consumidos', 'Diferencia'],
+    datasets: [{ label: 'Consumo Energético', data: [0, 0], backgroundColor: ['#4caf50','#e0e0e0'] }]
+  };
+
+  chartOptions: ChartOptions<any> = {
+    responsive: true,
+    plugins: { legend: { position: 'top' } },
+    scales: { y: { beginAtZero: true } }
+  };
+
   constructor(private metricasService: MetricasService) {}
 
-  // Ciclo de vida: al inicializar el componente
   ngOnInit(): void {
-    // Se suscribe al servicio que obtiene métricas desde backend/API
-    this.metricasService.getMetricas().subscribe((data: Metrica[]) => {
-      // Asigna etiquetas dinámicas en base al ID de cada métrica
-      this.chartData.labels = data.map((m) => `Métrica ${m.id}`);
+    this.metricasService.getMetricas().subscribe((data: MetricaData[]) => {
+      const labels = data.map(d => new Date(d.fecha).toLocaleDateString());
 
-      // Llena los datasets con valores obtenidos de la API
-      this.chartData.datasets[0].data = data.map((m) => m.temperatura);
-      this.chartData.datasets[1].data = data.map((m) => m.consumo);
+      // Temperatura (línea)
+      this.temperaturaData.labels = labels;
+      this.temperaturaData.datasets[0].data = data.map(d => Number(d.temperatura) || 0);
+
+      // Consumo (barra)
+      this.consumoData.labels = labels;
+      this.consumoData.datasets[0].data = data.map(d => Number(d.litros_consumidos) || 0);
+
+      // Ahorro (doughnut: watt consumidos vs diferencia)
+      const totalWatt = data.reduce((acc, d) => acc + Number(d.watt_consumidos || 0), 0);
+      const maxWatt = 1000; // Ajustar según caso
+      this.ahorroData.datasets[0].data = [totalWatt, maxWatt - totalWatt];
     });
   }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      // Forzar actualización de gráficos después de que Angular renderice el DOM
+      if (this.temperaturaData) this.temperaturaData.datasets = [...this.temperaturaData.datasets];
+      if (this.consumoData) this.consumoData.datasets = [...this.consumoData.datasets];
+      if (this.ahorroData) this.ahorroData.datasets = [...this.ahorroData.datasets];
+    }, 0);
+  }
+
 }

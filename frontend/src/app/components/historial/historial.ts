@@ -1,92 +1,63 @@
+// historial.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HistorialService, Historial } from '../../services/historial.service';
 import { NgChartsModule } from 'ng2-charts';
+import { ChartData, ChartOptions } from 'chart.js';
+import { HistorialService, Historial as HistorialData } from '../../services/historial.service';
 
 @Component({
-  selector: 'app-historial',                   // Selector para usar en HTML
-  standalone: true,                            // Componente independiente
-  imports: [CommonModule, NgChartsModule],     // Importa módulos necesarios
-  templateUrl: './historial.html',             // Template asociado
-  styleUrls: ['./historial.css']               // Estilos asociados
+  selector: 'app-historial',
+  standalone: true,
+  imports: [CommonModule, NgChartsModule],
+  templateUrl: './historial.html',
+  styleUrls: ['./historial.css']
 })
-export class HistorialComponent implements OnInit {
-  // Variables que guardan la información para cada gráfico
-  temperaturaData: any;
-  humedadData: any;
-  consumoData: any;
-  ahorroData: any;
+export class Historial implements OnInit {
 
-  // Opciones generales de los gráficos
-  options = {
-    responsive: true,          // Se adaptan al tamaño de pantalla
-    maintainAspectRatio: false // Permite ajustar alto/anchura libremente
+  temperaturaData: ChartData<'line', number[], string> = {
+    labels: [],
+    datasets: [{ label: 'Temperatura (°C)', data: [], borderColor: '#ff6384', fill: false }]
   };
 
-  // Inyección del servicio que obtiene datos del historial
+  humedadData: ChartData<'line', number[], string> = {
+    labels: [],
+    datasets: [{ label: 'Humedad (%)', data: [], borderColor: '#36a2eb', fill: false }]
+  };
+
+  consumoData: ChartData<'bar', number[], string> = {
+    labels: [],
+    datasets: [{ label: 'Consumo (L)', data: [], backgroundColor: 'rgba(54, 162, 235, 0.6)' }]
+  };
+
+  ahorroData: ChartData<'doughnut', number[], string> = {
+    labels: ['Watt Consumidos', 'Diferencia'],
+    datasets: [{ label: 'Consumo Energético', data: [0, 0], backgroundColor: ['green','gray'] }]
+  };
+
+  options: ChartOptions<any> = {
+    responsive: true,
+    plugins: { legend: { position: 'top' } },
+    scales: { y: { beginAtZero: true } }
+  };
+
   constructor(private historialService: HistorialService) {}
 
-  // Se ejecuta al inicializar el componente
-  ngOnInit() {
-    // Llama al servicio y se suscribe para recibir los datos
-    this.historialService.getHistorial().subscribe((data: Historial[]) => {
-      // Extrae las fechas para usarlas como labels en los gráficos
-      const fechas = data.map(d => d.fecha);
+  ngOnInit(): void {
+    this.historialService.getHistorial().subscribe((data: HistorialData[]) => {
+      console.log('Datos API historial:', data);
 
-      // Configuración del gráfico de Temperatura
-      this.temperaturaData = {
-        labels: fechas,
-        datasets: [
-          {
-            data: data.map(d => d.temperatura),
-            label: 'Temperatura (°C)',
-            borderColor: '#ff6384',     // Color de línea
-            backgroundColor: '#ff6384', // Color del punto
-            fill: false,                // No rellenar debajo de la línea
-            tension: 0.3                // Curvatura de la línea
-          }
-        ]
-      };
+      const labels = data.map(d => new Date(d.fecha).toLocaleTimeString());
+      this.temperaturaData.labels = labels;
+      this.humedadData.labels = labels;
+      this.consumoData.labels = labels;
 
-      // Configuración del gráfico de Humedad
-      this.humedadData = {
-        labels: fechas,
-        datasets: [
-          {
-            data: data.map(d => d.humedad),
-            label: 'Humedad (%)',
-            borderColor: '#36a2eb',
-            backgroundColor: '#36a2eb',
-            fill: false,
-            tension: 0.3
-          }
-        ]
-      };
+      this.temperaturaData.datasets[0].data = data.map(d => Number(d.temperatura) || 0);
+      this.humedadData.datasets[0].data = data.map(d => Number(d.humedad) || 0);
+      this.consumoData.datasets[0].data = data.map(d => Number(d.litros_consumidos) || 0);
 
-      // Configuración del gráfico de Consumo
-      this.consumoData = {
-        labels: fechas,
-        datasets: [
-          {
-            data: data.map(d => d.consumo),
-            label: 'Consumo (kWh)',
-            backgroundColor: '#ffce56'  // Color de las barras
-          }
-        ]
-      };
-
-      // Configuración del gráfico de Ahorro
-      this.ahorroData = {
-        labels: fechas,
-        datasets: [
-          {
-            data: data.map(d => d.ahorro),
-            label: 'Ahorro (%)',
-            // Colores diferentes para cada sector del doughnut
-            backgroundColor: ['#4bc0c0', '#ff9f40', '#9966ff']
-          }
-        ]
-      };
+      const totalWatt = data.reduce((sum, d) => sum + Number(d.watt_consumidos || 0), 0);
+      const maxWatt = 20000;
+      this.ahorroData.datasets[0].data = [totalWatt, maxWatt - totalWatt];
     });
   }
 }
