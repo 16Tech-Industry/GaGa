@@ -8,10 +8,10 @@ from rest_framework import status
 from rest_framework.permissions import AllowAny
 
 # Importamos los modelos y serializers que SÍ usamos
-from .models import Metrica, Usuario
+from .models import Metrica, Usuario, Central
 from .serializers import MetricaSerializer, UsuarioSerializer, CentralSerializer#, CentralSerializer
 # Importamos el formulario de registro desde backends.py
-from .backends import RegistroForm, ActualizacionUsuarioForm
+from .backends import RegistroForm, ActualizacionUsuarioForm, CreacionCentralForm, ActualizacionCentralForm
 
 
 #definicion de las respuesas
@@ -163,3 +163,53 @@ class CentralDetailView(APIView):
         except Exception as e:
             return Response({"error": f"Error al eliminar: {str(e)}"}, 
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+class CentralListView(APIView):
+    """
+    Maneja el listado (GET) y la creación (POST) de centrales.
+    """
+    def get(self, request):
+        centrales = Central.objects.all()
+        serializer = CentralSerializer(centrales, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def post(self, request):
+        form = CreacionCentralForm(data=request.data)
+        if form.is_valid():
+            nueva_central = form.save()
+            serializer = CentralSerializer(nueva_central)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(form.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class CentralDetailView(APIView):
+    """
+    Maneja las operaciones GET, PUT y DELETE para una Central específica.
+    """
+    def get(self, request, pk):
+        try:
+            central = Central.objects.get(id_central=pk)
+            serializer = CentralSerializer(central) 
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except Central.DoesNotExist:
+            return Response({"error": f"Central con ID {pk} no encontrada"}, status=status.HTTP_404_NOT_FOUND)
+
+    def put(self, request, pk):
+        data = request.data.copy()
+        data['id_central'] = pk
+        form = ActualizacionCentralForm(data=data)
+        
+        if form.is_valid():
+            central_actualizada = form.save()
+            serializer = CentralSerializer(central_actualizada)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response(form.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk):
+        try:
+            central = Central.objects.get(id_central=pk)
+            central.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        except Central.DoesNotExist:
+            return Response({"error": f"Central con ID {pk} no encontrada"}, status=status.HTTP_404_NOT_FOUND)

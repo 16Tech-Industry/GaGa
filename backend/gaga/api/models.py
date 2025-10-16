@@ -75,33 +75,12 @@ class Central(models.Model):
     empresa = models.ForeignKey(
         Empresa, 
         models.DO_NOTHING, 
-        db_column='EMPRESAS_id_empresa'
+        db_column='empresas_id_empresa'
     )
 
     class Meta:
         managed = False
         db_table = '"gaga"."CENTRALES"'
-
-class Central(models.Model):
-    """
-    Representación de la tabla CENTRALES.
-    """
-    id_central = models.AutoField(primary_key=True)
-    n_serie = models.BigIntegerField()
-    direccion = models.CharField(max_length=160, blank=True, null=True)
-    fecha_carga = models.DateTimeField(blank=True, null=True)
-    
-    # Relación ForeignKey con la tabla Empresa
-    empresa = models.ForeignKey(
-        Empresa, 
-        models.DO_NOTHING, 
-        db_column='EMPRESAS_id_empresa'
-    )
-
-    class Meta:
-        managed = False
-        db_table = '"gaga"."CENTRALES"'
-
 
 class Metrica(models.Model):
     """

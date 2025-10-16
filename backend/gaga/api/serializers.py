@@ -27,22 +27,17 @@ class CentralSerializer(serializers.ModelSerializer):
     """
     Serializer para el modelo Central.
     """
+    # Se añade esta línea para que el campo en el JSON de salida
+    # coincida exactamente con el modelo de Angular.
+    EMPRESAS_id_empresa = serializers.IntegerField(source='empresa.id_empresa')
+
     class Meta:
         model = Central
-        # Incluimos los campos necesarios para el ABM de Centrales
-        # id_central es el pk, n_serie es clave, direccion es la ubicación, empresa es la FK.
-        fields = ['id_central', 'n_serie', 'direccion', 'fecha_carga', 'empresa'] 
-        # Asume que el campo 'empresa' es la clave foránea a la tabla Empresa
+        # Se actualiza la lista de campos para usar el nuevo campo
+        # y se elimina el campo 'empresa' para no duplicar datos.
+        fields = ['id_central', 'n_serie', 'direccion', 'fecha_carga', 'EMPRESAS_id_empresa']
 
 
-""" OLD
-class AuthUserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = AuthUser
-        # Es mejor elegir campos específicos en lugar de '__all__'
-        # para no exponer datos sensibles como el hash de la contraseña.
-        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'is_staff']
-"""
 class MetricaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Metrica
