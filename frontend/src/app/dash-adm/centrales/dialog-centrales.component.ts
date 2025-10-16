@@ -1,8 +1,8 @@
-import { Component, signal, inject, OnInit } from '@angular/core';
+import { Component, signal, inject, OnInit } from '@angular/core'; // <-- Importar OnInit
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-// Importaciones de Angular Material
+//VENTABA MODAL
 import {
   MatDialogModule,
   MatDialogRef,
@@ -12,24 +12,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
-/**
- * Define la estructura de los datos que el diálogo devuelve al componente principal.
- * Coincide con los campos editables del modelo Centrales.
- */
 export interface DialogCentralesResult {
-  n_serie: number;
-  direccion: string;
-  EMPRESAS_id_empresa: number;
+  nombre: string;
+  Ubicacion: string;
+  empresa: string;
 }
 
-/**
- * Define la estructura de los datos que el componente principal envía al diálogo.
- */
 export interface DialogData {
-  id_central: number | null;
-  n_serie: number;
-  direccion: string;
-  EMPRESAS_id_empresa: number;
+  id: string | null;
+  nombre: string;
+  Ubicacion: string;
+  empresa: string;
 }
 
 @Component({
@@ -48,25 +41,30 @@ export interface DialogData {
 export class DialogCentralesComponent implements OnInit {
 
   private dialogRef = inject(MatDialogRef<DialogCentralesComponent>);
-  
-  // Inyecta los datos iniciales o crea un objeto vacío si es para una nueva central.
-  public data: DialogData = inject(MAT_DIALOG_DATA, { optional: true }) || 
-    { id_central: null, n_serie: 0, direccion: '', EMPRESAS_id_empresa: 0 };
 
-  // Signals para vincular a los campos del formulario.
-  n_serie = signal<number>(0);
-  direccion = signal<string>('');
-  EMPRESAS_id_empresa = signal<number>(0);
+
+  public data: DialogData = inject(MAT_DIALOG_DATA, {
+    optional: true,
+
+  }) || { id: null, nombre: '', Ubicacion: '', empresa: '' };
+
+  // Signals para vincular a los campos del formulario
+  ubicacion = signal<string>('');
+  nombre = signal<string>('');
+  empresa = signal<string>('');
+  centralId: string | null = null;
 
   ngOnInit(): void {
-    // Si se están editando datos, inicializa los signals con los valores recibidos.
+
     if (this.data) {
-      this.n_serie.set(this.data.n_serie);
-      this.direccion.set(this.data.direccion);
-      this.EMPRESAS_id_empresa.set(this.data.EMPRESAS_id_empresa);
+      this.centralId = this.data.id;
+      this.nombre.set(this.data.nombre);
+      this.ubicacion.set(this.data.Ubicacion);
+      this.empresa.set(this.data.empresa);
     }
   }
 
+  // Función para cancelar y cerrar el diálogo
   onNoClick(): void {
     this.dialogRef.close();
   }

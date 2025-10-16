@@ -1,7 +1,7 @@
 # api/backends.py
 
 from django.contrib.auth.backends import BaseBackend
-from .models import Usuario, Empresa, Central
+from .models import Usuario, Empresa
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
 from django.db import IntegrityError
@@ -183,38 +183,3 @@ class ActualizacionUsuarioForm(forms.Form):
         
         # Retorna la instancia actualizada
         return user
-    
-class CreacionCentralForm(forms.ModelForm):
-    """
-    Formulario para crear una nueva Central.
-    Se utilizará en la vista de listado para manejar peticiones POST.
-    """
-    class Meta:
-        model = Central
-        # Campos necesarios para crear una central.
-        # 'empresa' se espera que sea el ID de la empresa a la que pertenece.
-        fields = ['n_serie', 'direccion', 'empresa']
-
-class ActualizacionCentralForm(forms.ModelForm):
-    """
-    Formulario para actualizar una Central existente.
-    Se utilizará en la vista de detalle para manejar peticiones PUT.
-    """
-    id_central = forms.IntegerField()
-
-    class Meta:
-        model = Central
-        fields = ['id_central', 'n_serie', 'direccion', 'empresa']
-
-    def save(self, commit=True):
-        # Busca la central existente por su ID
-        instance = Central.objects.get(pk=self.cleaned_data['id_central'])
-        
-        # Actualiza los datos de la instancia
-        instance.n_serie = self.cleaned_data['n_serie']
-        instance.direccion = self.cleaned_data['direccion']
-        instance.empresa = self.cleaned_data['empresa']
-
-        if commit:
-            instance.save()
-        return instance

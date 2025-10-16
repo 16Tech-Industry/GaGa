@@ -8,9 +8,8 @@ from .views import(
     LoginView, 
     RegistroView, 
     UsuarioDetailView,
-    UsuarioListView,
-    CentralListView,
     CentralDetailView,
+    UsuarioListView# <-- IMPORTAR
 )
 router = DefaultRouter()
 router.register(r'metricas', MetricaViewSet)
@@ -30,7 +29,6 @@ urlpatterns = [
     
     # Rutas para la gestión de Centrales
     # GET (Detalle), PUT (Modificar), DELETE (Eliminar) para una central específica
-    # Rutas para la gestión de Centrales
-    path('admin/centrales/', CentralListView.as_view(), name='admin-central-list'),
-    path('admin/centrales/<int:pk>/', CentralDetailView.as_view(), name='admin-central-detail'), 
+    path('admin/central/<int:pk>/', CentralDetailView.as_view(), name='admin-central-detail'),
+    
 ]

@@ -4,43 +4,39 @@
 
   <div class="action-buttons">
     <button class="square-button add-button" (click)="agregarCentral()">Agregar</button>
+      <!-- Al hacer clic ejecuta el método agregarCentral() del componente TS -->
   </div>
 </div>
 
 <table class="table">
   <thead>
     <tr>
-      <!-- Encabezados actualizados para coincidir con el modelo Centrales -->
+      <th>Nombre</th>
       <th>ID</th>
-      <th>N° de Serie</th>
-      <th>Dirección</th>
-      <th>ID Empresa</th>
-      <th>Fecha de Carga</th>
-      <th>Acciones</th>
+      <th>Ubicacion</th>
+      <th>Empresa</th>
+      <th></th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
-    <!-- Itera sobre la lista 'centrales' y usa 'id_central' para el tracking -->
-    @for (central of centrales(); track central.id_central) {
+    <!-- 🔁 Itera sobre la lista de 'centrales' proveniente del componente TypeScript -->
+    <!-- La función centrales() devuelve un arreglo de objetos 'central' -->
+    @for (central of centrales(); track central.id){
     <tr>
-      <!-- Muestra los datos de cada central usando las propiedades del modelo -->
-      <th scope="row">{{ central.id_central }}</th>
-      <td>{{ central.n_serie }}</td>
-      <td>{{ central.direccion }}</td>
-      <td>{{ central.EMPRESAS_id_empresa }}</td>
-      <!-- Usamos el pipe 'date' para formatear la fecha de manera legible -->
-      <td>{{ central.fecha_carga | date:'dd/MM/yyyy HH:mm' }}</td>
+      <td>{{ central.nombre }}</td> <th scope="row">{{ central.id }}</th>
+      <td>{{ central.Ubicacion }}</td>
+      <td>{{ central.empresa }}</td>
       <td>
         <div class="action-buttons">
+          <!-- Llama al método editarCentral() pasando el objeto 'central' como parámetro -->
           <button class="square-button edit-button" (click)="editarCentral(central)">Editar</button>
           <button class="square-button delete-button" (click)="borrarCentral(central)">Borrar</button>
         </div>
       </td>
     </tr>
-    } @empty {
-      <!-- Mensaje que se muestra si no hay centrales -->
+    }@empty{
       <tr>
-        <td colspan="6" class="text-center">No hay centrales para mostrar.</td>
+        <td colspan="5" class="text-center">No hay centrales registradas</td>
       </tr>
     }
   </tbody>

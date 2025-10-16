@@ -1,39 +1,31 @@
 <h2 mat-dialog-title>Registro de Central</h2>
 <mat-dialog-content>
-  <p>Por favor, ingrese los datos de la central:</p>
-  
-  <!-- Campo para N° de Serie -->
+  <p>Por favor, ingrese los datos de la nueva central:</p>
   <mat-form-field appearance="fill">
-    <mat-label>N° de Serie</mat-label>
-    <input matInput type="number" [ngModel]="n_serie()" (ngModelChange)="n_serie.set($event)" />
+    <mat-label>Nombre de la Central</mat-label>
+    <input matInput [ngModel]="nombre()" (ngModelChange)="nombre.set($event)" />
   </mat-form-field>
-  
-  <!-- Campo para Dirección -->
   <mat-form-field appearance="fill">
-    <mat-label>Dirección</mat-label>
-    <input matInput [ngModel]="direccion()" (ngModelChange)="direccion.set($event)" />
+    <mat-label>Ubicación</mat-label>
+    <input matInput [ngModel]="ubicacion()" (ngModelChange)="ubicacion.set($event)" />
   </mat-form-field>
-  
-  <!-- Campo para ID de Empresa -->
   <mat-form-field appearance="fill">
-    <mat-label>ID Empresa</mat-label>
-    <input matInput type="number" [ngModel]="EMPRESAS_id_empresa()" (ngModelChange)="EMPRESAS_id_empresa.set($event)" />
+    <mat-label>Empresa</mat-label>
+    <input matInput [ngModel]="empresa()" (ngModelChange)="empresa.set($event)" />
   </mat-form-field>
-
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button (click)="onNoClick()">Cancelar</button>
-  
-  <!-- Al guardar, devuelve un objeto con la estructura estandarizada -->
   <button
     mat-button
     [mat-dialog-close]="{
-      n_serie: n_serie(),
-      direccion: direccion(),
-      EMPRESAS_id_empresa: EMPRESAS_id_empresa()
+      nombre: nombre(),
+      Ubicacion: ubicacion(),
+      empresa: empresa()
     }"
     cdkFocusInitial
   >
     Guardar
   </button>
 </mat-dialog-actions>
+<!-- VENTANA MODAL-->
