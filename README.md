@@ -58,7 +58,7 @@ Tecnologias utilizadas:
 Registro del usuario<br>
 Dirígete a la página de registro (registrarse) y completa el formulario con los datos del usuario.<br>
 De allí será dirigido al inicio de sesión e ingresa con mail y contraseña registrados.<br>
-Una vez iniciada la sesión serás dirigido al dashboard de usuarios, donde puedes ver las métricas de consumo y el historial de humedad, temperatura, consumo energético y consumo energético ahorro.
+Una vez iniciada la sesión serás dirigido al dashboard de usuarios, donde puedes ver las métricas de consumo y el historial de humedad, temperatura, consumo energético y consumo energético ahorro. Dichos gráficos para visualizar su contenido se debe hacer clic sobre el color 2 veces para que refresque la búsqueda en la api y los complete.
 <br>
 usuario: jmartinez@gmail.com<br>
 contraseña: JMartin12!<br>
