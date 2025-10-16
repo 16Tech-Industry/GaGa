@@ -54,25 +54,25 @@ Tecnologias utilizadas:
 - Redes (WIFI, Internet)
 
 
-¿Cómo registrar usuario y acceder al dashboard de usuario?
-Registro del usuario
-Dirígete a la página de registro (registrarse) y completa el formulario con los datos del usuario.
-De allí será dirigido al inicio de sesión e ingresa con mail y contraseña registrados.
+¿Cómo registrar usuario y acceder al dashboard de usuario?<br>
+Registro del usuario<br>
+Dirígete a la página de registro (registrarse) y completa el formulario con los datos del usuario.<br>
+De allí será dirigido al inicio de sesión e ingresa con mail y contraseña registrados.<br>
 Una vez iniciada la sesión serás dirigido al dashboard de usuarios, donde puedes ver las métricas de consumo y el historial de humedad, temperatura, consumo energético y consumo energético ahorro.
+<br>
+usuario: jmartinez@gmail.com<br>
+contraseña: JMartin12!<br>
 
-usuario: jmartinez@gmail.com
-contraseña: JMartin12!
+¿Cómo ingresar con usuario administrador y acceder al dashboard de administrador?<br>
+Inicio de sesión como administrador<br>
+Ve a la página de login (/login)), ingresa las credenciales del usuario administrador y accede.<br>
 
-¿Cómo ingresar con usuario administrador y acceder al dashboard de administrador?
-Inicio de sesión como administrador
-Ve a la página de login (/login)), ingresa las credenciales del usuario administrador y accede.
-
-usuario: admin@admin.com
-contraseña: admin
+usuario: admin@admin.com<br>
+contraseña: admin<br>
 
 
-Acceso al dashboard de administrador
-Una vez autenticado como administrador, serás redirigido al dashboard de administrador (/dash-admin). Desde allí podrás gestionar usuarios y centrales, creación, edición y borrado de perfiles.
+Acceso al dashboard de administrador<br>
+Una vez autenticado como administrador, serás redirigido al dashboard de administrador (/dash-admin). Desde allí podrás gestionar usuarios y centrales, creación, edición y borrado de perfiles.<br>
 
-Reemplaza contraseña Django settings:
-Modificar contraseña de base de datos en archivo gaga/settings.py
+Reemplaza contraseña Django settings:<br>
+Modificar contraseña de base de datos en archivo gaga/settings.py<br>
