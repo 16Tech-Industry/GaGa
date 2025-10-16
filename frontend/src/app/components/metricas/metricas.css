@@ -1,15 +1,17 @@
+/* Contenedor principal de la sección métricas */
 .metricas {
   width: 100%;
-  max-width: 1200px; /* ancho máximo del contenedor */
-  margin: 20px auto;
-  text-align: center;
+  max-width: 1200px;  /* Define un ancho máximo para mantener diseño centrado */
+  margin: 20px auto;  /* Centra el contenedor con margen superior/inferior */
+  text-align: center; /* Centra el texto */
 }
 
+/* Estilos de la sección del clima actual (imagen o gráfico) */
 .clima_actual img {
-  width: 100%;      /* ocupa todo el contenedor */
-  max-width: 600px; /* tamaño máximo de la imagen */
-  height: auto;     /* mantiene proporción */
-  border-radius: 10px;
+  width: 100%;       /* Hace que la imagen ocupe todo el ancho disponible */
+  max-width: 600px;  /* Limita el ancho máximo */
+  height: auto;      /* Mantiene la proporción */
+  border-radius: 10px; /* Esquinas redondeadas */
   display: block;
-  margin: 0 auto;   /* centra la imagen */
+  margin: 0 auto;    /* Centra la imagen horizontalmente */
 }

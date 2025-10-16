@@ -41,4 +41,12 @@ class CentralSerializer(serializers.ModelSerializer):
 class MetricaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Metrica
-        fields = '__all__' # Incluimos todos los campos
+        fields = '__all__'  # Todos los campos existentes
+
+class HistorialSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Metrica
+        fields = [
+            'id_metrica', 'fecha', 'temperatura', 'humedad',
+            'litros_consumidos', 'watt_consumidos'
+        ]

@@ -1,5 +1,7 @@
 {
     "liveServer.settings.port": 5501,
     "typescript.tsdk": "node_modules\\typescript\\lib",
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": []
 }

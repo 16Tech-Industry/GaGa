@@ -1,6 +1,7 @@
 frontend/GaGa/
 # entorno
 recursos/ 
+entorno/ 
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

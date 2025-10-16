@@ -98,7 +98,7 @@ class Metrica(models.Model):
     central = models.ForeignKey(
         Central, 
         models.DO_NOTHING, 
-        db_column='CENTRALES_id_central'
+        db_column='centrales_id_central'
     )
 
     class Meta:

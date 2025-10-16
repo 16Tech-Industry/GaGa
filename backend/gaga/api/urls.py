@@ -11,9 +11,12 @@ from .views import(
     UsuarioListView,
     CentralListView,
     CentralDetailView,
+    MetricaViewSet, 
+    HistorialViewSet
 )
 router = DefaultRouter()
-router.register(r'metricas', MetricaViewSet)
+router.register(r'metricas', MetricaViewSet, basename='metrica')        # Endpoint para últimas métricas
+router.register(r'historial', HistorialViewSet, basename='historial')
 
 urlpatterns = [
     path('', include(router.urls)),
@@ -33,4 +36,5 @@ urlpatterns = [
     # Rutas para la gestión de Centrales
     path('admin/centrales/', CentralListView.as_view(), name='admin-central-list'),
     path('admin/centrales/<int:pk>/', CentralDetailView.as_view(), name='admin-central-detail'), 
+    
 ]

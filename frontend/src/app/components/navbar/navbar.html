@@ -1,28 +1,38 @@
-<!-- Botón hamburguesa -->
+<!-- Botón hamburguesa: aparece solo en pantallas pequeñas -->
 <button class="hamburger-button" (click)="toggleNavbar()">
+  <!-- Cada span representa una línea del ícono hamburguesa -->
   <span></span>
   <span></span>
   <span></span>
 </button>
 
 <!-- Sidebar / Navbar -->
+<!-- ngClass aplica la clase "open" cuando la variable isOpen = true -->
 <nav class="navbar-container" [ngClass]="{'open': isOpen}">
+  <!-- Logo: redirige al home usando routerLink -->
   <a class="logo" routerLink="/" routerLinkActive="active">
     <img src="assets/img/logo_hoja.png" alt="Logo" width="65" height="65">
   </a>
 
   <div class="sidebar-content">
     <ul class="nav-links">
+      <!-- Enlace a Temperatura y Consumo Actual -->
+      <!-- routerLinkActive marca el link como activo -->
+      <!-- (click)="closeNavbar()" cierra el menú en mobile -->
       <li>
         <a routerLink="/dash-user/temperatura" 
            routerLinkActive="active" 
            (click)="closeNavbar()">Temperatura y Consumo Actual</a>
       </li>
+
+      <!-- Enlace a Historial -->
       <li>
         <a routerLink="/dash-user/historial" 
            routerLinkActive="active" 
            (click)="closeNavbar()">Historial</a>
       </li>
+
+      <!-- Enlace a Alertas -->
       <li>
         <a routerLink="/dash-user/alertas" 
            routerLinkActive="active" 

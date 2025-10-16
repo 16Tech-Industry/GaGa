@@ -9,15 +9,23 @@ from rest_framework.permissions import AllowAny
 
 # Importamos los modelos y serializers que SÍ usamos
 from .models import Metrica, Usuario, Central
-from .serializers import MetricaSerializer, UsuarioSerializer, CentralSerializer#, CentralSerializer
+from .serializers import MetricaSerializer, UsuarioSerializer, CentralSerializer, MetricaSerializer, HistorialSerializer#, CentralSerializer
 # Importamos el formulario de registro desde backends.py
 from .backends import RegistroForm, ActualizacionUsuarioForm, CreacionCentralForm, ActualizacionCentralForm
 
 
 #definicion de las respuesas
-class MetricaViewSet(viewsets.ModelViewSet):
-    queryset = Metrica.objects.all()
+class MetricaViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Metrica.objects.all().order_by('-fecha')[:100]  # últimas 100 métricas
     serializer_class = MetricaSerializer
+
+class MetricaViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Metrica.objects.all().order_by('-fecha')[:100]  # últimas 100 métricas
+    serializer_class = MetricaSerializer
+    
+class HistorialViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Metrica.objects.all().order_by('fecha')  # historial completo
+    serializer_class = HistorialSerializer  # <- este es el cambio clave
 
 # checkeo del login 
 class LoginView(APIView):

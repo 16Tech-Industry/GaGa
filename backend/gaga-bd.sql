@@ -77,4 +77,40 @@ CREATE TABLE "METRICAS" (
     ON UPDATE NO ACTION
 );
 
-select * from gaga."EMPRESAS";
+-- Creacion de una empresa, ya que dependen de esa rama.
+insert into gaga."EMPRESAS"(id_empresa, email, nombre_empresa, direccion, cuit) values (default, 'info@samsung.com', 'Samsung','Calle Sin Nombre 1', 30999998882);
+insert into gaga."EMPRESAS"(id_empresa, email, nombre_empresa, direccion, cuit) values (default, 'info@lear.com', 'Lear','Calle Sin Nombre 2', 30999997772);
+insert into gaga."EMPRESAS"(id_empresa, email, nombre_empresa, direccion, cuit) values (default, 'info@ardu.com', 'Ardun','Calle Sin Nombre 3', 30999999992);
+
+-- creacion del usuario administrador.
+insert into gaga."USUARIOS"(id_usuario, nombre, apellido, email, cuit_empresa, rol, contrasenia, empresas_id_empresa) values (default, 'admin', 'admin','admin@admin.com', 30999999992, 'admin', 'admin', 1);
+
+-- creacion de usuario random
+insert into gaga."USUARIOS"(id_usuario, nombre, apellido, email, cuit_empresa, rol, contrasenia, empresas_id_empresa) values (default, 'JUAN', 'Martinez','jmartinez@gmail.com', 30999999992, 'usuario', 'JMartin12!', 1);
+
+-- Creacion de datos de centrales.
+insert into gaga."CENTRALES" (id_central, n_serie, direccion, empresas_id_empresa, fecha_carga) values (default, 000003, 'Calle siempre viva 1234', 1, '2000-01-01 00:00:00');
+insert into gaga."CENTRALES" (id_central, n_serie, direccion, empresas_id_empresa, fecha_carga) values (default, 000002, 'Calle siempre viva 1235', 1, '2000-01-01 00:00:00');
+insert into gaga."CENTRALES" (id_central, n_serie, direccion, empresas_id_empresa, fecha_carga) values (default, 000003, 'Calle siempre viva 1236', 1, '2000-01-01 00:00:00');
+
+
+-- INSER DE METRICAS
+INSERT INTO gaga."METRICAS" (id_metrica, fecha, temperatura, humedad, viento, litros_consumidos, watt_consumidos, centrales_id_central) 
+VALUES (default, '2025-10-15 21:00:00', 18.5, 65, 3.1, 2650, 7800, 1);
+
+INSERT INTO gaga."METRICAS" (id_metrica, fecha, temperatura, humedad, viento, litros_consumidos, watt_consumidos, centrales_id_central) 
+VALUES (default, '2025-10-15 21:01:00', 18.4, 66, 3.0, 2890, 5100, 2);
+
+INSERT INTO gaga."METRICAS" (id_metrica, fecha, temperatura, humedad, viento, litros_consumidos, watt_consumidos, centrales_id_central) 
+VALUES (default, '2025-10-15 21:02:00', 18.4, 66, 3.2, 2510, 9500, 1);
+
+INSERT INTO gaga."METRICAS" (id_metrica, fecha, temperatura, humedad, viento, litros_consumidos, watt_consumidos, centrales_id_central) 
+VALUES (default, '2025-10-15 21:03:00', 18.3, 67, 2.9, 2995, 6250, 2);
+
+INSERT INTO gaga."METRICAS" (id_metrica, fecha, temperatura, humedad, viento, litros_consumidos, watt_consumidos, centrales_id_central) 
+VALUES (default, '2025-10-15 21:04:00', 18.2, 68, 2.8, 2750, 8880, 1);
+
+
+
+
+

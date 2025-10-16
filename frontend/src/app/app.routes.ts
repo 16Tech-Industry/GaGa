@@ -10,7 +10,7 @@ import { UsuarioComponent } from './dash-adm/usuario/usuario';
 import { CentralesComponent } from './dash-adm/centrales/centrales';
 import { DashUser } from './dash-user/dash-user';
 import { Metricas } from './components/metricas/metricas';
-import { HistorialComponent } from './components/historial/historial';
+import { Historial } from './components/historial/historial';
 import { Alertas } from './components/alertas/alertas';
 import { Error404Component } from './error404/error404.component';
 // Módulos base de Angular
@@ -20,7 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { App } from './app';
-import { AuthService } from './services/auth';
+
 
 // DEFINICIÓN DE LAS RUTAS PRINCIPALES DE LA APLICACIÓN
 export const routes: Routes = [
@@ -50,7 +50,7 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'temperatura', pathMatch: 'full' },
       { path: 'temperatura', component: Metricas },
-      { path: 'historial', component: HistorialComponent },
+      { path: 'historial', component: Historial },
       { path: 'alertas', component: Alertas },
     ],
   }, // RUTA POR DEFECTO (404)
