@@ -53,7 +53,7 @@ Tecnologias utilizadas:
 - Hardware (Microprocesador ESP32, Sensores)
 - Redes (WIFI, Internet)
 
-
+## 🛠️ Flujo de trabajo
 ¿Cómo registrar usuario y acceder al dashboard de usuario?<br>
 Registro del usuario<br>
 Dirígete a la página de registro (registrarse) y completa el formulario con los datos del usuario.<br>
